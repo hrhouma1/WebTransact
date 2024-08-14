@@ -172,3 +172,91 @@
    ```
 
 ---
+
+
+Here's how you can enhance your Maven tutorial by adding explanations for the additional commands and verifying the results:
+
+---
+
+# Étape 8 : Nettoyage du projet avec `mvn clean`
+
+---
+
+1. **Exécutez la commande `mvn clean`** pour nettoyer votre projet Maven :
+   ```bash
+   mvn clean
+   ```
+2. **Vérifiez que le répertoire `target` a été supprimé** :
+   - Après avoir exécuté `mvn clean`, Maven supprimera le répertoire `target` où sont stockés les fichiers compilés et les résultats des tests. Pour vérifier, allez dans le répertoire de votre projet `calculator` et assurez-vous que le dossier `target` n'existe plus.
+
+---
+
+# Étape 9 : Construction du projet avec `mvn package`
+
+---
+
+1. **Exécutez la commande `mvn package`** pour compiler le projet et créer un fichier JAR exécutable :
+   ```bash
+   mvn package
+   ```
+2. **Vérifiez la création du fichier JAR** :
+   - Après l'exécution de `mvn package`, Maven compilera le code source et créera un fichier JAR dans le répertoire `target`. Accédez à `target` et vérifiez que le fichier `calculator-1.0-SNAPSHOT.jar` a bien été créé.
+
+---
+
+# Étape 10 : Génération du site de documentation avec `mvn site`
+
+---
+
+1. **Exécutez la commande `mvn site`** pour générer la documentation du projet :
+   ```bash
+   mvn site
+   ```
+2. **Vérifiez la génération du site Javadoc** :
+   - Après avoir exécuté `mvn site`, Maven génère un site web de documentation dans le répertoire `target/site`. Pour visualiser la documentation Javadoc, ouvrez le fichier `index.html` situé dans `target/site` dans votre navigateur.
+
+---
+
+Here's how you can enhance your Maven tutorial by adding explanations for the additional commands and verifying the results:
+
+---
+
+# Étape 8 : Nettoyage du projet avec `mvn clean`
+
+---
+
+1. **Exécutez la commande `mvn clean`** pour nettoyer votre projet Maven :
+   ```bash
+   mvn clean
+   ```
+2. **Vérifiez que le répertoire `target` a été supprimé** :
+   - Après avoir exécuté `mvn clean`, Maven supprimera le répertoire `target` où sont stockés les fichiers compilés et les résultats des tests. Pour vérifier, allez dans le répertoire de votre projet `calculator` et assurez-vous que le dossier `target` n'existe plus.
+
+---
+
+# Étape 9 : Construction du projet avec `mvn package`
+
+---
+
+1. **Exécutez la commande `mvn package`** pour compiler le projet et créer un fichier JAR exécutable :
+   ```bash
+   mvn package
+   ```
+2. **Vérifiez la création du fichier JAR** :
+   - Après l'exécution de `mvn package`, Maven compilera le code source et créera un fichier JAR dans le répertoire `target`. Accédez à `target` et vérifiez que le fichier `calculator-1.0-SNAPSHOT.jar` a bien été créé.
+
+---
+
+# Étape 10 : Génération du site de documentation avec `mvn site`
+
+---
+
+1. **Exécutez la commande `mvn site`** pour générer la documentation du projet :
+   ```bash
+   mvn site
+   ```
+2. **Vérifiez la génération du site Javadoc** :
+   - Après avoir exécuté `mvn site`, Maven génère un site web de documentation dans le répertoire `target/site`. Pour visualiser la documentation Javadoc, ouvrez le fichier `index.html` situé dans `target/site` dans votre navigateur.
+
+---
+
