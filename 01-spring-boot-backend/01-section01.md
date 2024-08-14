@@ -16,7 +16,7 @@ Dans ce projet, nous allons créer un simple service web "Hello World" en utilis
 - Travailler avec Lombok
 
 🎉 **Préparez-vous à coder !**
-```
+
 
 -------
 # 1 - Introduction : 
