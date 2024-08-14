@@ -69,6 +69,48 @@ CalculatorProject/
                     -- CalculatorTest.java
 ```
 
+
+---
+
+### 8.1. Commandes Maven couramment utilisées
+
+Voici un ensemble de commandes Maven couramment utilisées. Ces commandes sont exécutées dans le terminal ou l'invite de commande (cmd) à la racine du projet, où se trouve le fichier `pom.xml`.
+
+- `mvn archetype:generate`
+- `mvn compile`
+- `mvn test`
+- `mvn package`
+- `mvn verify`
+- `mvn install`
+- `mvn deploy`
+- `mvn clean`
+- `mvn site`
+- `mvn dependency:analyze`
+- `mvn dependency:update-snapshots`
+- **`mkdir`** (Pour créer la structure de répertoires)
+
+Créer cette structure de projet pour un projet Maven peut être effectué de deux manières : (1) manuellement ou (2) en utilisant un outil de ligne de commande comme Maven lui-même. Voici comment vous pouvez procéder dans les deux cas :
+
+---
+
+### 8.2. Création manuelle du projet
+
+Pour créer manuellement la structure de dossiers, vous suivez les étapes dans l'explorateur de fichiers de votre système d'exploitation ou via le terminal/invite de commandes :
+
+1. **Créer la structure de dossiers :**  
+   Utilisez des commandes `mkdir` dans le terminal (Linux/macOS) ou l'invite de commandes (Windows) pour créer tous les dossiers nécessaires. Voici comment vous pourriez le faire sur un système Unix-like (Linux/macOS) :
+
+   ```bash
+   mkdir -p CalculatorProject/src/main/java/com/example
+   mkdir -p CalculatorProject/src/test/java/com/example
+   ```
+
+   Sur Windows, vous devriez créer chaque dossier un par un via l'explorateur de fichiers ou l'invite de commandes avec `mkdir`.
+
+2. **Créer les fichiers :**  
+   Utilisez un éditeur de texte pour créer `Calculator.java` et `CalculatorTest.java` dans leurs dossiers respectifs, puis copiez-collez le code fourni. Créez également le fichier `pom.xml` à la racine du projet (`CalculatorProject/`).
+
+
 ---
 
 ### 9. Calculator.java
@@ -187,12 +229,41 @@ Vous pouvez exécuter les commandes Maven mentionnées précédemment dans le te
 - **Installer le projet dans le référentiel local Maven :** `mvn install`
 - **Générer un site pour le projet :** `mvn site`
 
+
+
+---
+
+### 13. Combinaison de commandes Maven
+
+Dans les projets réels, il est courant de combiner plusieurs commandes Maven pour automatiser plusieurs étapes du cycle de vie du build en une seule commande. Par exemple, vous pouvez vouloir nettoyer le projet, compiler le code, exécuter les tests, et installer le package dans le dépôt local, le tout en une seule commande. Voici comment vous pouvez le faire :
+
+#### Combinaison de commandes Maven
+
+```bash
+mvn clean install
+```
+
+Cette commande exécute les actions suivantes :
+
+1. **`mvn clean`** : Supprime le répertoire `target`, nettoyant ainsi tous les fichiers générés lors des builds précédents.
+2. **`mvn install`** : Compile le projet, exécute les tests unitaires, package le projet, puis l'installe dans le dépôt local Maven.
+
+L'avantage de combiner les commandes est de pouvoir effectuer plusieurs tâches consécutives sans avoir à exécuter chaque commande individuellement, ce qui est non seulement un gain de temps, mais assure également que toutes les étapes nécessaires sont exécutées de manière cohérente.
+
+Vous pouvez également combiner d'autres commandes selon vos besoins. Par exemple :
+
+```bash
+mvn clean compile package
+```
+
+Cela nettoie le projet, compile le code, et package le code compilé en un fichier JAR ou WAR.
+
+Cette flexibilité de Maven vous permet d'adapter le processus de build à vos besoins spécifiques, tout en maintenant la simplicité et l'efficacité dans le développement de projets Java.
+
 ---
 
 ### Conclusion
 
 En suivant le cycle de vie Maven, en comprenant la structure du projet, et en utilisant les commandes Maven courantes, vous pouvez gérer vos projets Java de manière plus efficace. Maven ne simplifie pas seulement le processus de build, mais impose également des bonnes pratiques et une standardisation, facilitant ainsi la collaboration au sein des équipes sur des projets complexes.
 
----
 
-Cette version est maintenant complète et prête à être intégrée dans votre README, avec les sections de code ajoutées pour vous permettre de créer un projet Maven fonctionnel. Vous pouvez également insérer les figures (FIGURE 1 et FIGURE 2) dans les sections appropriées comme indiqué.
