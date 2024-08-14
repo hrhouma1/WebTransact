@@ -1,0 +1,11 @@
+
+| **Section** | **Concepts** |
+| --- | --- |
+| **1. Introduction à Spring** | • Modules de Spring |
+| **2. Spring Core** | • Introduction à l'IOC <br> • Types de DI <br> • Setter VS Constructeur <br> • Injection de collections <br> • Héritage de Beans <br> • Beans internes <br> • Scopes de Beans <br> • Beans internes <br> • Auto-wiring de Beans <br> • Méthode de Factory Statique <br> • Méthode de Factory d'Instance <br> • Cycle de vie des Beans |
+| **3. Spring AOP** | • Concepts de l'AOP <br> • AOP programmatique VS déclaratif <br> • AOP programmatique <br> • Types de Conseils (Advices) <br> • Types de Pointcuts |
+| **4. Spring MVC** | • Introduction à Spring MVC <br> • Mappage des Handlers <br> • Contrôleurs <br> • Validations <br> • Vues <br> • Tags de Formulaires |
+| **5. Introduction à Spring Boot** | • Introduction à Spring Boot - Qu'est-ce que Spring Boot et ce qu'il fait <br> • Spring Boot Hello World / Application Spring <br> • Télécharger et installer STS IDE <br> • Bref aperçu de Maven <br> • Beans Spring & Injection de dépendances <br> • Configuration <br> • Propriétés de configuration <br> • Propriétés de l'application & Configuration YAML <br> • Annotations Spring Boot : <br> - SpringBootApplication <br> - EnableAutoConfiguration <br> - SpringBootConfiguration <br> • Serveur intégré et ses usages <br> • Qu'est-ce que Spring Boot Actuator |
+| **6. Services Web RESTFUL** | • Vue d'ensemble de REST (Caractéristiques/Capacités, Modèles URI, REST vs SOAP) <br> • REST et Spring MVC <br> • Support de Spring pour REST <br> • @RequestMapping/@PathVariable, @RequestBody, @ResponseBody, Conversion de méthode HTTP <br> • Modèles URI et @PathVariable <br> • Écriture de contrôleurs RESTful / @RestController |
+| **7. Accès aux données avec Spring Boot et support de base de données** | • Introduction à l'accès aux données <br> • Spring Data JDBC <br> • Auto-configuration de base - Source de données <br> • Propriétés de configuration <br> • Support JPA de Spring Boot - spring-boot-starter-data-JPA |
+| **8. Sécurité Spring Boot** | • Ajout du starter de sécurité Spring Boot <br> • Application de la configuration de sécurité en écrivant nos propres autorisations et authentifications |
