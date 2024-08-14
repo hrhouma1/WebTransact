@@ -1,3 +1,26 @@
+-------
+# 1 - Introduction : 
+-------
+
+- Ces étapes vous guideront depuis la configuration initiale du projet jusqu'à l'ajout d'une base de données PostgreSQL et l'utilisation de Lombok pour rendre le développement plus efficace.
+
+1. Utiliser Spring Initializr pour créer et configurer rapidement un projet Spring Boot.  
+2. Ajouter les dépendances nécessaires dans le fichier pom.xml.  
+3. Importer le fichier pom.xml dans l'environnement de développement Maven.
+4. Créer les classes `Greeting.java` et `GreetingController.java` pour gérer les données et les contrôleurs de l'application.
+5. Exécuter l'application pour vérifier son bon fonctionnement.
+6. Résoudre les éventuels problèmes, comme un port 8080 déjà occupé.
+7. Ajouter les dépendances PostgreSQL et JPA dans le fichier pom.xml.
+8. Configurer les propriétés de connexion dans le fichier application.properties.
+9. Ajouter les annotations JPA à la classe `Greeting.java` pour assurer la persistance des données.
+10. Vérifier que la classe `Greeting.java` respecte les exigences de Spring Data.
+11. Créer une base de données PostgreSQL (par exemple nommée "haythem") et attribuer les privilèges nécessaires à l'utilisateur désigné.
+12. Utiliser Lombok pour simplifier le code en générant automatiquement des méthodes courantes comme les getters et setters.
+
+
+-------
+# 2- Étapes et concepts :
+-------
 
 ### PROJET 1 - Projet Hello World
 
@@ -21,3 +44,9 @@
 | **3. Travail avec Lombok**                |                                                                                                                          |
 | - Introduction de Lombok                  | Utilisation de Lombok pour générer automatiquement les méthodes comme les getters et setters.                             |
 
+
+-------
+# 3 - Conclusion: 
+-------
+
+Dans le cadre du projet 1 intitulé "Hello World", nous commencerons par la mise en place initiale du projet en utilisant Spring Initializr, où nous ajouterons les dépendances nécessaires dans le fichier pom.xml et importerons ce dernier dans l'environnement de développement Maven. Ensuite, nous procéderons à la création des classes `Greeting.java` et `GreetingController.java`, qui seront utilisées pour gérer les données et les contrôleurs de l'application Spring Boot. Après avoir testé l'application et résolu les éventuels problèmes, comme un port 8080 déjà occupé, nous intégrerons une base de données PostgreSQL en ajoutant les dépendances PostgreSQL et JPA au fichier pom.xml. Nous configurerons ensuite les propriétés de connexion dans le fichier application.properties et ajouterons les annotations JPA à la classe `Greeting.java` pour assurer la persistance des données. La vérification des getters, setters, et constructeurs sera effectuée pour garantir que la classe respecte les exigences de Spring Data. Par la suite, nous créerons une base de données PostgreSQL, par exemple nommée "haythem", et attribuerons les privilèges nécessaires à l'utilisateur désigné. Enfin, nous travaillerons avec Lombok pour simplifier le code en générant automatiquement des méthodes courantes comme les getters et setters. Ces étapes constituent la structure principale du projet, vous guidant depuis la configuration initiale de Spring Boot jusqu'à l'ajout d'une base de données et l'utilisation de Lombok pour rendre le développement plus efficace.
