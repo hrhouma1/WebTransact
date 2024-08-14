@@ -1,4 +1,6 @@
+----
 # Installation de Maven 3.9.0 et Java 17 sur Windows
+----
 
 Ce guide explique comment installer Java 17 et Maven 3.9.0 sur un système Windows et configurer les variables d'environnement nécessaires.
 
