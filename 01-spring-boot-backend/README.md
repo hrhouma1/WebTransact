@@ -1,7 +1,3 @@
-Voici un exemple de README qui introduit les apprenants à l'approche par projet, en expliquant le cadre des deux projets et l'utilisation d'un dossier théorique complémentaire.
-
----
-
 # 🎓 **Bienvenue dans votre parcours d'apprentissage par projet !**
 
 ---
