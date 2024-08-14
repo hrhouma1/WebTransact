@@ -8,10 +8,10 @@
    - **Ne pas utiliser WinZip**, car certains fichiers pourraient ne pas être extraits correctement.
 
 2. **Installation de Java 17** :
-   - Bien que Java 8 soit inclus, vous devez installer Java 17. Téléchargez-le depuis le site officiel de Java et suivez les instructions d'installation.
+   - Bien que Java 8 soit inclus, vous devez installer Java 17. Téléchargez-le depuis le site officiel de Java et suivez les instructions d'installation (**voir 02-atelier02**).
 
-3. **Installation de Maven** :
-   - Après avoir extrait le dossier `apache-maven-3.9.0`, ajoutez le chemin du dossier `bin` de Maven à votre variable d'environnement `PATH`.
+3. **Installation de Maven 3.9.0** :
+   - Après avoir extrait le dossier `apache-maven-3.9.0`, ajoutez le chemin du dossier `bin` de Maven à votre variable d'environnement `PATH` (**voir 02-atelier02**).
 
 4. **Configuration de Spring Tool Suite** :
    - Lancez l'IDE Spring Tool Suite en utilisant le dossier extrait ou en installant via le fichier `.zip`. Configurez l'IDE avec votre JDK (Java 17) et commencez à travailler sur vos projets Spring Boot.
