@@ -33,6 +33,7 @@ Ce guide explique comment installer Java 17 et Maven 3.9.0 sur un système Windo
      ```plaintext
      %JAVA_HOME%\bin
      ```
+   - **Assurez-vous de faire monter cette ligne en haut pour lui accorder la priorité en cas de présences d'autres versions de JAVA.**
    - Cliquez sur "OK" pour sauvegarder.
 
 5. **Vérifier l'installation de Java :**
@@ -64,6 +65,7 @@ Ce guide explique comment installer Java 17 et Maven 3.9.0 sur un système Windo
      ```plaintext
      %MAVEN_HOME%\bin
      ```
+   - *Assurez-vous de faire monter cette ligne en haut pour lui accorder la priorité en cas de présences d'autres versions de MAVEN.*
    - Cliquez sur "OK" pour sauvegarder.
 
 5. **Vérifier l'installation de Maven :**
