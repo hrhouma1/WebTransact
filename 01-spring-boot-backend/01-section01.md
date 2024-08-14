@@ -1,6 +1,4 @@
-Voici une suggestion d'animation ou d'annotation que vous pouvez utiliser pour introduire votre "Projet 1 - Hello World" dans un fichier README. Vous pouvez copier-coller le texte suivant dans votre fichier pour ajouter une touche décorative :
 
-```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📘 **Projet 1 - Hello World** 📘
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -19,9 +17,6 @@ Dans ce projet, nous allons créer un simple service web "Hello World" en utilis
 
 🎉 **Préparez-vous à coder !**
 ```
-
-Vous pouvez ajuster les emojis et le style selon vos préférences.
-
 
 -------
 # 1 - Introduction : 
