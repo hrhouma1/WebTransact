@@ -11,7 +11,7 @@ Dans le cadre de votre apprentissage du développement avec Spring Boot, nous av
 Nous avons choisi de baser votre apprentissage sur des projets concrets. Cela signifie que vous allez :
 - **Construire un projet de A à Z** : Le premier projet est une simple application "Hello World", qui vous permettra de vous familiariser avec les concepts de base de Spring Boot.
 - **Modifier et étendre un projet pré-développé** : Le second projet est un projet existant, que vous allez explorer, comprendre, puis améliorer en y ajoutant des fonctionnalités étape par étape.
-- Le reste est à venir
+- **TO DO**
 
 ### 📂 **Dossier Théorie**
 
@@ -95,6 +95,25 @@ Dans ce projet, vous allez travailler sur un projet pré-développé qui contien
 | - Accéder à Swagger                        | Tester l'interface de documentation Swagger via le navigateur.                                                           |
 
 ---
+
+---
+
+## 📘 **Projet 3 - TO DO **
+
+---
+
+## 📘 **Projet 4 - TO DO **
+
+
+---
+
+## 📘 **Projet 5 - TO DO **
+
+
+---
+
+## 📘 **Projet 6 - TO DO **
+
 
 ## 🏁 **Conclusion**
 
