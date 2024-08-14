@@ -1,6 +1,6 @@
 
 
-## Tuto Maven pour un Projet de Calculatrice
+# Tuto Maven pour un Projet de Calculatrice
 
 
 ---
