@@ -115,11 +115,36 @@ Pour créer manuellement la structure de dossiers, vous suivez les étapes dans 
    Utilisez un éditeur de texte pour créer `Calculator.java` et `CalculatorTest.java` dans leurs dossiers respectifs, puis copiez-collez le code fourni. Créez également le fichier `pom.xml` à la racine du projet (`CalculatorProject/`).
 
 
+------
+
+### 8.3. Création automatique du projet
+
 ---
+
+**Générez un projet Maven** en utilisant la commande suivante :
+
+   ```bash
+   mvn archetype:generate -DgroupId=com.example -DartifactId=calculator -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+   cd calculator
+   ```
+
+**Ouvrez le projet dans VS Code** :
+
+   ```bash
+   code .
+   ```
+
+**Renommer les fichiers App.java et AppTest.java**
+**Renommez les fichiers** suivants :
+   - `App.java` → `Calculator.java`
+   - `AppTest.java` → `CalculatorTest.java`
+
+
+------
 
 # 9. Calculator.java
 
-Créez le fichier `Calculator.java` dans le répertoire `src/main/java/com/example/` :
+Assurez vous d'avoir crée le fichier `Calculator.java` dans le répertoire `src/main/java/com/example/` :
 
 ```java
 package com.example;
