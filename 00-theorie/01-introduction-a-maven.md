@@ -1,14 +1,14 @@
-### Introduction à Maven
+# Introduction à Maven
 
 ---
 
-#### 1. Qu'est-ce que Maven ?
+# 1. Qu'est-ce que Maven ?
 
 Maven est un outil d'automatisation de build principalement utilisé pour les projets Java, mais il peut également être utilisé avec d'autres langages. Il simplifie le processus de build, la gestion des dépendances, et la gestion du cycle de vie des projets en fournissant une méthode standard pour décrire un projet, ses dépendances, et les étapes de build. Pour quelqu'un qui connaît Java mais qui est nouveau avec Maven, pensez à Maven comme un outil qui automatise la compilation de votre code Java, son empaquetage dans un fichier JAR, la gestion des bibliothèques tierces, et bien plus encore—tout cela avec seulement quelques commandes.
 
 ---
 
-#### 2. Pourquoi avons-nous besoin de Maven ?
+# 2. Pourquoi avons-nous besoin de Maven ?
 
 Lorsque vous travaillez sur des projets Java, en particulier des projets de grande envergure, la gestion des dépendances, la garantie de builds cohérents entre différents environnements, et la gestion de structures de projets complexes peuvent devenir des défis importants. Maven répond à ces défis en offrant :
 
@@ -20,6 +20,8 @@ Lorsque vous travaillez sur des projets Java, en particulier des projets de gran
 ---
 
 ### Comprendre le cycle de vie Maven
+
+![image](https://github.com/user-attachments/assets/59a966be-07e8-4cc8-9946-e3702cfe2072)
 
 (FIGURE 1 : Cycle de vie d'un livrable Maven)
 
@@ -37,6 +39,8 @@ Les phases du cycle de vie de Maven vous permettent d'automatiser l'ensemble du 
 
 ### Structure d'un projet Maven
 
+![image](https://github.com/user-attachments/assets/db695659-6a0b-4533-b126-e04214ddb0f4)
+
 (FIGURE 2 : Structure d'un livrable Maven)
 
 Chaque projet Maven possède une structure spécifique, qui inclut :
@@ -49,7 +53,7 @@ Chaque projet Maven possède une structure spécifique, qui inclut :
 
 ---
 
-### 8. Structure du projet
+# 8. Structure du projet
 
 Notre projet Maven devra suivre cette structure de répertoires :
 
@@ -113,7 +117,7 @@ Pour créer manuellement la structure de dossiers, vous suivez les étapes dans 
 
 ---
 
-### 9. Calculator.java
+# 9. Calculator.java
 
 Créez le fichier `Calculator.java` dans le répertoire `src/main/java/com/example/` :
 
@@ -144,7 +148,7 @@ public class Calculator {
 
 ---
 
-### 10. CalculatorTest.java
+# 10. CalculatorTest.java
 
 Créez le fichier `CalculatorTest.java` dans le répertoire `src/test/java/com/example/` :
 
@@ -185,7 +189,7 @@ public class CalculatorTest {
 
 ---
 
-### 11. pom.xml
+# 11. pom.xml
 
 Fichier `pom.xml` qui configure notre projet pour utiliser JUnit 4.12 pour les tests :
 
@@ -218,7 +222,7 @@ Fichier `pom.xml` qui configure notre projet pour utiliser JUnit 4.12 pour les t
 
 ---
 
-### 12. Exécution des commandes Maven
+# 12. Exécution des commandes Maven
 
 Vous pouvez exécuter les commandes Maven mentionnées précédemment dans le terminal ou CMD à la racine du projet (`CalculatorProject`), là où se trouve le fichier `pom.xml`.
 
@@ -233,7 +237,7 @@ Vous pouvez exécuter les commandes Maven mentionnées précédemment dans le te
 
 ---
 
-### 13. Combinaison de commandes Maven
+# 13. Combinaison de commandes Maven
 
 Dans les projets réels, il est courant de combiner plusieurs commandes Maven pour automatiser plusieurs étapes du cycle de vie du build en une seule commande. Par exemple, vous pouvez vouloir nettoyer le projet, compiler le code, exécuter les tests, et installer le package dans le dépôt local, le tout en une seule commande. Voici comment vous pouvez le faire :
 
@@ -262,7 +266,7 @@ Cette flexibilité de Maven vous permet d'adapter le processus de build à vos b
 
 ---
 
-### Conclusion
+# Conclusion
 
 En suivant le cycle de vie Maven, en comprenant la structure du projet, et en utilisant les commandes Maven courantes, vous pouvez gérer vos projets Java de manière plus efficace. Maven ne simplifie pas seulement le processus de build, mais impose également des bonnes pratiques et une standardisation, facilitant ainsi la collaboration au sein des équipes sur des projets complexes.
 
