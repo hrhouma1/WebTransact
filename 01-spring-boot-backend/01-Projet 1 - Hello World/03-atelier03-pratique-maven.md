@@ -174,89 +174,57 @@
 ---
 
 
-Here's how you can enhance your Maven tutorial by adding explanations for the additional commands and verifying the results:
+# Étape 11 : Modifier le test pour introduire une erreur
 
 ---
 
-# Étape 8 : Nettoyage du projet avec `mvn clean`
-
----
-
-1. **Exécutez la commande `mvn clean`** pour nettoyer votre projet Maven :
+1. **Modifiez le fichier `CalculatorTest.java`** pour introduire une erreur :
+   - Changez la valeur du test `testAdd` pour qu'il vérifie que `3 + 5` est égal à `50` au lieu de `8`.
+   - Trouvez la méthode `testAdd()` dans `CalculatorTest.java` et remplacez cette ligne :
+     ```java
+     Assert.assertEquals(8, calculator.add(3, 5));
+     ```
+     par :
+     ```java
+     Assert.assertEquals(50, calculator.add(3, 5));
+     ```
+2. **Exécutez les tests avec la commande `mvn test`** :
    ```bash
-   mvn clean
+   mvn test
    ```
-2. **Vérifiez que le répertoire `target` a été supprimé** :
-   - Après avoir exécuté `mvn clean`, Maven supprimera le répertoire `target` où sont stockés les fichiers compilés et les résultats des tests. Pour vérifier, allez dans le répertoire de votre projet `calculator` et assurez-vous que le dossier `target` n'existe plus.
+3. **Vérifiez l'échec du test** :
+   - Vous verrez que le test `testAdd` échoue, car le résultat attendu est incorrect. Ceci montre comment Maven vous aide à identifier les erreurs dans votre code.
 
 ---
 
-# Étape 9 : Construction du projet avec `mvn package`
+# Étape 12 : Corriger l'erreur et re-tester
 
 ---
 
-1. **Exécutez la commande `mvn package`** pour compiler le projet et créer un fichier JAR exécutable :
+1. **Corrigez l'erreur** en remettant la valeur correcte dans `CalculatorTest.java` :
+   - Remplacez :
+     ```java
+     Assert.assertEquals(50, calculator.add(3, 5));
+     ```
+     par :
+     ```java
+     Assert.assertEquals(8, calculator.add(3, 5));
+     ```
+2. **Recompilez le projet et exécutez les tests** pour vérifier que tout fonctionne correctement :
    ```bash
-   mvn package
+   mvn compile test
    ```
-2. **Vérifiez la création du fichier JAR** :
-   - Après l'exécution de `mvn package`, Maven compilera le code source et créera un fichier JAR dans le répertoire `target`. Accédez à `target` et vérifiez que le fichier `calculator-1.0-SNAPSHOT.jar` a bien été créé.
 
 ---
 
-# Étape 10 : Génération du site de documentation avec `mvn site`
+# Étape 13 : Combiner plusieurs commandes Maven
 
 ---
 
-1. **Exécutez la commande `mvn site`** pour générer la documentation du projet :
-   ```bash
-   mvn site
-   ```
-2. **Vérifiez la génération du site Javadoc** :
-   - Après avoir exécuté `mvn site`, Maven génère un site web de documentation dans le répertoire `target/site`. Pour visualiser la documentation Javadoc, ouvrez le fichier `index.html` situé dans `target/site` dans votre navigateur.
-
----
-
-Here's how you can enhance your Maven tutorial by adding explanations for the additional commands and verifying the results:
-
----
-
-# Étape 8 : Nettoyage du projet avec `mvn clean`
-
----
-
-1. **Exécutez la commande `mvn clean`** pour nettoyer votre projet Maven :
-   ```bash
-   mvn clean
-   ```
-2. **Vérifiez que le répertoire `target` a été supprimé** :
-   - Après avoir exécuté `mvn clean`, Maven supprimera le répertoire `target` où sont stockés les fichiers compilés et les résultats des tests. Pour vérifier, allez dans le répertoire de votre projet `calculator` et assurez-vous que le dossier `target` n'existe plus.
-
----
-
-# Étape 9 : Construction du projet avec `mvn package`
-
----
-
-1. **Exécutez la commande `mvn package`** pour compiler le projet et créer un fichier JAR exécutable :
-   ```bash
-   mvn package
-   ```
-2. **Vérifiez la création du fichier JAR** :
-   - Après l'exécution de `mvn package`, Maven compilera le code source et créera un fichier JAR dans le répertoire `target`. Accédez à `target` et vérifiez que le fichier `calculator-1.0-SNAPSHOT.jar` a bien été créé.
-
----
-
-# Étape 10 : Génération du site de documentation avec `mvn site`
-
----
-
-1. **Exécutez la commande `mvn site`** pour générer la documentation du projet :
-   ```bash
-   mvn site
-   ```
-2. **Vérifiez la génération du site Javadoc** :
-   - Après avoir exécuté `mvn site`, Maven génère un site web de documentation dans le répertoire `target/site`. Pour visualiser la documentation Javadoc, ouvrez le fichier `index.html` situé dans `target/site` dans votre navigateur.
-
----
-
+1. **Combinez plusieurs commandes Maven** pour compiler, tester, et empaqueter le projet en une seule ligne :
+   - Vous pouvez exécuter les commandes `mvn clean compile test package` en une seule fois pour effectuer toutes ces étapes d'un coup, comme cela se fait souvent dans la vraie vie :
+     ```bash
+     mvn clean compile test package
+     ```
+2. **Vérifiez les résultats** :
+   - Après l'exécution de cette commande, assurez-vous que les tests réussissent, le projet est compilé et le fichier JAR est généré dans le répertoire `target`.
