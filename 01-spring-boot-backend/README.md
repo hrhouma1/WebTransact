@@ -4,13 +4,14 @@
 
 ## 📝 **Introduction générale**
 
-Dans le cadre de votre apprentissage du développement avec Spring Boot, nous avons structuré ce cours autour de deux projets principaux. Cette approche par projet vous permettra de mettre en pratique les concepts clés tout en apprenant à résoudre des problèmes concrets. L'objectif est de vous offrir une immersion progressive dans l'univers de Spring Boot et de ses différentes fonctionnalités, tout en renforçant votre compréhension théorique grâce à un dossier dédié.
+Dans le cadre de votre apprentissage du développement avec Spring Boot, nous avons structuré ce cours autour de cinq mini-projets principaux. Cette approche par projet vous permettra de mettre en pratique les concepts clés tout en apprenant à résoudre des problèmes concrets. L'objectif est de vous offrir une immersion progressive dans l'univers de Spring Boot et de ses différentes fonctionnalités, tout en renforçant votre compréhension théorique grâce à un dossier dédié.
 
 ### 🧠 **Concept d'apprentissage par projet**
 
 Nous avons choisi de baser votre apprentissage sur des projets concrets. Cela signifie que vous allez :
 - **Construire un projet de A à Z** : Le premier projet est une simple application "Hello World", qui vous permettra de vous familiariser avec les concepts de base de Spring Boot.
 - **Modifier et étendre un projet pré-développé** : Le second projet est un projet existant, que vous allez explorer, comprendre, puis améliorer en y ajoutant des fonctionnalités étape par étape.
+- Le reste est à venir
 
 ### 📂 **Dossier Théorie**
 
