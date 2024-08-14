@@ -3,7 +3,7 @@
 Ce guide explique comment installer Java 17 et Maven 3.9.0 sur un système Windows et configurer les variables d'environnement nécessaires.
 
 ----
-## Étape 1: Installation de Java 17
+# 1 - Étape 1: Installation de Java 17
 ----
 
 1. **Télécharger Java 17 :**
@@ -41,7 +41,7 @@ Ce guide explique comment installer Java 17 et Maven 3.9.0 sur un système Windo
    - Vous devriez voir une sortie indiquant la version Java installée.
 
 ---
-## Étape 2: Installation de Maven 3.9.0
+# 2 - Étape 2: Installation de Maven 3.9.0
 ---
 
 1. **Télécharger Maven 3.9.0 :**
@@ -74,7 +74,7 @@ Ce guide explique comment installer Java 17 et Maven 3.9.0 sur un système Windo
      Apache Maven 3.9.0 (...)
      ```
 ---
-## Conclusion
+# 3 - Conclusion
 ---
 
 Vous avez maintenant installé Java 17 et Maven 3.9.0 sur votre machine Windows. Vous pouvez commencer à utiliser Maven pour gérer vos projets Java.
