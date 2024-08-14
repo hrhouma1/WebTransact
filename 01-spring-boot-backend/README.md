@@ -55,7 +55,7 @@ Dans ce premier projet, vous allez créer un simple service web "Hello World" en
 
 ---
 
-## 📘 **Projet 2 - Projet Pré-développé**
+## 📘 **Projet 2 - Projet Account (Pré-développé)**
 
 ### 🚀 **Bienvenue dans le deuxième projet !**
 
