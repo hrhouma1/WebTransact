@@ -29,6 +29,10 @@ Dans ce projet, nous allons travailler sur un projet pré-développé qui contie
 4. **Exécuter l'application sans IDE** : Lancer l'application à partir de la ligne de commande en utilisant Maven ou Gradle.
 5. **Résolution des erreurs potentielles** : Diagnostic et correction des erreurs courantes lors de l'exécution du projet.
 6. **Vérifier le bon fonctionnement** : Accéder à l'application via le navigateur pour s'assurer que tout fonctionne correctement.
+7. **Utiliser SQL over HTTP avec Spring Boot**
+8. **Tester et manipuler les endpoints avec Postman**
+9. **Implémenter une journalisation détaillée**
+10. **Documenter l'API avec Swagger**
 
 -----------------------------------
 # 📝 2 - Étapes et concepts :
