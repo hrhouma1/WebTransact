@@ -1,8 +1,31 @@
+Voici une suggestion d'animation ou d'annotation que vous pouvez utiliser pour introduire votre "Projet 1 - Hello World" dans un fichier README. Vous pouvez copier-coller le texte suivant dans votre fichier pour ajouter une touche décorative :
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📘 **Projet 1 - Hello World** 📘
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 **Bienvenue dans le premier projet !**
+
+Dans ce projet, nous allons créer un simple service web "Hello World" en utilisant Spring Boot et Spring Framework. Ce projet vous permettra de vous familiariser avec les concepts de base, tels que Maven, pom.xml, PostgreSQL, Docker, et Git.
+
+🎯 **Objectifs :**
+- Configurer le projet initial
+- Ajouter des dépendances
+- Créer les classes principales
+- Tester l'application
+- Ajouter une base de données
+- Travailler avec Lombok
+
+🎉 **Préparez-vous à coder !**
+```
+
+Vous pouvez ajuster les emojis et le style selon vos préférences.
+
+
 -------
 # 1 - Introduction : 
 -------
-
-- Ces étapes vous guideront depuis la configuration initiale du projet jusqu'à l'ajout d'une base de données PostgreSQL et l'utilisation de Lombok pour rendre le développement plus efficace.
 
 1. Utiliser Spring Initializr pour créer et configurer rapidement un projet Spring Boot.  
 2. Ajouter les dépendances nécessaires dans le fichier pom.xml.  
