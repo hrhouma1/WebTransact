@@ -298,4 +298,76 @@ Vous pouvez exécuter les commandes Maven mentionnées précédemment dans le te
 
 ---
 
-Cela conclut le document avec l'annexe incluse pour couvrir les aspects importants du projet Maven ainsi que l'intégration avec Jenkins.
+Voici le code des trois classes que vous devriez avoir dans votre projet Spring Boot :
+
+1. **Classe principale `DemoApplication.java`** :
+   ```java
+   package com.example.demo;
+
+   import org.springframework.boot.SpringApplication;
+   import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+   @SpringBootApplication
+   public class DemoApplication {
+
+       public static void main(String[] args) {
+           SpringApplication.run(DemoApplication.class, args);
+       }
+   }
+   ```
+
+2. **Classe `Greeting.java`** :
+   ```java
+   package com.example.demo;
+
+   public class Greeting {
+
+       private Long id;
+       private String content;
+
+       public Greeting(Long id, String content) {
+           this.id = id;
+           this.content = content;
+       }
+
+       public Long getId() {
+           return id;
+       }
+
+       public void setId(Long id) {
+           this.id = id;
+       }
+
+       public String getContent() {
+           return content;
+       }
+
+       public void setContent(String content) {
+           this.content = content;
+       }
+   }
+   ```
+
+3. **Classe `GreetingController.java`** :
+   ```java
+   package com.example.demo;
+
+   import java.util.concurrent.atomic.AtomicLong;
+   import org.springframework.web.bind.annotation.GetMapping;
+   import org.springframework.web.bind.annotation.RequestParam;
+   import org.springframework.web.bind.annotation.RestController;
+
+   @RestController
+   public class GreetingController {
+
+       private static final String template = "Hello, %s!";
+       private final AtomicLong counter = new AtomicLong();
+
+       @GetMapping("/greeting")
+       public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+           return new Greeting(counter.incrementAndGet(), String.format(template, name));
+       }
+   }
+   ```
+
+Avec ces trois classes, votre projet Spring Boot devrait pouvoir démarrer correctement et exposer un service REST sur le point de terminaison `/greeting`. Vous pouvez tester ce service en accédant à l'URL suivante : `http://localhost:8080/greeting?name=VotreNom`.
