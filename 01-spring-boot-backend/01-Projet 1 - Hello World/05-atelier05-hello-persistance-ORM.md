@@ -1,8 +1,4 @@
-D'accord ! Voici la version mise à jour avec les getters et setters écrits en entier lorsque Lombok n'est pas utilisé :
-
----
-
-# 🌟 **Projet 01 - Ajout de la base de données PostgreSQL avec Jakarta Persistence** 🌟
+# 🌟 **Projet 01 (partie 02) - Ajout de la base de données PostgreSQL avec Jakarta Persistence** 🌟
 
 ## 🗂️ **TABLE DES MATIÈRES**
 
