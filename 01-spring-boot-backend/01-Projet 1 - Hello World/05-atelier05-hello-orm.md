@@ -2,17 +2,17 @@
 
 ## 🗂️ **TABLE DES MATIÈRES**
 
-1. [Rappel rapide](#1---rappel-rapide)
-2. [Ajout de la base de données](#2---ajout-de-la-base-de-données)
+1. [Rappel rapide](#1-rappel-rapide)
+2. [Ajout de la base de données](#2-ajout-de-la-base-de-données)
    1. [(A) Les dépendances dans POM.XML](#21-a-les-dépendances-dans-pomxml)
    2. [(B) Modification du fichier application.properties](#22-b-modification-du-fichier-applicationproperties)
    3. [(C) Annotation du modèle ou du bean Greeting.java](#23-c-annotation-du-modèle-ou-du-bean-greetingjava)
    4. [(D) S’assurer que vous avez les getters et les setters et les constructeurs dans Greeting.java](#24-d-sassurer-que-vous-avez-les-getters-et-les-setters-et-les-constructeurs-dans-greetingjava)
    5. [(E) Création de la base de données haythem dans PostgreSQL avec les bons privilèges](#25-e-création-de-la-base-de-données-haythem-dans-postgresql-avec-les-bons-privilèges)
-3. [Exercice 1 : Refaire le projet avec Javax Persistence](#3---exercice-1--refaire-le-projet-avec-javax-persistence)
-4. [Exercice 2 : Configuration avec application.yml](#4---exercice-2--configuration-avec-applicationyml)
-5. [Exercice 3 : Supprimer les getters et setters avec Lombok](#5---exercice-3--supprimer-les-getters-et-setters-avec-lombok)
-6. [Exercice 4 : Recréer la base de données automatiquement](#6---exercice-4--recréer-la-base-de-données-automatiquement)
+3. [Exercice 1 : Refaire le projet avec Javax Persistence](#3-exercice-1-refaire-le-projet-avec-javax-persistence)
+4. [Exercice 2 : Configuration avec application.yml](#4-exercice-2-configuration-avec-applicationyml)
+5. [Exercice 3 : Supprimer les getters et setters avec Lombok](#5-exercice-3-supprimer-les-getters-et-setters-avec-lombok)
+6. [Exercice 4 : Recréer la base de données automatiquement](#6-exercice-4-recréer-la-base-de-données-automatiquement)
 
 ---
 
@@ -232,9 +232,9 @@ Supprimez les getters et setters manuels dans la classe `Greeting.java` et utili
 
 **Étapes :**
 1. Supprimez les méthodes `getId()`, `setId()`, `getContent()`, et `setContent()` dans `Greeting.java`.
-2. Ajoutez l'annotation `@Data` de Lombok
+2. Ajoutez l'annotation `@Data
 
- en haut de la classe.
+` de Lombok en haut de la classe.
 3. Recompilez et redémarrez votre application.
 4. Vérifiez dans PostgreSQL si la table `greeting` est correctement générée.
 
