@@ -18,7 +18,7 @@ Veuillez trouver les notes de support ci-dessous. 👇
 1. [Créer et importer le projet](#1---créer-et-importer-le-projet)
    1. [Starter ou Spring Initializr](#11--starter-ou-spring-initializr)
    2. [Ajout des dépendances](#12--ajout-des-dépendances)
-   3. [Ouvrir à STS, effectuer un import de type « Maven Projects », et sélection de pom.xml](#13--ouvrir-à-sts-effectuer-un-import-de-type-maven-projects-et-sélection-de-pomxml)
+   3. [Ouvrir dans VSCode, effectuer un import de type « Maven Projects », et sélection de pom.xml](#13--ouvrir-dans-vscode-effectuer-un-import-de-type-maven-projects-et-sélection-de-pomxml)
    4. [Créez la classe Greeting.java](#14--créez-la-classe-greetingjava)
    5. [Créez la classe GreetingController.java](#15--créez-la-classe-greetingcontrollerjava)
    6. [Observez et testez](#16--observez-et-testez)
@@ -31,31 +31,24 @@ Veuillez trouver les notes de support ci-dessous. 👇
 
 ### 1.1️⃣ - Starter ou Spring Initializr
 
-Pour démarrer le projet, utilisez [Spring Initializr](https://start.spring.io/). Choisissez les dépendances nécessaires et configurez votre projet comme illustré ci-dessous :
-
-![Spring Initializr](file-HgnCesVSgr9iOLaPgCgSc4lQ)
+Pour démarrer le projet, utilisez [Spring Initializr](https://start.spring.io/). Choisissez les dépendances nécessaires et configurez votre projet comme illustré ci-dessous.
 
 ### 1.2️⃣ - Ajout des dépendances
 
 Ajoutez les dépendances essentielles pour votre projet dans le fichier `pom.xml`. Voici les dépendances recommandées :
-
-![Ajout des dépendances](file-0kSFlMhig9GFBcitAjm4w34C)
 
 - **Spring Web** 🌐 : Pour créer des applications web RESTful.
 - **Lombok** ✂️ : Pour réduire le code boilerplate.
 - **Spring Data JPA** 📦 : Pour la persistance des données avec JPA.
 - **PostgreSQL Driver** 🛢️ : Pour connecter l'application à une base de données PostgreSQL.
 
-### 1.3️⃣ - Ouvrir à STS, effectuer un import de type « Maven Projects », et sélection de pom.xml
+### 1.3️⃣ - Ouvrir dans VSCode, effectuer un import de type « Maven Projects », et sélection de pom.xml
 
-Une fois le projet généré, déplacez-le dans votre workspace et importez-le dans Spring Tool Suite (STS) comme un projet Maven :
+Une fois le projet généré, déplacez-le dans votre espace de travail et ouvrez-le dans Visual Studio Code (VSCode) :
 
-![Ouvrir à STS](file-Wty1bcIaGhAKAr5uN0kMZJpX)
-
-1. Cliquez sur **File > Import**.
-2. Sélectionnez **Maven Projects** et importez le fichier `pom.xml` de votre projet.
-
-![Sélection de pom.xml](file-qX6u5pH1o47sf3SRkPerpY2V)
+1. Ouvrez VSCode et accédez à **File > Open Folder** pour ouvrir votre projet.
+2. Assurez-vous d'avoir l'extension **Maven for Java** installée dans VSCode pour gérer les projets Maven.
+3. Dans l'explorateur de projets, cliquez avec le bouton droit sur le fichier `pom.xml` et sélectionnez **Maven > Update Project** pour télécharger les dépendances.
 
 ### 1.4️⃣ - Créez la classe **Greeting.java**
 
@@ -92,8 +85,6 @@ public class Greeting {
 }
 ```
 
-![Créer la classe Greeting.java](file-jmG0ylEvKMc1MPRPYoa9bqu4)
-
 ### 1.5️⃣ - Créez la classe **GreetingController.java**
 
 Ensuite, créez un contrôleur pour gérer les requêtes HTTP. Voici un exemple pour `GreetingController.java` :
@@ -119,25 +110,54 @@ public class GreetingController {
 }
 ```
 
-![Créer la classe GreetingController.java](file-cHJAkNOl40viDWIRKO2fWjqO)
-
 ### 1.6️⃣ - **Observez et testez** 🧪
 
-Après avoir configuré les classes, il est temps de tester votre projet. Exécutez les commandes Maven suivantes pour nettoyer, compiler et lancer l'application :
+Après avoir configuré les classes, il est temps de tester votre projet. Utilisez les commandes Maven suivantes dans le terminal intégré de VSCode pour nettoyer, compiler et lancer l'application :
 
 1. **Maven clean** 🧹 : Nettoie le projet.
 2. **Maven install** 📦 : Compile et installe les dépendances nécessaires.
 3. **Spring Boot app** 🚀 : Lance l'application.
 
-Ensuite, saisissez l'URL suivante dans votre navigateur pour tester l'application : [http://localhost:8080/greeting?name=armestrong](http://localhost:8080/greeting?name=armestrong).
+```java
+mvn clean
+mvn install ==> erreur à cause des tests unitaires
+mvn install -DskipTests
+mvn spring-boot:run  ==> erreur à cause des dépendances non utilisés
+```
 
-![Observez et testez](file-SqkDW3KHTQEeDAjvfActhaT5)
+
 
 ### 1.7️⃣ - **Résolution d’erreurs** 🛠️
 
 #### 1.7.1️⃣ - Résolution de problèmes #1
 
 Si vous rencontrez une erreur de configuration, vérifiez si vous avez ajouté des dépendances inutilisées. Supprimez-les comme illustré :
+
+# Dépendances à supprimer
+```xml
+<!-- Dépendances à supprimer -->
+<dependency>
+   <groupId>org.projectlombok</groupId>
+   <artifactId>lombok</artifactId>
+   <optional>true</optional>
+</dependency>
+
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+<dependency>
+   <groupId>org.postgresql</groupId>
+   <artifactId>postgresql</artifactId>
+   <scope>runtime</scope>
+</dependency>
+```
+
+
+
+# Dépendances à garder
+
 
 ```xml
 <!-- Dépendances à supprimer -->
@@ -159,6 +179,15 @@ Si vous rencontrez une erreur de configuration, vérifiez si vous avez ajouté d
 </dependency>
 ```
 
+```java
+mvn clean
+mvn install -DskipTests
+mvn spring-boot:run 
+```
+
+Ensuite, saisissez l'URL suivante dans votre navigateur pour tester l'application : [http://localhost:8080/greeting?name=armestrong](http://localhost:8080/greeting?name=armestrong).
+
+
 #### 1.7.2️⃣ - Résolution de problèmes #2
 
 Si le port 8080 est déjà utilisé, vous pouvez soit changer de port dans `application.properties`, soit tuer le processus en cours.
@@ -179,18 +208,13 @@ Si le port 8080 est déjà utilisé, vous pouvez soit changer de port dans `appl
   taskkill /F /PID pid_number
   ```
 
-![Résolution d’erreurs](file-7m2bZZ1AbFbcgeGFaGyE6vs3)
-
 ---
 
 🎯 Ce tutoriel vous guide étape par étape pour créer et configurer un projet Spring Boot simple avec une classe Greeting et un contrôleur, tout en vous aidant à résoudre les erreurs courantes que vous pourriez rencontrer en cours de route. Les images fournissent un support visuel pour chaque étape, rendant le processus plus facile à suivre. 📸
 
-
-# ==> Étape suivante : Ajout de la persistance et de la base de donnée PostgreSQL
-
+# ==> Étape suivante : Ajout de la persistance et de la base de données PostgreSQL
 
 ```yaml
-
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
