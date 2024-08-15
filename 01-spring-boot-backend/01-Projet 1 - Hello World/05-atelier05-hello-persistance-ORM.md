@@ -117,12 +117,10 @@ Vérifiez que la classe `Greeting.java` contient bien les getters, setters et co
 **Important :** À ce stade, vous devez créer la base de données `haythem` dans PostgreSQL. Pour ce faire, suivez les étapes ci-dessous :
 
 1. **Créer un rôle utilisateur** : Accédez à "Login/Group Roles" et créez un nouveau rôle `hrgres` avec les privilèges appropriés.
-
-   ![Créer un rôle](file-cOyf6fHKxOkqRv9LM0AxF5At)
-
 2. **Configurer les privilèges** : Assurez-vous que le rôle dispose des privilèges nécessaires comme la possibilité de créer des bases de données.
 
-   ![Configurer les privilèges](file-3BQb0IKekE59xoubbRMKLZmw)
+![image](https://github.com/user-attachments/assets/c6539777-5fca-4366-ab00-6fe2a38749b5)
+
 
 3. **Créer la base de données** : Créez une nouvelle base de données appelée `haythem` et attribuez-la à l'utilisateur `hrgres`.
 
