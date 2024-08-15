@@ -210,9 +210,9 @@ Après avoir configuré le fichier `application.properties` et annoté correctem
    - Suivi d'un **Maven install** pour compiler et installer les dépendances.
    - Enfin, lancez l'application avec **Spring Boot App**.
 
-   ![Maven clean](file-z3bgfEVMubXBATs1MCp6VzVK)  
-   ![Maven install](file-wP62dF63YURDsOZFK9mqziwc)  
-   ![Spring Boot App](file-KOo5SdI8EUgjyLAVY48AggTY)  
+
+ ![image](https://github.com/user-attachments/assets/5d3ddf50-6f3b-4ce1-a1c8-c36e1d9b55d3)
+
 
 2. **Accéder à l'URL suivante pour tester le endpoint** :
 
@@ -228,7 +228,10 @@ Après avoir configuré le fichier `application.properties` et annoté correctem
    - Naviguez vers la base de données `haythem` et sélectionnez la table `greeting` sous le schéma `public`.
    - Rafraîchissez la vue pour voir les nouvelles entrées dans la table `greeting` comme illustré dans l'image ci-dessous.
 
-   ![Vérifier dans PostgreSQL](file-2M3EFwCmX9RdwlDKAt7tlwGP)
+![image](https://github.com/user-attachments/assets/a5957ca0-3a93-4b33-948b-80681f463311)
+![image](https://github.com/user-attachments/assets/f940fc50-b255-4ccd-a04a-b31ef8dbe693)
+
+
 
    - Vous pouvez exécuter la requête SQL suivante pour voir les données insérées :
 
