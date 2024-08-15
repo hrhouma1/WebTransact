@@ -14,6 +14,7 @@
 5. [Exercice 2 : Configuration avec application.yml](#5-exercice-2-configuration-avec-applicationyml)
 6. [Exercice 3 : Supprimer les getters et setters avec Lombok](#6-exercice-3-supprimer-les-getters-et-setters-avec-lombok)
 7. [Exercice 4 : Recréer la base de données automatiquement](#7-exercice-4-recréer-la-base-de-données-automatiquement)
+8. [Exercice 5 : Refaire tout le travail avec une autre base de données (MySQL, SQL Server, ou Oracle)](#8-exercice-5-refaire-tout-le-travail-avec-une-autre-base-de-données-mysql-sql-server-ou-oracle)
 
 ---
 
@@ -436,6 +437,146 @@ Recréez la base de données `haythem` automatiquement sans avoir besoin de la c
    ```
 
    **⚠️ Explication :** Avec `create-drop`, la base de données est créée au démarrage de l'application et supprimée à l'arrêt. Cela vous permet de recréer automatiquement la base de données pour les tests, mais attention, cette configuration n'est pas recommandée en production.
+
+---
+
+
+## 8️⃣ **Exercice 5 : Refaire tout le travail avec une autre base de données (MySQL, SQL Server, ou Oracle)**
+
+### 📝 **Enoncé**
+
+Refaites l'intégralité du projet en utilisant une autre base de données que PostgreSQL. Vous pouvez choisir entre MySQL, SQL Server, ou Oracle.
+
+**Étapes :**
+
+1. **Choisir une autre base de données :**
+   - MySQL
+   - SQL Server
+   - Oracle
+
+2. **Mettre à jour les dépendances dans le fichier `pom.xml` :**
+   - Remplacez la dépendance PostgreSQL par celle correspondant à la base de données choisie.
+   - Exemple pour MySQL :
+     ```xml
+     <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <scope>runtime</scope>
+     </dependency>
+     ```
+   - Pour SQL Server :
+     ```xml
+     <dependency>
+         <groupId>com.microsoft.sqlserver</groupId>
+         <artifactId>mssql-jdbc</artifactId>
+         <scope>runtime</scope>
+     </dependency>
+     ```
+   - Pour Oracle :
+     ```xml
+     <dependency>
+         <groupId>com.oracle.database.jdbc</groupId>
+         <artifactId>ojdbc8</artifactId>
+         <scope>runtime</scope>
+     </dependency>
+     ```
+
+3. **Modifier le fichier `application.properties` pour correspondre à la nouvelle base de données :**
+   - Exemple pour MySQL :
+     ```properties
+     spring.datasource.url=jdbc:mysql://localhost:3306/haythem?useSSL=false
+     spring.datasource.username=root
+     spring.datasource.password=rootpassword
+     spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+     spring.jpa.hibernate.ddl-auto=update
+     ```
+   - Exemple pour SQL Server :
+     ```properties
+     spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=haythem
+     spring.datasource.username=sa
+     spring.datasource.password=yourStrong(!)Password
+     spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+     spring.jpa.hibernate.ddl-auto=update
+     ```
+   - Exemple pour Oracle :
+     ```properties
+     spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+     spring.datasource.username=system
+     spring.datasource.password=oraclepassword
+     spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.Oracle12cDialect
+     spring.jpa.hibernate.ddl-auto=update
+     ```
+
+   - **Remarque :** Pour MySQL, l'utilisateur par défaut est `root` avec un mot de passe souvent `root` ou `rootpassword` pour les configurations locales. Assurez-vous de remplacer ces valeurs avec celles que vous utilisez réellement.
+
+4. **Créer la nouvelle base de données et les utilisateurs avec les bons privilèges :**
+   - **Pour MySQL :**
+     - Connectez-vous à votre serveur MySQL à l'aide d'un client comme MySQL Workbench ou en ligne de commande.
+     - Exécutez les commandes suivantes pour créer la base de données `haythem` et configurer un utilisateur avec les privilèges nécessaires :
+       ```sql
+       CREATE DATABASE haythem;
+       CREATE USER 'root'@'localhost' IDENTIFIED BY 'rootpassword';
+       GRANT ALL PRIVILEGES ON haythem.* TO 'root'@'localhost';
+       FLUSH PRIVILEGES;
+       ```
+   - **Pour SQL Server :**
+     - Utilisez SQL Server Management Studio ou un autre client compatible.
+     - Exécutez les commandes suivantes :
+       ```sql
+       CREATE DATABASE haythem;
+       ALTER LOGIN sa WITH PASSWORD = 'yourStrong(!)Password';
+       USE haythem;
+       ```
+   - **Pour Oracle :**
+     - Utilisez SQL*Plus ou Oracle SQL Developer.
+     - Exécutez les commandes suivantes :
+       ```sql
+       CREATE USER system IDENTIFIED BY oraclepassword;
+       GRANT ALL PRIVILEGES TO system;
+       ```
+
+5. **Vérifier et tester :**
+   - **Recompilez et exécutez** votre projet en utilisant la nouvelle base de données.
+   - **Accédez au même endpoint** `http://localhost:8080/greeting?name=SpringUser` pour tester l'application.
+   - **Vérifiez que les données sont bien enregistrées** dans la nouvelle base de données. Utilisez les commandes SQL appropriées pour vérifier les entrées dans la table `greeting`.
+
+### ✅ **Correction**
+
+1. **Dépendances pour MySQL dans `pom.xml` :**
+
+   ```xml
+   <dependency>
+       <groupId>mysql</groupId>
+       <artifactId>mysql-connector-java</artifactId>
+       <scope>runtime</scope>
+   </dependency>
+   ```
+
+2. **Configuration du fichier `application.properties` pour MySQL :**
+
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/haythem?useSSL=false
+   spring.datasource.username=root
+   spring.datasource.password=rootpassword
+   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+   spring.jpa.hibernate.ddl-auto=update
+   ```
+
+3. **Création de la base de données et de l'utilisateur dans MySQL :**
+
+   - Dans MySQL, exécutez les commandes suivantes :
+     ```sql
+     CREATE DATABASE haythem;
+     CREATE USER 'root'@'localhost' IDENTIFIED BY 'rootpassword';
+     GRANT ALL PRIVILEGES ON haythem.* TO 'root'@'localhost';
+     FLUSH PRIVILEGES;
+     ```
+
+4. **Vérification :**
+   - Recompilez le projet et assurez-vous que l'application fonctionne comme attendu avec la nouvelle base de données.
+   - Utilisez un client SQL pour vérifier que les données sont bien insérées dans la base de données `haythem`.
+
+   **Remarque :** Assurez-vous que MySQL, SQL Server ou Oracle sont bien installés et configurés sur votre machine avant de réaliser cet exercice. Si vous rencontrez des problèmes de connexion, vérifiez que le serveur de base de données est en cours d'exécution et que les informations de connexion dans `application.properties` sont correctes.
 
 ---
 
