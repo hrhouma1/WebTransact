@@ -4,11 +4,17 @@
 
 # 1. Qu'est-ce que Maven ?
 
+---
+
+
 Maven est un outil d'automatisation de build principalement utilisé pour les projets Java, mais il peut également être utilisé avec d'autres langages. Il simplifie le processus de build, la gestion des dépendances, et la gestion du cycle de vie des projets en fournissant une méthode standard pour décrire un projet, ses dépendances, et les étapes de build. Pour quelqu'un qui connaît Java mais qui est nouveau avec Maven, pensez à Maven comme un outil qui automatise la compilation de votre code Java, son empaquetage dans un fichier JAR, la gestion des bibliothèques tierces, et bien plus encore—tout cela avec seulement quelques commandes.
 
 ---
 
 # 2. Pourquoi avons-nous besoin de Maven ?
+
+---
+
 
 Lorsque vous travaillez sur des projets Java, en particulier des projets de grande envergure, la gestion des dépendances, la garantie de builds cohérents entre différents environnements, et la gestion de structures de projets complexes peuvent devenir des défis importants. Maven répond à ces défis en offrant :
 
@@ -19,7 +25,10 @@ Lorsque vous travaillez sur des projets Java, en particulier des projets de gran
 
 ---
 
-### Comprendre le cycle de vie Maven
+# 3. Comprendre le cycle de vie Maven
+
+---
+
 
 ![image](https://github.com/user-attachments/assets/59a966be-07e8-4cc8-9946-e3702cfe2072)
 
@@ -37,7 +46,10 @@ Les phases du cycle de vie de Maven vous permettent d'automatiser l'ensemble du 
 
 ---
 
-### Structure d'un projet Maven
+# 4. Structure d'un projet Maven
+
+---
+
 
 ![image](https://github.com/user-attachments/assets/db695659-6a0b-4533-b126-e04214ddb0f4)
 
@@ -53,7 +65,9 @@ Chaque projet Maven possède une structure spécifique, qui inclut :
 
 ---
 
-# 8. Structure du projet
+# 5. Structure du projet
+
+---
 
 Notre projet Maven devra suivre cette structure de répertoires :
 
@@ -76,7 +90,7 @@ CalculatorProject/
 
 ---
 
-### 8.1. Commandes Maven couramment utilisées
+### 5.1. Commandes Maven couramment utilisées
 
 Voici un ensemble de commandes Maven couramment utilisées. Ces commandes sont exécutées dans le terminal ou l'invite de commande (cmd) à la racine du projet, où se trouve le fichier `pom.xml`.
 
@@ -97,7 +111,7 @@ Créer cette structure de projet pour un projet Maven peut être effectué de de
 
 ---
 
-### 8.2. Création manuelle du projet
+### 5.2. Création manuelle du projet
 
 Pour créer manuellement la structure de dossiers, vous suivez les étapes dans l'explorateur de fichiers de votre système d'exploitation ou via le terminal/invite de commandes :
 
@@ -117,7 +131,7 @@ Pour créer manuellement la structure de dossiers, vous suivez les étapes dans 
 
 ------
 
-### 8.3. Création automatique du projet
+### 5.3. Création automatique du projet
 
 ---
 
@@ -142,7 +156,7 @@ Pour créer manuellement la structure de dossiers, vous suivez les étapes dans 
 
 ------
 
-# 9. Calculator.java
+# 6. Calculator.java
 
 Assurez vous d'avoir crée le fichier `Calculator.java` dans le répertoire `src/main/java/com/example/` :
 
@@ -173,7 +187,7 @@ public class Calculator {
 
 ---
 
-# 10. CalculatorTest.java
+# 7. CalculatorTest.java
 
 Créez le fichier `CalculatorTest.java` dans le répertoire `src/test/java/com/example/` :
 
@@ -214,7 +228,7 @@ public class CalculatorTest {
 
 ---
 
-# 11. pom.xml
+# 8. pom.xml
 
 Fichier `pom.xml` qui configure notre projet pour utiliser JUnit 4.12 pour les tests :
 
@@ -247,7 +261,7 @@ Fichier `pom.xml` qui configure notre projet pour utiliser JUnit 4.12 pour les t
 
 ---
 
-# 12. Exécution des commandes Maven
+# 9. Exécution des commandes Maven
 
 Vous pouvez exécuter les commandes Maven mentionnées précédemment dans le terminal ou CMD à la racine du projet (`CalculatorProject`), là où se trouve le fichier `pom.xml`.
 
@@ -262,7 +276,7 @@ Vous pouvez exécuter les commandes Maven mentionnées précédemment dans le te
 
 ---
 
-# 13. Combinaison de commandes Maven
+# 10. Combinaison de commandes Maven
 
 Dans les projets réels, il est courant de combiner plusieurs commandes Maven pour automatiser plusieurs étapes du cycle de vie du build en une seule commande. Par exemple, vous pouvez vouloir nettoyer le projet, compiler le code, exécuter les tests, et installer le package dans le dépôt local, le tout en une seule commande. Voici comment vous pouvez le faire :
 
