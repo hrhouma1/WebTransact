@@ -118,13 +118,10 @@ Vérifiez que la classe `Greeting.java` contient bien les getters, setters et co
 
 1. **Créer un rôle utilisateur** : Accédez à "Login/Group Roles" et créez un nouveau rôle `hrgres` avec les privilèges appropriés.
 2. **Configurer les privilèges** : Assurez-vous que le rôle dispose des privilèges nécessaires comme la possibilité de créer des bases de données.
-
 ![image](https://github.com/user-attachments/assets/c6539777-5fca-4366-ab00-6fe2a38749b5)
-
-
 3. **Créer la base de données** : Créez une nouvelle base de données appelée `haythem` et attribuez-la à l'utilisateur `hrgres`.
+![image](https://github.com/user-attachments/assets/26e1c3dc-675b-4324-ae5d-ea4cd00a0305)
 
-   ![Créer la base de données](file-RDmHKyB2UDW2s4a2OAHvP8E7)
 
 ---
 
