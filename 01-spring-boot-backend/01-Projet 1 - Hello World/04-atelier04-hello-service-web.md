@@ -158,25 +158,18 @@ Si vous rencontrez une erreur de configuration, vérifiez si vous avez ajouté d
 
 # Dépendances à garder
 
-
 ```xml
-<!-- Dépendances à supprimer -->
-<dependency>
-   <groupId>org.projectlombok</groupId>
-   <artifactId>lombok</artifactId>
-   <optional>true</optional>
-</dependency>
+<!-- Dépendances à garder -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
-<dependency>
-   <groupId>org.springframework.boot</groupId>
-   <artifactId>spring-boot-starter-data-jpa</artifactId>
-</dependency>
-
-<dependency>
-   <groupId>org.postgresql</groupId>
-   <artifactId>postgresql</artifactId>
-   <scope>runtime</scope>
-</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 ```
 
 ```java
