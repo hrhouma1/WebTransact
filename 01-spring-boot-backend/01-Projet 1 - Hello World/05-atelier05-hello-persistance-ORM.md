@@ -49,7 +49,8 @@ Pour ajouter le support de la base de données PostgreSQL et l'API de persistanc
 
 ### 2.2 (B) 🛠️ **Modification du fichier application.properties**
 
-Configurez votre application pour utiliser PostgreSQL en modifiant le fichier `application.properties` comme suit :
+- Configurez votre application pour utiliser PostgreSQL en modifiant le fichier `application.properties` comme suit :
+- Changez haythem dans la première ligne de code avec le nom de la base de données désirée.
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/haythem?useSSL=false
