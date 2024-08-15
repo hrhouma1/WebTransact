@@ -184,3 +184,6 @@ Si le port 8080 est déjà utilisé, vous pouvez soit changer de port dans `appl
 ---
 
 🎯 Ce tutoriel vous guide étape par étape pour créer et configurer un projet Spring Boot simple avec une classe Greeting et un contrôleur, tout en vous aidant à résoudre les erreurs courantes que vous pourriez rencontrer en cours de route. Les images fournissent un support visuel pour chaque étape, rendant le processus plus facile à suivre. 📸
+
+
+# ==> Étape suivante : Ajout de la persistance et de la base de donnée PostgreSQL
