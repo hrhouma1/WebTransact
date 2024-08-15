@@ -441,3 +441,4 @@ Recréez la base de données `haythem` automatiquement sans avoir besoin de la c
 
 🎓 **Ce tutoriel et ses exercices vous permettent non seulement de maîtriser l'intégration de PostgreSQL avec Jakarta Persistence, mais aussi d'explorer des alternatives comme Javax Persistence, l'utilisation de Lombok, et la configuration avancée avec `application.yml`.** 🌟
 
+# ==> Étape suivante : Ajout de la base de donnée mémoire H2
