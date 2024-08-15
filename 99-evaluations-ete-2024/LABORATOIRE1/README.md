@@ -1,4 +1,4 @@
-# Laboratoire 1 - Développement Avancé des Fonctionnalités CRUD pour une Application de Gestion de Cartes
+# Laboratoire 1 - Développement des Fonctionnalités CRUD pour une Application de Gestion de Cartes
 
 ## Date limite de remise : À VENIR !
 
