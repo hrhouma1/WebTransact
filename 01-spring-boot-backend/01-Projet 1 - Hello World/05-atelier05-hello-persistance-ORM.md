@@ -1,4 +1,4 @@
-# 🌟 **Projet 01 (partie 02) - Ajout de la base de données PostgreSQL avec Jakarta Persistence** 🌟
+# 🌟 **Projet 01 (suite de l'atelier 04) - Ajout de la base de données PostgreSQL avec Jakarta Persistence** 🌟
 
 ## 🗂️ **TABLE DES MATIÈRES**
 
