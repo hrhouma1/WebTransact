@@ -214,7 +214,7 @@ Si le port 8080 est déjà utilisé, vous pouvez soit changer de port dans `appl
 
 # ==> Étape suivante : Ajout de la persistance et de la base de données PostgreSQL
 
-
+# Partie à ignorer !
 # Exercice : 
 - Expliquez l'annotation @SpringBootApplication dans la classe principale.
   
