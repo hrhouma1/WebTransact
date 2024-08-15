@@ -11,15 +11,15 @@
 
 ## TABLE DES MATIÈRES
 
-1. [Créer et importer le projet](#créer-et-importer-le-projet)
-   1. [Starter ou Spring Initializr](#starter-ou-spring-initializr)
-   2. [Ajout des dépendances](#ajout-des-dépendances)
-   3. [Ouvrir à STS, effectuer un import de type « Maven Projects », et sélection de pom.xml](#ouvrir-à-sts-effectuer-un-import-de-type-maven-projects-et-sélection-de-pomxml)
-   4. [Créez la classe Greeting.java](#créez-la-classe-greetingjava)
-   5. [Créez la classe GreetingController.java](#créez-la-classe-greetingcontrollerjava)
-   6. [Observez et testez](#observez-et-testez)
-      - [Résolution de problèmes #1](#résolution-de-problèmes-1)
-      - [Résolution de problèmes #2](#résolution-de-problèmes-2)
+1. [Créer et importer le projet](#1---créer-et-importer-le-projet)
+   1. [Starter ou Spring Initializr](#11--starter-ou-spring-initializr)
+   2. [Ajout des dépendances](#12--ajout-des-dépendances)
+   3. [Ouvrir à STS, effectuer un import de type « Maven Projects », et sélection de pom.xml](#13--ouvrir-à-sts-effectuer-un-import-de-type-maven-projects-et-sélection-de-pomxml)
+   4. [Créez la classe Greeting.java](#14--créez-la-classe-greetingjava)
+   5. [Créez la classe GreetingController.java](#15--créez-la-classe-greetingcontrollerjava)
+   6. [Observez et testez](#16--observez-et-testez)
+      - [Résolution de problèmes #1](#171--résolution-de-problèmes-1)
+      - [Résolution de problèmes #2](#172--résolution-de-problèmes-2)
 
 ---
 
@@ -180,3 +180,7 @@ Si le port 8080 est déjà utilisé, vous pouvez soit changer de port dans `appl
 ---
 
 Ce tuto vous guide étape par étape pour créer et configurer un projet Spring Boot simple avec une classe Greeting et un contrôleur, tout en vous aidant à résoudre les erreurs courantes que vous pourriez rencontrer en cours de route. Les images fournissent un support visuel pour chaque étape, rendant le processus plus facile à suivre.
+
+
+
+
