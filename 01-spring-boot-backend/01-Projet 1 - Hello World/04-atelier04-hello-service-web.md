@@ -187,3 +187,20 @@ Si le port 8080 est déjà utilisé, vous pouvez soit changer de port dans `appl
 
 
 # ==> Étape suivante : Ajout de la persistance et de la base de donnée PostgreSQL
+
+
+```yaml
+
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+```
