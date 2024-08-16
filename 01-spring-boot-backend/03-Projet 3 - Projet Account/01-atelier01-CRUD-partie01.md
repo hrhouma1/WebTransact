@@ -6,7 +6,7 @@ Ce guide vous expliquera comment cloner le projet, l'ouvrir, configurer la base 
 
 ### 1️⃣ Cloner le projet
 ```bash
-git clone https://github.com/hrhouma1/cards.git
+git clone https://github.com/hrhouma1/accounts-v1.git
 ```
 
 ### 2️⃣ Accéder au répertoire du projet
