@@ -50,8 +50,9 @@ Une fois l'application démarrée, connectez-vous à la console H2 en accédant 
 [http://localhost:8080/h2-console/](http://localhost:8080/h2-console/)
 
 
-## Attention : si vous utilisez HTTPS, il se peut que la page n'apparaisse pas. Dans tous les cas, testez http://localhost:8080/.
+## Attention (#1): si vous utilisez HTTPS, il se peut que la page n'apparaisse pas. Dans tous les cas, testez http://localhost:8080/.
 
+## Attention (#2): Si vous souhaitez changer le port de 8080 à 8081, il faut ajouter la ligne suivante dans `application.properties` : `server.port=8081`.
 
 Lorsque vous y êtes, utilisez les informations suivantes pour vous connecter :
 
