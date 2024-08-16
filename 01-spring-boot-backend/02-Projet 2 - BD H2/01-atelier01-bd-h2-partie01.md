@@ -1,4 +1,4 @@
-# 📚 Bases de données en mémoire vive H2 - partie 1
+# 📚 Bases de données en mémoire vive H2 - Partie 1
 
 - Ce travail est une version modifiée et améliorée du tutoriel disponible sur TutorialPoint.com.
 
@@ -49,10 +49,9 @@ Une fois l'application démarrée, connectez-vous à la console H2 en accédant 
 
 [http://localhost:8080/h2-console/](http://localhost:8080/h2-console/)
 
+**Attention (#1)** : Si vous utilisez HTTPS, il se peut que la page n'apparaisse pas. Dans tous les cas, testez [http://localhost:8080/](http://localhost:8080/).
 
-## Attention (#1): si vous utilisez HTTPS, il se peut que la page n'apparaisse pas. Dans tous les cas, testez http://localhost:8080/.
-
-## Attention (#2): Si vous souhaitez changer le port de 8080 à 8081, il faut ajouter la ligne suivante dans `application.properties` : `server.port=8081`.
+**Attention (#2)** : Si vous souhaitez changer le port de 8080 à 8081, il faut ajouter la ligne suivante dans `application.properties` : `server.port=8081`.
 
 Lorsque vous y êtes, utilisez les informations suivantes pour vous connecter :
 
@@ -71,8 +70,7 @@ SELECT * FROM STUDENT;
 
 - Ces requêtes vous permettront de voir les données présentes dans les tables **CITY** et **STUDENT**.
 
-
-### 🎯 Création et Manipulation de la Base de Données `HAYTHEM`
+### 🎯 Création et Manipulation de la Table `HAYTHEM`
 
 Vous pouvez également tester la création et l'insertion de données dans une nouvelle table `HAYTHEM` pour comprendre comment H2 gère les bases de données en mémoire. Suivez les étapes ci-dessous :
 
@@ -101,27 +99,28 @@ Vous pouvez également tester la création et l'insertion de données dans une n
    SELECT * FROM HAYTHEM;
    ```
 
-⚠️ **Remarque Importante** : La base de données en mémoire, y compris les tables et les données que vous créez, est temporaire et sera effacée lorsque vous vous déconnecterez ou arrêterez l'application.
+⚠️ **Remarque Importante** : La base de données en mémoire, y compris les tables et les données que vous créez, est temporaire et sera effacée lorsque vous arrêterez l'application. La simple déconnexion et reconnexion à la console H2 ne suffit pas pour observer la perte des données, car elles restent en mémoire tant que l'application est en cours d'exécution.
 
-### 🔄 Déconnexion et Reconnexion
+### 🔄 Arrêt et Redémarrage de l'Application
 
 Après avoir créé la table `HAYTHEM` et inséré des données, suivez ces étapes pour observer le comportement de la base de données en mémoire :
 
-1. **Déconnexion** : Déconnectez-vous de la console H2 en cliquant sur le bouton **Disconnect**.
+1. **Arrêt de l'application** : Arrêtez l'exécution de l'application en interrompant la commande `mvn spring-boot:run`.
 
-2. **Reconnexion** : Reconnectez-vous immédiatement en utilisant les mêmes informations de connexion.
+2. **Redémarrage de l'application** : Relancez l'application en exécutant à nouveau la commande `mvn spring-boot:run`.
 
-   ➡️ **Observation** : Vous remarquerez que la table `HAYTHEM` et les données insérées ne sont plus présentes après la reconnexion. Cela s'explique par le fait que H2 est configuré pour fonctionner en mémoire (`in-memory`), ce qui signifie que toutes les bases de données et les données créées dans cette session sont temporaires et non persistées.
+   ➡️ **Observation** : Vous remarquerez que la table `HAYTHEM` et les données insérées ne sont plus présentes après le redémarrage de l'application. Cela s'explique par le fait que H2 est configuré pour fonctionner en mémoire (`in-memory`), ce qui signifie que toutes les bases de données et les données créées dans cette session sont temporaires et non persistées sur le disque.
 
 ### 📝 Explication
 
 Pour bien comprendre pourquoi certaines données persistent et d'autres non, voici une explication détaillée :
 
-- **Bases de données `CITY` et `STUDENT`** : Ces tables existent parce qu'elles sont définies dans les fichiers `schema.sql` et `data.sql`. Ces fichiers sont chargés automatiquement par Spring Boot lors du démarrage de l'application. Les tables sont initialisées à chaque démarrage, ce qui leur permet de toujours être présentes en mémoire tant que l'application est en cours d'exécution.
+- **Tables `CITY` et `STUDENT`** : Ces tables existent parce qu'elles sont définies dans les fichiers `schema.sql` et `data.sql`. Ces fichiers sont chargés automatiquement par Spring Boot lors du démarrage de l'application. Les tables sont initialisées à chaque démarrage, ce qui leur permet de toujours être présentes en mémoire tant que l'application est en cours d'exécution.
 
-- **Table `HAYTHEM`** : Contrairement aux tables `CITY` et `STUDENT`, la table `HAYTHEM` que vous avez créée manuellement est stockée uniquement en mémoire. Elle disparaît lorsque l'application est arrêtée ou lorsque vous vous déconnectez de la console H2.
+- **Table `HAYTHEM`** : Contrairement aux tables `CITY` et `STUDENT`, la table `HAYTHEM` que vous avez créée manuellement est stockée uniquement en mémoire. Elle disparaît lorsque l'application est arrêtée, car aucune persistance sur disque n'a été configurée pour cette table.
 
+---
 
+# Vous êtes tombés dans le piège ! 🎯
 
-
-
+⚠️ **Remarque Importante** : La base de données en mémoire, y compris les tables et les données que vous créez, est temporaire et sera effacée lorsque vous arrêterez l'application. La simple déconnexion et reconnexion à la console H2 ne suffit pas pour observer la perte des données, car elles restent en mémoire tant que l'application est en cours d'exécution.
