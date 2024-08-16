@@ -1,4 +1,4 @@
-### Classe `Customer` 
+### Classe `Customer` (Sans relation)
 
 ```java
 package com.exemple.cards.model;
