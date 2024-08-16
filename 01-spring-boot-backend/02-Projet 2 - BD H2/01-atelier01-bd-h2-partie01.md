@@ -56,7 +56,7 @@ Une fois l'application démarrée, connectez-vous à la console H2 en accédant 
 
 Lorsque vous y êtes, utilisez les informations suivantes pour vous connecter :
 
-- **JDBC URL** : `jdbc:h2:mem:testdb`
+- **JDBC URL** : `jdbc:h2:mem:javatpoint`
 - **User Name** : `sa`
 - **Password** : (laissez vide)
 
