@@ -9,6 +9,7 @@
 
 ```bash
 git clone https://github.com/hrhouma1/h2-persistance-EX3.git
+cd h2-persistance-EX3
 ```
 
 ### 2. 🔍 Vérification des Fichiers Nécessaires
