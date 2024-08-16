@@ -1,6 +1,6 @@
-# 📚 README - Version 2 : Utilisation d'une Base de Données Persistante avec H2
+# 📚 Base de Données Persistante avec H2
 
-Cette version du projet vous guide pour utiliser H2 avec une base de données persistante sur le disque, en maintenant le même style et les mêmes fonctionnalités que la version précédente.
+Cette version du projet vous guide pour utiliser H2 avec une base de données persistante sur le disque.
 
 ## 🚀 Étapes pour Exécuter cette Version du Projet
 
