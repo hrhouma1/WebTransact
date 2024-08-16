@@ -79,10 +79,3 @@ public class Cards {
     private LocalDate createDt;
 }
 ```
-
-### Explications  :
-
-- **Customer** : La classe `Customer` contient les informations sur les clients, et elle a une relation un-à-plusieurs avec la classe `Cards` via la liste `cards`.
-
-- **Cards** : La classe `Cards` contient les informations sur les cartes et possède une relation plusieurs-à-un avec la classe `Customer`. Le champ `customer` est utilisé pour lier chaque carte à un client spécifique.
-
