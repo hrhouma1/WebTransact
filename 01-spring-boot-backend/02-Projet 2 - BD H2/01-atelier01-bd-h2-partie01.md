@@ -1,6 +1,6 @@
 # 📚 Bases de données en mémoire vive H2 - partie 1
 
-Ce travail est une version modifiée et améliorée du tutoriel disponible sur TutorialPoint.com.
+- Ce travail est une version modifiée et améliorée du tutoriel disponible sur TutorialPoint.com.
 
 ## 🚀 Étapes pour Exécuter ce Projet
 
