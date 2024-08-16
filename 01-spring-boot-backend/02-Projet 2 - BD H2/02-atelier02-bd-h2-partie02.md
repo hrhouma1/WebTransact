@@ -119,3 +119,26 @@ Avant de redémarrer l'application, supprimez les fichiers `schema.sql` et `data
 
 Une alternative consiste à ajouter les requêtes d'insertion directement dans le fichier `data.sql`. Cela garantit que les données sont initialisées à chaque démarrage de l'application, tout en conservant la possibilité de persister les modifications.
 
+
+# Annexe 1 : Contenu de schema.sql
+
+```sql
+DROP TABLE IF EXISTS TBL_EMPLOYEES;
+ 
+CREATE TABLE TBL_EMPLOYEES (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  first_name VARCHAR(250) NOT NULL,
+  last_name VARCHAR(250) NOT NULL,
+  email VARCHAR(250) DEFAULT NULL
+);
+```
+# Annexe 2 : Contenu de data.sql
+```sql
+INSERT INTO 
+	TBL_EMPLOYEES (first_name, last_name, email) 
+VALUES
+  	('Lokesh', 'Gupta', 'howtodoinjava@gmail.com'),
+  	('John', 'Doe', 'xyz@email.com');
+```
+
+# ==> Autre alternative pour ne pas perdre les données à cause du DROP TABLE IF EXISTS TBL_EMPLOYEES dans schema.sql qui est exécuté avec mvn spring-boot:run , renommer les fichiers comme illsutré dans 03-atelier03-bd-h2-partie03.md
