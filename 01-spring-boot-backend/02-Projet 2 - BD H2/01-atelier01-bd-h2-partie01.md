@@ -53,7 +53,22 @@ Une fois l'application démarrée, connectez-vous à la console H2 en accédant 
 
 **Attention (#2)** : Si vous souhaitez changer le port de 8080 à 8081, il faut ajouter la ligne suivante dans `application.properties` : `server.port=8081`.
 
-Lorsque vous y êtes, utilisez les informations suivantes pour vous connecter :
+# Question 1 : 
+- Observer application.properties et indiquez les valeurs de ces variables !
+
+```properties
+spring.datasource.url=?
+spring.datasource.driverClassName=?
+spring.datasource.username=?
+spring.datasource.password=?
+```
+
+- Saisir l'url suivante : http://localhost:8080/h2-console/
+- Quesque nous devons écrire dans le formulaire ?
+
+# Réponse : 
+
+- Lorsque vous y êtes sur la page (http://localhost:8080/h2-console/), utilisez les informations suivantes pour vous connecter :
 
 - **JDBC URL** : `jdbc:h2:mem:javatpoint`
 - **User Name** : `sa`
@@ -68,7 +83,19 @@ SELECT * FROM CITY;
 SELECT * FROM STUDENT;
 ```
 
+
+
 - Ces requêtes vous permettront de voir les données présentes dans les tables **CITY** et **STUDENT**.
+
+# Question 2 : 
+
+- **Quelle est l'origine des tables CITY et STUDENT ? Expliquez comment elles sont créées ou intégrées dans la base de données.**"
+
+# Réponse  : 
+- Observez les contenus de schema.sql et data.sql.
+- **schema.sql** : Ce fichier est utilisé pour la création de la base de données.
+- **data.sql** : Ce fichier ajoute des données initiales (seed data) à la base de données.
+
 
 ### 🎯 Création et Manipulation de la Table `HAYTHEM`
 
@@ -121,6 +148,6 @@ Pour bien comprendre pourquoi certaines données persistent et d'autres non, voi
 
 ---
 
-# Vous êtes tombés dans le piège ! 🎯
+# Vous êtes tombés dans le piège ? 🎯
 
 ⚠️ **Remarque Importante** : La base de données en mémoire, y compris les tables et les données que vous créez, est temporaire et sera effacée lorsque vous arrêterez l'application. La simple déconnexion et reconnexion à la console H2 ne suffit pas pour observer la perte des données, car elles restent en mémoire tant que l'application est en cours d'exécution.
