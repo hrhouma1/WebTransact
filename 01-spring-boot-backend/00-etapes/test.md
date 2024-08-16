@@ -1,3 +1,4 @@
+```ssh
 package com.exemple.cards.model;
 
 import jakarta.persistence.*;
@@ -26,13 +27,13 @@ public class Customer {
     private String address;
 
 }
+```
 
 
 
 
 
-
-
+```ssh
 package com.exemple.cards.model;
 
 import java.time.LocalDate;
@@ -71,4 +72,7 @@ public class Cards {
     private LocalDate createDt;
 
 }
+
+```
+
 
