@@ -2,9 +2,16 @@
 
 Cette version du projet vous guide pour utiliser H2 avec une base de données persistante sur le disque.
 
+
 ## 🚀 Étapes pour Exécuter cette Version du Projet
 
 ### 1. 🔍 Vérification des Fichiers Nécessaires
+
+```bash
+git clone https://github.com/hrhouma1/h2-persistance-EX2.git
+cd h2-persistance-EX2
+```
+
 
 Assurez-vous d'avoir les deux fichiers suivants dans votre projet :
 
