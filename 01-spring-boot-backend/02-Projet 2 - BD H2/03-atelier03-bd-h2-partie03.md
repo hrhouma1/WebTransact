@@ -123,7 +123,7 @@ Pour résoudre ce problème, vous devez ajouter ou vérifier la configuration su
 
 ```properties
 spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
+spring.h2.console.path=/h2
 ```
 
 Ces paramètres permettent d'activer la console H2 et de définir le chemin correct pour y accéder.
