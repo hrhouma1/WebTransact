@@ -146,13 +146,15 @@ VALUES
 # Note de fin : 
 
 ```
-  / \__
- (    @\___
- /         O
-/   (_____/
-/_____/   U
+   ____  
+  /    \ 
+ | o  o | 
+ |  __  | 
+  \____/  
+   |  |   
+  /    \  
+ /______\ 
 ```
-
 
 ## 🚨 **Attention** : Préserver les données lors de l'exécution de `mvn spring-boot:run`
 
