@@ -141,4 +141,30 @@ VALUES
   	('John', 'Doe', 'xyz@email.com');
 ```
 
-# ==> Autre alternative pour ne pas perdre les données à cause du DROP TABLE IF EXISTS TBL_EMPLOYEES dans schema.sql qui est exécuté avec mvn spring-boot:run , renommer les fichiers comme illsutré dans 03-atelier03-bd-h2-partie03.md
+
+
+# Note de fin : 
+
+```
+  / \__
+ (    @\___
+ /         O
+/   (_____/
+/_____/   U
+```
+
+
+## 🚨 **Attention** : Préserver les données lors de l'exécution de `mvn spring-boot:run`
+
+### 💡 **Alternative** pour éviter la perte de données lors de l'exécution du script `schema.sql`
+
+Lorsque vous exécutez la commande `mvn spring-boot:run`, le fichier `schema.sql` est automatiquement exécuté, ce qui inclut la commande `DROP TABLE IF EXISTS TBL_EMPLOYEES`. Cela pourrait entraîner la perte des données existantes dans la table.
+
+### 🛠️ **Solution** : Renommer les fichiers pour préserver vos données
+
+Une alternative consiste à renommer vos fichiers SQL pour éviter leur exécution automatique. Suivez l'illustration dans `03-atelier03-bd-h2-partie03.md` pour renommer correctement vos fichiers et ainsi préserver vos données.
+
+
+
+
+
