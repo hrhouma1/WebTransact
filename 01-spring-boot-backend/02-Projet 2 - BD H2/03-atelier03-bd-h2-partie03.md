@@ -73,7 +73,7 @@ mvn spring-boot:run
 
 ### 3. 🛠️ Compilation et Exécution du Projet
 
-Une fois les fichiers renommés et les modifications effectuées, vous pouvez compiler et exécuter le projet avec les commandes suivantes :
+Une fois les fichiers renommés et les modifications effectuées, vous avez compilé et exécuté le projet avec les commandes suivantes :
 
 ```bash
 mvn clean
