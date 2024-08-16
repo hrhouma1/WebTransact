@@ -7,10 +7,8 @@
 
 ### 1. 📥 Cloner le Dépôt Git
 
-Commencez par cloner le dépôt Git correspondant à cette version :
-
 ```bash
-git clone <votre-url-depot>
+git clone https://github.com/hrhouma1/h2-persistance-EX3.git
 ```
 
 ### 2. 🔍 Vérification des Fichiers Nécessaires
