@@ -1,6 +1,6 @@
 # 📚 Application Spring Boot avec Base de Données H2 Persistante - Version 3
 
-Cette version du projet est une amélioration significative par rapport aux versions précédentes. Elle utilise une base de données H2 persistante, permettant de conserver les données entre les redémarrages de l'application, contrairement à la version 1 qui utilisait uniquement une base de données en mémoire.
+Cette version du projet utilise une base de données H2 persistante, permettant de conserver les données entre les redémarrages de l'application, contrairement à la version 1 qui utilisait uniquement une base de données en mémoire.
 
 ## 🚀 Instructions pour Exécuter cette Version du Projet
 
