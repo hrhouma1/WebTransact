@@ -11,7 +11,7 @@ git clone https://github.com/hrhouma1/accounts-v1.git
 
 ### 2️⃣ Accéder au répertoire du projet
 ```bash
-cd cards
+cd accounts-v1
 ```
 
 ### 3️⃣ Ouvrir le projet dans votre éditeur de code (par exemple, Visual Studio Code)
