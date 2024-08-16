@@ -64,13 +64,31 @@ Après avoir inséré les nouvelles données, vérifiez qu'elles ont bien été 
 SELECT * FROM TBL_EMPLOYEES;
 ```
 
-### 🎯 Création d'une Nouvelle Base de Données
+### 🎯 Création d'une Nouvelle table
 
-Vous pouvez tester la création d'une nouvelle base de données en exécutant la commande SQL suivante :
+1. **Création de la Table `HAYTHEM`** : Une fois connecté, vous pouvez exécuter la commande SQL suivante pour créer une table `HAYTHEM` :
 
-```sql
-CREATE DATABASE HAYTHEM;
-```
+   ```sql
+   CREATE TABLE HAYTHEM (
+       ID INT PRIMARY KEY,
+       NAME VARCHAR(255)
+   );
+   ```
+
+2. **Insertion de Données dans la Table `HAYTHEM`** : Ajoutez des données dans la table `HAYTHEM` en utilisant les commandes suivantes :
+
+   ```sql
+   INSERT INTO HAYTHEM (ID, NAME) VALUES (1, 'Alice');
+   INSERT INTO HAYTHEM (ID, NAME) VALUES (2, 'Bob');
+   INSERT INTO HAYTHEM (ID, NAME) VALUES (3, 'Charlie');
+   ```
+
+3. **Consultation des Données** : Vérifiez que les données ont été insérées correctement en exécutant la requête suivante :
+
+   ```sql
+   SELECT * FROM HAYTHEM;
+   ```
+
 
 ### 🔄 Déconnexion et Reconnexion
 
