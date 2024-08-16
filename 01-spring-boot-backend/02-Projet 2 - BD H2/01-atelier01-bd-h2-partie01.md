@@ -64,36 +64,59 @@ SELECT * FROM CITY;
 SELECT * FROM STUDENT;
 ```
 
-Ces requêtes vous permettront de voir les données présentes dans les tables **CITY** et **STUDENT**.
+- Ces requêtes vous permettront de voir les données présentes dans les tables **CITY** et **STUDENT**.
 
-### 🎯 Création d'une Nouvelle Base de Données
 
-Vous pouvez également tester la création d'une nouvelle base de données pour comprendre comment H2 gère les bases de données en mémoire. Suivez les étapes ci-dessous :
+### 🎯 Création et Manipulation de la Base de Données `HAYTHEM`
+
+Vous pouvez également tester la création et l'insertion de données dans une nouvelle table `HAYTHEM` pour comprendre comment H2 gère les bases de données en mémoire. Suivez les étapes ci-dessous :
 
 1. **Connectez-vous à la Console H2** : Accédez à la console H2 en utilisant l'URL suivante : [http://localhost:8080/h2-console/](http://localhost:8080/h2-console/). Utilisez les informations de connexion appropriées.
 
-2. **Exécution de la Commande SQL** : Une fois connecté, vous pouvez exécuter la commande SQL suivante pour créer une nouvelle base de données appelée `HAYTHEM` :
+2. **Création de la Table `HAYTHEM`** : Une fois connecté, vous pouvez exécuter la commande SQL suivante pour créer une table `HAYTHEM` :
 
    ```sql
-   CREATE DATABASE HAYTHEM;
+   CREATE TABLE HAYTHEM (
+       ID INT PRIMARY KEY,
+       NAME VARCHAR(255)
+   );
    ```
 
-   ⚠️ **Remarque Importante** : La commande ci-dessus est acceptée par H2, mais il est important de noter que dans le mode en mémoire, la création d'une base de données distincte comme `HAYTHEM` n'est pas persistée au-delà de la session actuelle. Cette base de données existera uniquement durant la session en cours et sera effacée lorsque vous vous déconnecterez.
+3. **Insertion de Données dans la Table `HAYTHEM`** : Ajoutez des données dans la table `HAYTHEM` en utilisant les commandes suivantes :
+
+   ```sql
+   INSERT INTO HAYTHEM (ID, NAME) VALUES (1, 'Alice');
+   INSERT INTO HAYTHEM (ID, NAME) VALUES (2, 'Bob');
+   INSERT INTO HAYTHEM (ID, NAME) VALUES (3, 'Charlie');
+   ```
+
+4. **Consultation des Données** : Vérifiez que les données ont été insérées correctement en exécutant la requête suivante :
+
+   ```sql
+   SELECT * FROM HAYTHEM;
+   ```
+
+⚠️ **Remarque Importante** : La base de données en mémoire, y compris les tables et les données que vous créez, est temporaire et sera effacée lorsque vous vous déconnecterez ou arrêterez l'application.
 
 ### 🔄 Déconnexion et Reconnexion
 
-Après avoir créé la base de données `HAYTHEM`, suivez ces étapes pour observer le comportement de la base de données en mémoire :
+Après avoir créé la table `HAYTHEM` et inséré des données, suivez ces étapes pour observer le comportement de la base de données en mémoire :
 
 1. **Déconnexion** : Déconnectez-vous de la console H2 en cliquant sur le bouton **Disconnect**.
 
 2. **Reconnexion** : Reconnectez-vous immédiatement en utilisant les mêmes informations de connexion.
 
-   ➡️ **Observation** : Vous remarquerez que la base de données `HAYTHEM` n'est plus présente. Cela s'explique par le fait que H2 est configuré pour fonctionner en mémoire (`in-memory`), ce qui signifie que toutes les bases de données créées dans cette session sont temporaires et non persistées.
+   ➡️ **Observation** : Vous remarquerez que la table `HAYTHEM` et les données insérées ne sont plus présentes après la reconnexion. Cela s'explique par le fait que H2 est configuré pour fonctionner en mémoire (`in-memory`), ce qui signifie que toutes les bases de données et les données créées dans cette session sont temporaires et non persistées.
 
 ### 📝 Explication
 
 Pour bien comprendre pourquoi certaines données persistent et d'autres non, voici une explication détaillée :
 
 - **Bases de données `CITY` et `STUDENT`** : Ces tables existent parce qu'elles sont définies dans les fichiers `schema.sql` et `data.sql`. Ces fichiers sont chargés automatiquement par Spring Boot lors du démarrage de l'application. Les tables sont initialisées à chaque démarrage, ce qui leur permet de toujours être présentes en mémoire tant que l'application est en cours d'exécution.
-  
-- **Base de données `HAYTHEM`** : Contrairement aux tables `CITY` et `STUDENT`, la base de données `HAYTHEM` que vous avez créée manuellement n'est pas définie dans les fichiers d'initialisation `schema.sql` et `data.sql`. Elle est créée uniquement en mémoire et n'est pas sauvegardée sur le disque, ce qui explique pourquoi elle disparaît une fois que vous vous déconnectez de la console H2.
+
+- **Table `HAYTHEM`** : Contrairement aux tables `CITY` et `STUDENT`, la table `HAYTHEM` que vous avez créée manuellement est stockée uniquement en mémoire. Elle disparaît lorsque l'application est arrêtée ou lorsque vous vous déconnectez de la console H2.
+
+
+
+
+
