@@ -1,4 +1,4 @@
-# 📚 Base de Données Persistante avec H2
+# 📚 Base de Données Persistante avec H2 -version 2
 
 Cette version du projet vous guide pour utiliser H2 avec une base de données persistante sur le disque.
 
