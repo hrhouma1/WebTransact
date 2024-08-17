@@ -1,6 +1,6 @@
 ### 🏁 Partie 1 : Déploiement d'une Application Flask avec PostgreSQL sur une Instance Amazon EC2
 
-## Objectif : 
+## Objectif :
 - Configurer et déployer votre application Flask avec PostgreSQL sur une instance Amazon EC2.
 - Ce guide inclut chaque étape, depuis la création de l'instance EC2 jusqu'à la configuration des points de terminaison et le lancement de l'application.
 
@@ -37,6 +37,8 @@
      ssh -i "votre_clé.pem" ubuntu@<Public_IP_de_votre_instance>
      ```
 
+---
+
 #### 2️⃣ Installer les Dépendances sur l'Instance EC2
 
 1. **Mettre à jour les packages**
@@ -71,6 +73,8 @@
      GRANT ALL PRIVILEGES ON DATABASE flaskdb TO flaskuser;
      \q
      ```
+
+---
 
 #### 3️⃣ Configurer le Projet Flask
 
@@ -216,6 +220,8 @@
     gunicorn --bind 0.0.0.0:5000 wsgi:app
     ```
 
+---
+
 #### 4️⃣ Configurer Nginx pour Servir l'Application Flask
 
 1. **Configurer Nginx**
@@ -254,7 +260,11 @@
    sudo systemctl restart nginx
    ```
 
-4. **Configurer Gunicorn en tant que Service**
+---
+
+#### 5️⃣ Configurer Gunicorn en tant que Service
+
+1. **Créer un fichier de service pour Gunicorn**
    - Créez un fichier de service pour Gunicorn :
      ```bash
      sudo nano /etc/systemd/system/flask_accounts.service
@@ -270,7 +280,9 @@
    User=ubuntu
    Group=www-data
    WorkingDirectory=/home/ubuntu/flask_accounts
-   ExecStart=/home/ubuntu/flask_accounts/venv/bin/gunicorn --workers 3 --bind unix:flask_accounts.sock -m 007 wsgi:app
+   ExecStart=/home/ubuntu/fl
+
+ask_accounts/venv/bin/gunicorn --workers 3 --bind unix:flask_accounts.sock -m 007 wsgi:app
 
    [Install]
    WantedBy=multi-user.target
@@ -281,12 +293,7 @@
    - **WorkingDirectory** : Le répertoire racine de votre projet Flask.
    - **ExecStart** : Le chemin pour démarrer Gunicorn avec les options nécessaires.
 
-
-
-#### 5️⃣ Configurer Gunicorn en tant que Service (suite)
-
-   
-1. **Démarrer et activer le service Gunicorn**
+2. **Démarrer et activer le service Gunicorn**
    - Rechargez le système pour prendre en compte la nouvelle configuration du service :
      ```bash
      sudo systemctl daemon-reload
@@ -300,13 +307,15 @@
      sudo systemctl enable flask_accounts
      ```
 
-2. **Vérifier le statut du service**
+3. **Vérifier le statut du service**
    - Pour vérifier que Gunicorn fonctionne correctement, exécutez :
      ```bash
      sudo systemctl status flask_accounts
      ```
 
    Vous devriez voir un message indiquant que le service est actif (running).
+
+---
 
 #### 6️⃣ Configuration des Points de Terminaison (Endpoints)
 
@@ -389,4 +398,3 @@
 - **Optimisation** : Envisagez de configurer la mise en cache avec Redis pour améliorer les performances.
 - **Déploiement CI/CD** : Automatisez le déploiement de votre application avec des outils comme Jenkins ou GitHub Actions.
 
----
