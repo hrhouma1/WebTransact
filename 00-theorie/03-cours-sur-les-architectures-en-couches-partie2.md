@@ -49,3 +49,10 @@
 4. **Injection de Dépendances avec `@Autowired`** :
    - **Controller** dépend du **Service** et **Service** dépend du **Repository**. Ces dépendances sont injectées par Spring via l'annotation `@Autowired`.
 
+
+
+# Évaluation Formative:
+
+1. Existe-t-il d'autres mécanismes pour l'injection de dépendances en Spring ? Si oui, décrivez et comparez-les avec l'annotation `@Autowired`.
+2. En quoi ces mécanismes diffèrent-ils en termes de performance et de flexibilité ?
+3. Dans quels cas spécifiques serait-il préférable d'utiliser un mécanisme plutôt que l'autre ?
