@@ -48,8 +48,11 @@ public interface AccountsRepository extends CrudRepository<Accounts, Long> {
 
 ```
 
-### Question : pourquoi nous avons uniquement la méthode `findByCustomerId` ?
 
+
+# Question:
+
+Pourquoi le repository contient-il uniquement la méthode `findByCustomerId` ? Pourquoi les autres méthodes comme `save`, `delete`, ou `findAll` ne sont-elles pas visibles dans ce repository ? Expliquez la raison de leur absence apparente et comment elles sont réellement accessibles.
 
 # 3. Quand écrire une méthode personnalisée comme `findByCustomerId` ?
 Vous devez écrire une méthode personnalisée lorsque :
