@@ -98,5 +98,3 @@ git branch -M main
 # Pousser le contenu de la branche 'main' vers l'origine distante avec le nom de votre ami à droite
 git push -u origin main
 ```
-
-Ce script raconte une histoire à travers les commandes Git, où chaque commit capture un moment significatif dans l'évolution de votre CV. Les descriptions des commits sont conçues pour ajouter une touche narrative, comme si vous construisiez progressivement votre parcours professionnel avec l'aide de vos amis.
