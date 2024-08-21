@@ -217,3 +217,4 @@ git push origin main
 ### Conclusion
 
 Grâce à cette approche collaborative utilisant des branches et des mises à jour régulières via `git pull` et `rebase`, Sébastien et son équipe ont réussi à créer une application de partage pour les étudiants. Chaque membre a pu travailler de manière indépendante sur sa fonctionnalité, puis les intégrer harmonieusement dans une version stable du projet.
+
