@@ -333,8 +333,12 @@ git config --global user.name "HashMapScreft"
 git config --global user.email "screft@hotmail.com"
 ```
 
+----
 
-# Annexe 1 : 
+# Annexe 1 : Automatiser la création des profils
+
+----
+
 
 Je vous propose un exemple de création de différents profils Git et d'un script pour automatiser les changements de configuration.
 
@@ -404,7 +408,12 @@ chmod +x ~/.change_git_profile.sh
 
 Avec ce script, vous pouvez facilement changer de profil Git en exécutant une simple commande, ce qui est particulièrement utile si vous travaillez régulièrement avec plusieurs comptes GitHub.
 
+----
+
 # Annexe 2 : Méthode 2
+
+----
+
 
 - *Objectif* :  créer les fichiers de configuration et le script nécessaire pour gérer plusieurs profils Git, en utilisant `sh ~/change_git_profile.sh` pour exécuter le script.
 
