@@ -49,7 +49,7 @@ git config --global user.email "votreVraiEmailGithub"
 
 ### 6. Créer un fichier pour commencer à rédiger le CV
 
-Il crée un fichier appelé `votrenom.txt` pour commencer à raconter son histoire professionnelle :
+Il crée un fichier appelé `cvEric.txt` pour commencer à raconter son histoire professionnelle :
 
 ```bash
 touch cvEric.txt
@@ -159,7 +159,7 @@ git push origin main
 Eric ajoute maintenant ses réalisations les plus significatives avec l'aide de son ami à droite, montrant ainsi ses compétences et qualifications :
 
 ```bash
-echo "Je suis Paula. Je vais ajouter des certifications au cv d'ERIC -  AWS Certified Solutions Architect" >> cvEric.txt
+echo "Je suis Paula. Je vais ajouter des certifications au CV d'ERIC - AWS Certified Solutions Architect" >> cvEric.txt
 ```
 
 ### 20. Configurer les informations utilisateur de son ami à droite
@@ -194,13 +194,13 @@ Ainsi, Eric, avec l'aide de ses amis, a réussi à créer un CV qui non seulemen
 # Résumé 
 
 ```bash
-# Créer un nouveau répertoire appelé ProjetJava
+# Créer un nouveau répertoire appelé monCV
 mkdir monCV
 
-# Naviguer dans le répertoire ProjetJava
+# Naviguer dans le répertoire monCV
 cd monCV
 
-# Initialiser un dépôt Git local dans le répertoire ProjetJava
+# Initialiser un dépôt Git local dans le répertoire monCV
 git init
 
 # Vérifier l'état actuel du dépôt Git (affiche les fichiers suivis et non suivis)
@@ -212,16 +212,16 @@ git config --global user.name "votreUserGithub"
 # Configurer votre adresse email globale pour Git
 git config --global user.email "votreVraiEmailGithub"
 
-# Créer un nouveau fichier texte appelé votrenom.txt pour commencer à rédiger votre CV
-touch votrenom.txt
+# Créer un nouveau fichier texte appelé cvEric.txt pour commencer à rédiger votre CV
+touch cvEric.txt
 
-# Vérifier à nouveau l'état du dépôt Git (le fichier votrenom.txt apparaîtra comme non suivi)
+# Vérifier à nouveau l'état du dépôt Git (le fichier cvEric.txt apparaîtra comme non suivi)
 git status
 
-# Ajouter le fichier votrenom.txt au suivi dans Git pour que votre travail soit sauvegardé et prêt à être partagé
-git add votrenom.txt
+# Ajouter le fichier cvEric.txt au suivi dans Git pour que votre travail soit sauvegardé et prêt à être partagé
+git add cvEric.txt
 
-# Vérifier l'état du dépôt Git pour confirmer que votrenom.txt est maintenant suivi
+# Vérifier l'état du dépôt Git pour confirmer que cvEric.txt est maintenant suivi
 git status
 
 # Configurer votre nom d'utilisateur local pour ce dépôt Git
@@ -233,9 +233,6 @@ git config --local user.email "votreVraiEmailGithub"
 # Effectuer un commit pour immortaliser la première version de votre CV, comme si vous graviez votre premier chapitre dans l'histoire de votre carrière
 git commit -m "The journey begins: First draft of my CV added"
 
-# Supprimer l'origine distante actuelle si elle existe
-git remote remove origin
-
 # Ajouter une nouvelle origine distante pointant vers votre dépôt GitHub, où votre histoire numérique sera partagée avec le monde
 git remote add origin VOTRE_URL
 
@@ -246,7 +243,7 @@ git branch -M main
 git push -u origin main
 
 # Modification 1 : Vous commencez à écrire votre introduction, un premier aperçu de qui vous êtes et de vos aspirations
-echo "Bonjour, je m'appelle Eric, et je suis un développeur passionné par la technologie. Voici une brève introduction sur moi." >> votrenom.txt
+echo "Bonjour, je m'appelle Eric, et je suis un développeur passionné par la technologie. Voici une brève introduction sur moi." >> cvEric.txt
 
 # Configurer le nom d'utilisateur de votre ami à votre gauche pour ce dépôt Git
 git config --local user.name "usernameamiacotedevousa-gauche"
@@ -257,20 +254,13 @@ git config --local user.email "EmailGithubdevotreamiacotedevousa-gauche"
 # Effectuer un commit pour capturer ce moment où votre ami vous aide à raconter votre histoire
 git commit -m "A friend's touch: Introduction added by l'ami à gauche"
 
-# Supprimer l'origine distante actuelle si elle existe
-git remote remove origin
-
-# Ajouter une nouvelle origine distante pointant vers votre dépôt GitHub
-git remote add origin VOTRE_URL
-
-# Renommer la branche actuelle en 'main'
-git branch -M main
-
 # Pousser le contenu de la branche 'main' vers l'origine distante avec le nom de votre ami à gauche
-git push -u origin main
+git push origin main
 
-# Modification 2 : Vous ajoutez vos réalisations, les fruits de votre travail, pour montrer au monde ce que vous avez accompli
-echo "Ajout des certifications : AWS Certified Solutions Architect, Google Cloud Professional Data Engineer. Mise à jour des diplômes : Master en Informatique." >> votrenom.txt
+# Modification 2 : Vous ajoutez vos réalisations, les
+
+ fruits de votre travail, pour montrer au monde ce que vous avez accompli
+echo "Ajout des certifications : AWS Certified Solutions Architect, Google Cloud Professional Data Engineer. Mise à jour des diplômes : Master en Informatique." >> cvEric.txt
 
 # Configurer le nom d'utilisateur de votre ami à votre droite pour ce dépôt Git
 git config --local user.name "usernameamiacotedevousa-DROITE"
@@ -281,15 +271,6 @@ git config --local user.email "EmailGithubdevotreamiacotedevousa-DROITE"
 # Effectuer un commit pour immortaliser ces ajouts, comme si vous posiez une pierre angulaire dans l'édifice de votre carrière
 git commit -m "Milestones achieved: Certifications and diplomas added by l'ami à droite"
 
-# Supprimer l'origine distante actuelle si elle existe
-git remote remove origin
-
-# Ajouter une nouvelle origine distante pointant vers votre dépôt GitHub
-git remote add origin VOTRE_URL
-
-# Renommer la branche actuelle en 'main'
-git branch -M main
-
 # Pousser le contenu de la branche 'main' vers l'origine distante avec le nom de votre ami à droite
-git push -u origin main
+git push origin main
 ```
