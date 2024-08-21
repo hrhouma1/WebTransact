@@ -1,6 +1,6 @@
 ### L'histoire de Paula et ses coéquipiers : Collaborer avec Git pour créer un projet ensemble
 
-Paula, une étudiante en programmation, est très motivée par la gestion de projets en groupe. Elle décide de créer un projet avec l'aide de ses amis Eric, Ludovik, et Benjamin. Le projet consiste à développer une application web qui permet aux étudiants de partager leurs idées et ressources pour améliorer leur apprentissage.
+Paula, une étudiante en programmation, est très motivée par la gestion de projets en groupe. Elle décide de créer un projet avec l'aide de ses amis Eric, Ludovik, et Tommy. Le projet consiste à développer une application web qui permet aux étudiants de partager leurs idées et ressources pour améliorer leur apprentissage.
 
 Paula, en tant que chef de projet, initie la première version du projet, et chaque membre de l'équipe travaille sur une fonctionnalité distincte à travers différentes branches Git. Voici comment Paula et son équipe collaborent pour mener à bien ce projet.
 
@@ -108,9 +108,9 @@ git add db/schema.sql
 git commit -m "Database schema for users created"
 ```
 
-### 11. Benjamin intègre une fonctionnalité de messagerie
+### 11. Tommy intègre une fonctionnalité de messagerie
 
-Benjamin crée une branche `messaging` pour ajouter une fonctionnalité de messagerie entre étudiants :
+Tommy crée une branche `messaging` pour ajouter une fonctionnalité de messagerie entre étudiants :
 
 ```bash
 git checkout main
