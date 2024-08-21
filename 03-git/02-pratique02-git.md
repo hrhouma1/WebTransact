@@ -55,8 +55,7 @@ git config --global user.name "eric-michaud"
 git config --global user.email "michaud_e@hotmail.com"
 ```
 
-
-Replace the commands above with the appropriate user information when switching between users. If you need to frequently switch users, you can create different Git profiles or use a script to automate the configuration changes.
+Remplacez les commandes ci-dessus par les informations d'utilisateur appropriées lorsque vous changez d'utilisateur. Si vous avez besoin de changer fréquemment d'utilisateur, vous pouvez créer différents profils Git ou utiliser un script pour automatiser les changements de configuration (**Voir** *Annexe1*).
 
 ### 6. Créer un fichier pour commencer à rédiger le CV
 
@@ -333,3 +332,74 @@ Pour Michael (HashMapScreft):
 git config --global user.name "HashMapScreft"
 git config --global user.email "screft@hotmail.com"
 ```
+
+
+# Annexe 1 : 
+
+Je vous propose un exemple de création de différents profils Git et d'un script pour automatiser les changements de configuration.
+
+### 1. Création de différents profils Git
+
+Vous pouvez créer des fichiers de configuration Git spécifiques à chaque utilisateur dans votre répertoire personnel. Par exemple :
+
+- **~/.gitconfig_eric**
+```bash
+[user]
+    name = eric-michaud
+    email = michaud_e@hotmail.com
+```
+
+- **~/.gitconfig_sebastien**
+```bash
+[user]
+    name = sgag-2-6
+    email = seb.s.gag@gmail.com
+```
+
+- **~/.gitconfig_michael**
+```bash
+[user]
+    name = HashMapScreft
+    email = screft@hotmail.com
+```
+
+### 2. Script pour changer de profil
+
+Créez un script bash pour automatiser le changement de profil. Par exemple :
+
+**~/.change_git_profile.sh**
+```bash
+#!/bin/bash
+
+if [ "$1" == "eric" ]; then
+    cp ~/.gitconfig_eric ~/.gitconfig
+    echo "Profil Git changé pour Eric (eric-michaud)."
+elif [ "$1" == "sebastien" ]; then
+    cp ~/.gitconfig_sebastien ~/.gitconfig
+    echo "Profil Git changé pour Sébastien (sgag-2-6)."
+elif [ "$1" == "michael" ]; then
+    cp ~/.gitconfig_michael ~/.gitconfig
+    echo "Profil Git changé pour Michael (HashMapScreft)."
+else
+    echo "Usage : $0 {eric|sebastien|michael}"
+fi
+```
+
+### 3. Utilisation du script
+
+Donnez des permissions d'exécution au script et utilisez-le pour changer de profil :
+
+```bash
+chmod +x ~/.change_git_profile.sh
+
+# Pour changer de profil à Eric
+~/.change_git_profile.sh eric
+
+# Pour changer de profil à Sébastien
+~/.change_git_profile.sh sebastien
+
+# Pour changer de profil à Michael
+~/.change_git_profile.sh michael
+```
+
+Avec ce script, vous pouvez facilement changer de profil Git en exécutant une simple commande, ce qui est particulièrement utile si vous travaillez régulièrement avec plusieurs comptes GitHub.
