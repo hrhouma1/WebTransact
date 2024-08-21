@@ -47,6 +47,17 @@ git config --global user.name "votreUserGithub"
 git config --global user.email "votreVraiEmailGithub"
 ```
 
+### exemple : 
+
+Pour Eric :
+```bash
+git config --global user.name "eric-michaud"
+git config --global user.email "michaud_e@hotmail.com"
+```
+
+
+Replace the commands above with the appropriate user information when switching between users. If you need to frequently switch users, you can create different Git profiles or use a script to automate the configuration changes.
+
 ### 6. Créer un fichier pour commencer à rédiger le CV
 
 Il crée un fichier appelé `cvEric.txt` pour commencer à raconter son histoire professionnelle :
@@ -138,12 +149,25 @@ git config --local user.name "usernameamiacotedevousa-gauche"
 git config --local user.email "EmailGithubdevotreamiacotedevousa-gauche"
 ```
 
+### exemple : 
+
+
+Pour Sébastien (sgag-2-6):
+```bash
+git config --global user.name "sgag-2-6"
+git config --global user.email "seb.s.gag@gmail.com"
+```
+
+
 ### 17. Commit de l'introduction ajoutée
 
 Il scelle cette belle introduction dans un commit, honorant l'aide de son ami :
 
 ```bash
+git add .
+git status
 git commit -m "A friend's touch: Introduction added by l'ami à gauche"
+git status
 ```
 
 ### 18. Pousser les changements vers le dépôt distant
@@ -159,7 +183,7 @@ git push origin main
 Eric ajoute maintenant ses réalisations les plus significatives avec l'aide de son ami à droite, montrant ainsi ses compétences et qualifications :
 
 ```bash
-echo "Je suis Paula. Je vais ajouter des certifications au CV d'ERIC - AWS Certified Solutions Architect" >> cvEric.txt
+echo "Je suis Michael. Je vais ajouter des certifications au CV d'ERIC - AWS Certified Solutions Architect" >> cvEric.txt
 ```
 
 ### 20. Configurer les informations utilisateur de son ami à droite
@@ -171,12 +195,23 @@ git config --local user.name "usernameamiacotedevousa-DROITE"
 git config --local user.email "EmailGithubdevotreamiacotedevousa-DROITE"
 ```
 
+### exemple : 
+
+Pour Michael (HashMapScreft):
+```bash
+git config --global user.name "HashMapScreft"
+git config --global user.email "screft@hotmail.com"
+```
+
 ### 21. Commit des certifications et diplômes ajoutés
 
 Eric scelle cette étape importante dans un commit, posant une pierre angulaire dans l'édifice de sa carrière :
 
 ```bash
+git add .
+git status
 git commit -m "Milestones achieved: Certifications and diplomas added by l'ami à droite"
+git status
 ```
 
 ### 22. Pousser les changements vers le dépôt distant
@@ -252,6 +287,7 @@ git config --local user.name "usernameamiacotedevousa-gauche"
 git config --local user.email "EmailGithubdevotreamiacotedevousa-gauche"
 
 # Effectuer un commit pour capturer ce moment où votre ami vous aide à raconter votre histoire
+git add .
 git commit -m "A friend's touch: Introduction added by l'ami à gauche"
 
 # Pousser le contenu de la branche 'main' vers l'origine distante avec le nom de votre ami à gauche
@@ -269,8 +305,31 @@ git config --local user.name "usernameamiacotedevousa-DROITE"
 git config --local user.email "EmailGithubdevotreamiacotedevousa-DROITE"
 
 # Effectuer un commit pour immortaliser ces ajouts, comme si vous posiez une pierre angulaire dans l'édifice de votre carrière
+git add .
 git commit -m "Milestones achieved: Certifications and diplomas added by l'ami à droite"
 
 # Pousser le contenu de la branche 'main' vers l'origine distante avec le nom de votre ami à droite
 git push origin main
+```
+
+
+
+# Exemple de configurations : 
+
+Pour Eric :
+```bash
+git config --global user.name "eric-michaud"
+git config --global user.email "michaud_e@hotmail.com"
+```
+
+Pour Sébastien (sgag-2-6):
+```bash
+git config --global user.name "sgag-2-6"
+git config --global user.email "seb.s.gag@gmail.com"
+```
+
+Pour Michael (HashMapScreft):
+```bash
+git config --global user.name "HashMapScreft"
+git config --global user.email "screft@hotmail.com"
 ```
