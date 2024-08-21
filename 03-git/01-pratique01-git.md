@@ -63,6 +63,9 @@ git config --global user.name "hrhouma"
 git config --global user.email "rehoumahaythem@gmail.com"
 ```
 
+## Remarque :
+- Vous pouvez remplacer "hrhouma" et "rehoumahaythem@gmail.com" par votre utilisateur global à vous
+
 # 8. Configurer les informations utilisateur locales
 
 Configurez des informations utilisateur spécifiques à ce dépôt :
@@ -71,6 +74,7 @@ Configurez des informations utilisateur spécifiques à ce dépôt :
 git config --local user.name "dev"
 git config --local user.email "dev_alex@gmail.com"
 ```
+- Vous pouvez remplacer "dev" et "dev_alex@gmail.com" par votre utilisateur local à vous
 
 # 9. Commit des fichiers
 
@@ -119,3 +123,19 @@ Pour voir la configuration actuelle de votre dépôt, utilisez :
 ```bash
 cat .git/config
 ```
+
+
+
+| **Commande Git** | **Action Git**                         | **Analogie de la valise**                                           | **Description en vrai vie**                                   |
+|------------------|----------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------|
+| `git add`        | Ajouter les fichiers à l'index         | Mettre des objets dans la valise                                    | Préparer les fichiers à être inclus dans le prochain commit    |
+| `git commit`     | Enregistrer les changements            | Fermer la valise et la préparer pour le voyage                      | Enregistrer définitivement les changements dans le dépôt local |
+| `git push`       | Envoyer les changements vers un dépôt distant | Envoyer la valise à la maison de vacances (destination finale) | Partager les changements avec d'autres en les envoyant sur un dépôt distant (comme GitHub) |
+
+### Explication détaillée :
+
+- **Git add** : Imagine que tu choisis des vêtements et des objets pour un voyage. En les mettant dans la valise, tu te prépares à emporter ces articles. Avec `git add`, tu fais la même chose pour tes fichiers : tu les "prépares" à être inclus dans le commit.
+
+- **Git commit** : Une fois ta valise bien remplie, tu la fermes et la prépares à être envoyée. Cela signifie que tout ce que tu as mis dans la valise est prêt et ne peut plus être changé. En faisant `git commit`, tu enregistres tous les fichiers ajoutés pour qu'ils soient une partie permanente de l'historique de ton projet.
+
+- **Git push** : Enfin, tu envoies ta valise à ta destination de vacances. Tes amis ou ta famille peuvent ouvrir la valise et utiliser ce que tu y as mis. Avec `git push`, tu envoies tes commits vers un dépôt distant, comme GitHub, où d'autres peuvent accéder à ton travail.
