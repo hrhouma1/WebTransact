@@ -1,8 +1,8 @@
-### L'histoire de Paula et ses coéquipiers : Collaborer avec Git pour créer un projet ensemble
+# L'histoire de Sébastien et ses coéquipiers : Collaborer avec Git pour créer un projet ensemble
 
-Paula, une étudiante en programmation, est très motivée par la gestion de projets en groupe. Elle décide de créer un projet avec l'aide de ses amis Eric, Ludovik, et Tommy. Le projet consiste à développer une application web qui permet aux étudiants de partager leurs idées et ressources pour améliorer leur apprentissage.
+Sébastien, un étudiant en programmation, est très motivé par la gestion de projets en groupe. Il décide de créer un projet avec l'aide de ses amis Eric et Michael. Le projet consiste à développer une application web qui permet aux étudiants de partager leurs idées et ressources pour améliorer leur apprentissage.
 
-Paula, en tant que chef de projet, initie la première version du projet, et chaque membre de l'équipe travaille sur une fonctionnalité distincte à travers différentes branches Git. Voici comment Paula et son équipe collaborent pour mener à bien ce projet.
+Sébastien, en tant que chef de projet, initie la première version du projet, et chaque membre de l'équipe travaille sur une fonctionnalité distincte à travers différentes branches Git. Voici comment Sébastien et son équipe collaborent pour mener à bien ce projet.
 
 ---
 
@@ -10,7 +10,7 @@ Paula, en tant que chef de projet, initie la première version du projet, et cha
 
 ### 1. Créer un nouveau répertoire pour le projet
 
-Paula commence par créer un répertoire pour l'application web :
+Sébastien commence par créer un répertoire pour l'application web :
 
 ```bash
 mkdir partageEtudiants
@@ -19,23 +19,32 @@ cd partageEtudiants
 
 ### 2. Initialiser un dépôt Git
 
-Elle initialise ensuite un dépôt Git pour suivre l'évolution du projet :
+Il initialise ensuite un dépôt Git pour suivre l'évolution du projet :
 
 ```bash
 git init
 ```
 
-### 3. Créer la branche principale
+### 3. Configurer Git pour Sébastien
 
-Paula crée une branche `main` pour représenter la version stable du projet :
+Sébastien configure Git avec son nom d'utilisateur et son email :
+
+```bash
+git config --global user.name "sgag-2-6"
+git config --global user.email "seb.s.gag@gmail.com"
+```
+
+### 4. Créer la branche principale
+
+Sébastien crée une branche `main` pour représenter la version stable du projet :
 
 ```bash
 git branch -M main
 ```
 
-### 4. Ajouter le premier fichier README
+### 5. Ajouter le premier fichier README
 
-Elle crée un fichier README pour décrire le projet :
+Il crée un fichier README pour décrire le projet :
 
 ```bash
 echo "# Application de partage pour les étudiants" > README.md
@@ -43,17 +52,30 @@ git add README.md
 git commit -m "Initial commit: Added README file"
 ```
 
-### 5. Création d'une branche pour une nouvelle fonctionnalité par Paula
+### 6. Publier le projet sur un dépôt distant
 
-Paula crée une nouvelle branche `interface` pour développer l'interface utilisateur de l'application :
+Sébastien configure un dépôt distant et pousse la branche `main` :
+
+```bash
+git remote add origin <url-du-depot>
+git push -u origin main
+```
+
+---
+
+# Poste de Sébastien : Chef de projet
+
+### 7. Création d'une branche pour une nouvelle fonctionnalité par Sébastien
+
+Sébastien crée une nouvelle branche `interface` pour développer l'interface utilisateur de l'application :
 
 ```bash
 git checkout -b interface
 ```
 
-### 6. Paula commence à travailler sur l'interface utilisateur
+### 8. Sébastien commence à travailler sur l'interface utilisateur
 
-Dans la branche `interface`, Paula crée les fichiers nécessaires pour l'interface utilisateur :
+Dans la branche `interface`, Sébastien crée les fichiers nécessaires pour l'interface utilisateur :
 
 ```bash
 mkdir ui
@@ -62,24 +84,45 @@ git add ui/index.html
 git commit -m "Created the initial UI for the homepage"
 ```
 
-### 7. Paula pousse ses changements sur la branche distante
+### 9. Sébastien pousse ses changements sur la branche distante
 
-Paula pousse la branche `interface` vers le dépôt distant pour que les autres membres de l'équipe puissent y accéder :
+Sébastien pousse la branche `interface` vers le dépôt distant pour que les autres membres de l'équipe puissent y accéder :
 
 ```bash
 git push -u origin interface
 ```
 
-### 8. Eric commence à travailler sur la gestion des utilisateurs
+---
 
-Eric, qui est responsable de la gestion des utilisateurs, crée une nouvelle branche `gestion-utilisateurs` à partir de `main` :
+# Poste d'Eric : Gestion des utilisateurs
+
+
+### 10. Cloner le dépôt et créer une branche
+
+Eric, qui est responsable de la gestion des utilisateurs, doit d'abord cloner le dépôt avant de commencer :
 
 ```bash
-git checkout main
+git clone <url-du-depot>
+cd partageEtudiants
+```
+
+### 11. Configurer Git pour Eric
+
+Avant de commencer, Eric configure Git avec son nom d'utilisateur et son email :
+
+```bash
+git config --global user.name "eric-michaud"
+git config --global user.email "michaud_e@hotmail.com"
+```
+
+Ensuite, il met à jour sa copie locale de la branche `main` avant de créer une nouvelle branche `gestion-utilisateurs` :
+
+```bash
+git pull origin main
 git checkout -b gestion-utilisateurs
 ```
 
-### 9. Eric ajoute la gestion des utilisateurs
+### 12. Eric ajoute la gestion des utilisateurs
 
 Dans la branche `gestion-utilisateurs`, Eric ajoute un fichier pour la gestion des utilisateurs :
 
@@ -88,34 +131,35 @@ mkdir users
 echo "module.exports = function registerUser() { console.log('User registered'); };" > users/user.js
 git add users/user.js
 git commit -m "Added user registration functionality"
+git push -u origin gestion-utilisateurs
 ```
 
-### 10. Ludovik travaille sur la base de données
+---
 
-Ludovik, en charge de la base de données, crée une branche `database` :
+# Poste de Michael : Fonctionnalité de messagerie
 
-```bash
-git checkout main
-git checkout -b database
-```
 
-Il configure la base de données :
+### 13. Cloner le dépôt et créer une branche
+
+Michael suit les mêmes étapes pour cloner le dépôt et se synchroniser avec la branche `main` avant de créer sa propre branche `messaging` :
 
 ```bash
-mkdir db
-echo "CREATE TABLE users (id INT, name VARCHAR(100));" > db/schema.sql
-git add db/schema.sql
-git commit -m "Database schema for users created"
-```
-
-### 11. Tommy intègre une fonctionnalité de messagerie
-
-Tommy crée une branche `messaging` pour ajouter une fonctionnalité de messagerie entre étudiants :
-
-```bash
-git checkout main
+git clone <url-du-depot>
+cd partageEtudiants
+git pull origin main
 git checkout -b messaging
 ```
+
+### 14. Configurer Git pour Michael
+
+Michael configure Git avec son nom d'utilisateur et son email :
+
+```bash
+git config --global user.name "HashMapScreft"
+git config --global user.email "screft@hotmail.com"
+```
+
+### 15. Michael ajoute la fonctionnalité de messagerie
 
 Il commence à travailler sur le backend de la messagerie :
 
@@ -124,32 +168,45 @@ mkdir messaging
 echo "module.exports = function sendMessage() { console.log('Message sent'); };" > messaging/message.js
 git add messaging/message.js
 git commit -m "Added messaging functionality"
+git push -u origin messaging
 ```
 
-### 12. Fusion des branches dans `main`
+---
 
-Une fois que toutes les fonctionnalités sont prêtes, Paula décide de fusionner les branches dans `main`. Elle commence par fusionner `interface` :
+# Poste de Sébastien : Chef de projet
+
+### 16. Mise à jour et fusion des branches dans `main`
+
+Avant de fusionner les branches de ses coéquipiers, Sébastien met à jour la branche `main` et se rébase sur les différentes branches créées par ses coéquipiers si nécessaire :
+
+```bash
+git checkout main
+git pull origin main
+git rebase interface
+git rebase gestion-utilisateurs
+git rebase database
+git rebase messaging
+```
+
+### 17. Sébastien fusionne les branches dans `main`
+
+Sébastien commence ensuite la fusion des branches dans `main` :
 
 ```bash
 git checkout main
 git merge interface
-```
-
-Ensuite, elle fusionne les autres branches :
-
-```bash
 git merge gestion-utilisateurs
 git merge database
 git merge messaging
 ```
 
-### 13. Résolution des conflits (si nécessaire)
+### 18. Résolution des conflits (si nécessaire)
 
-Paula pourrait rencontrer des conflits lors de la fusion. Elle résout les conflits et finalise la fusion.
+Sébastien pourrait rencontrer des conflits lors de la fusion. Il résout les conflits et finalise la fusion.
 
-### 14. Pousser la version finale du projet
+### 19. Pousser la version finale du projet
 
-Paula pousse la version finale sur la branche `main` :
+Sébastien pousse la version finale sur la branche `main` :
 
 ```bash
 git push origin main
@@ -159,4 +216,4 @@ git push origin main
 
 ### Conclusion
 
-Grâce à cette approche collaborative utilisant des branches, Paula et son équipe ont réussi à créer une application de partage pour les étudiants. Chaque membre a pu travailler de manière indépendante sur sa fonctionnalité, puis les intégrer harmonieusement dans une version stable du projet.
+Grâce à cette approche collaborative utilisant des branches et des mises à jour régulières via `git pull` et `rebase`, Sébastien et son équipe ont réussi à créer une application de partage pour les étudiants. Chaque membre a pu travailler de manière indépendante sur sa fonctionnalité, puis les intégrer harmonieusement dans une version stable du projet.
