@@ -273,7 +273,74 @@ mvn package
 En suivant ce tutoriel, vous avez non seulement installé Java 17 et Maven 3.9.0 sur Ubuntu 22.04, mais vous avez également automatisé la création et la configuration d'un projet Maven à l'aide d'un script shell. Cela simplifie le processus de mise en place d'un projet Java, vous permettant de vous concentrer davantage sur le développement de votre code.
 
 
-# Annexe 01 
+# Annexe 01 - troubleshooting
+
+```bash
+cd calculator/
+nano pom.xml
+```
+
+```bash
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>calculator</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>calculator</name>
+    <description>Un projet Maven pour une calculatrice simple</description>
+
+    <properties>
+        <!-- Configuration du compilateur -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        
+        <!-- Encodage des sources et rapports -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Dépendance JUnit pour les tests unitaires -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin de compilation -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+```
+
+```bash
+mvn compile
+mvn test
+mvn package
+```
+
+
+# Annexe 02
 
 
 Le dossier `/opt` sur les systèmes Linux, comme Ubuntu, est un répertoire standard utilisé pour installer des logiciels supplémentaires qui ne font pas partie de la distribution standard du système d'exploitation. Il est souvent utilisé pour installer des applications qui ne sont pas gérées par le gestionnaire de paquets du système (`apt` sur Ubuntu, par exemple) ou pour des logiciels qui doivent être isolés du reste du système.
