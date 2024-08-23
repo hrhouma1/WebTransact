@@ -271,3 +271,22 @@ mvn package
 ## Conclusion
 
 En suivant ce tutoriel, vous avez non seulement installé Java 17 et Maven 3.9.0 sur Ubuntu 22.04, mais vous avez également automatisé la création et la configuration d'un projet Maven à l'aide d'un script shell. Cela simplifie le processus de mise en place d'un projet Java, vous permettant de vous concentrer davantage sur le développement de votre code.
+
+
+# Annexe 01 
+
+
+Le dossier `/opt` sur les systèmes Linux, comme Ubuntu, est un répertoire standard utilisé pour installer des logiciels supplémentaires qui ne font pas partie de la distribution standard du système d'exploitation. Il est souvent utilisé pour installer des applications qui ne sont pas gérées par le gestionnaire de paquets du système (`apt` sur Ubuntu, par exemple) ou pour des logiciels qui doivent être isolés du reste du système.
+
+### Caractéristiques du dossier `/opt` :
+- **Installation de logiciels tiers** : C'est un emplacement commun pour installer des applications et des paquets logiciels tiers qui ne sont pas distribués avec le système d'exploitation, tels que des versions personnalisées de Java, des serveurs web, des logiciels de développement, etc.
+  
+- **Organisation** : Les logiciels installés dans `/opt` sont souvent placés dans des sous-répertoires correspondant au nom du paquet ou de l'application. Par exemple, si vous installez Apache Maven, vous pourriez le placer dans `/opt/maven`.
+
+- **Isolation** : Les applications installées dans `/opt` sont généralement isolées des autres parties du système, ce qui facilite la gestion, la mise à jour et la suppression de ces applications sans interférer avec les autres logiciels installés.
+
+### Exemple d'utilisation :
+Dans le tutoriel précédent, nous avons installé Maven dans `/opt/maven`. Cela permet de garder Maven dans un répertoire dédié, distinct des autres logiciels et fichiers système. Cela évite également de polluer les répertoires standards comme `/usr/bin` ou `/usr/local/bin` avec des fichiers spécifiques à une application.
+
+### Pour résumer :
+Le répertoire `/opt` est un bon endroit pour installer des applications personnalisées ou des logiciels tiers que vous voulez garder séparés des composants principaux du système d'exploitation.
