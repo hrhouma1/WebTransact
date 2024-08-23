@@ -51,7 +51,7 @@ Ensuite, vous devez installer Maven 3.9.0.
 Téléchargez l'archive binaire de Maven 3.9.0 depuis le site officiel :
 
 ```bash
-wget https://downloads.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.tar.gz
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
 ```
 
 ### Étape 2 : Extraction de l'archive
@@ -59,7 +59,7 @@ wget https://downloads.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.
 Extrayez l'archive téléchargée :
 
 ```bash
-tar xzf apache-maven-3.9.0-bin.tar.gz
+tar xzf apache-maven-3.9.9-bin.tar.gz
 ```
 
 ### Étape 3 : Déplacement de Maven
@@ -67,7 +67,7 @@ tar xzf apache-maven-3.9.0-bin.tar.gz
 Déplacez le répertoire Maven dans `/opt/maven` :
 
 ```bash
-sudo mv apache-maven-3.9.0 /opt/maven
+sudo mv apache-maven-3.9.9 /opt/maven
 ```
 
 ### Étape 4 : Configuration des variables d'environnement
