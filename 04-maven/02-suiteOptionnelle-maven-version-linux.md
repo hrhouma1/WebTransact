@@ -52,7 +52,7 @@ Ensuite, vous devez installer Maven 3.9.0.
 Téléchargez l'archive binaire de Maven 3.9.0 depuis le site officiel :
 
 ```bash
-wget https://downloads.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.tar.gz
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
 ```
 
 ### Étape 2 : Extraction de l'archive
