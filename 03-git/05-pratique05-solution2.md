@@ -1,4 +1,13 @@
-Pour garantir un conflit à 100%, voici comment cela peut se produire :
+# SOLUTION - VARIANTE II (AVEC CONFLITS)
+
+---
+
+### La Chasse au Trésor Git avec Rebase
+
+----
+
+
+# Objectif :  Garantir un conflit à 100%, je vous propose un scénario qui illustre comment cela peut se produire :
 
 1. **Marc et Paul clonent le dépôt à peu près au même moment, mais ils travaillent indépendamment sur leurs branches sans se synchroniser avec `main` après que l'enseignant a fusionné la branche de Paul.**
 
