@@ -273,10 +273,15 @@ mvn package
 En suivant ce tutoriel, vous avez non seulement installé Java 17 et Maven 3.9.0 sur Ubuntu 22.04, mais vous avez également automatisé la création et la configuration d'un projet Maven à l'aide d'un script shell. Cela simplifie le processus de mise en place d'un projet Java, vous permettant de vous concentrer davantage sur le développement de votre code.
 
 
+----
+
 # Annexe 01 - troubleshooting
+
+----
 
 ```bash
 cd calculator/
+rm -rf pom.xml
 nano pom.xml
 ```
 
@@ -339,6 +344,178 @@ mvn test
 mvn package
 ```
 
+# Ou 
+
+- corriger 
+
+```bash
+rm -rf setup_maven_project.sh
+nano  setup_maven_project.sh
+chmod +x setup_maven_project.sh
+```
+
+
+```bash
+#!/bin/bash
+
+# Nom du projet et des fichiers
+GROUP_ID="com.example"
+ARTIFACT_ID="calculator"
+ARCHETYPE_ID="maven-archetype-quickstart"
+MAIN_CLASS="Calculator"
+TEST_CLASS="CalculatorTest"
+
+# Générez le projet Maven
+mvn archetype:generate -DgroupId=$GROUP_ID -DartifactId=$ARTIFACT_ID -DarchetypeArtifactId=$ARCHETYPE_ID -DinteractiveMode=false
+
+# Se déplacer dans le répertoire du projet
+cd $ARTIFACT_ID
+
+# Renommer les fichiers générés
+mv src/main/java/com/example/App.java src/main/java/com/example/$MAIN_CLASS.java
+mv src/test/java/com/example/AppTest.java src/test/java/com/example/$TEST_CLASS.java
+
+# Remplacement du contenu dans les fichiers Java
+sed -i "s/App/$MAIN_CLASS/g" src/main/java/com/example/$MAIN_CLASS.java
+sed -i "s/App/$MAIN_CLASS/g" src/test/java/com/example/$TEST_CLASS.java
+
+# Ajout du code pour Calculator.java
+cat > src/main/java/com/example/$MAIN_CLASS.java <<EOL
+package com.example;
+
+public class $MAIN_CLASS {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public double divide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Division by zero.");
+        }
+        return (double) a / b;
+    }
+}
+EOL
+
+# Ajout du code pour CalculatorTest.java
+cat > src/test/java/com/example/$TEST_CLASS.java <<EOL
+package com.example;
+import org.junit.Assert;
+import org.junit.Test;
+
+public class $TEST_CLASS {
+    private $MAIN_CLASS calculator = new $MAIN_CLASS();
+
+    @Test
+    public void testAdd() {
+        Assert.assertEquals(5, calculator.add(2, 3));
+    }
+
+    @Test
+    public void testSubtract() {
+        Assert.assertEquals(1, calculator.subtract(3, 2));
+    }
+
+    @Test
+    public void testMultiply() {
+        Assert.assertEquals(6, calculator.multiply(2, 3));
+    }
+
+    @Test
+    public void testDivide() {
+        Assert.assertEquals(2.0, calculator.divide(4, 2), 0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivideByZero() {
+        calculator.divide(1, 0);
+    }
+}
+EOL
+
+# Mise à jour du fichier pom.xml pour inclure JUnit et la configuration correcte du projet
+cat > pom.xml <<EOL
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>$GROUP_ID</groupId>
+    <artifactId>$ARTIFACT_ID</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>$ARTIFACT_ID</name>
+    <description>Un projet Maven pour une calculatrice simple</description>
+
+    <properties>
+        <!-- Configuration du compilateur -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        
+        <!-- Encodage des sources et rapports -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Dépendance JUnit pour les tests unitaires -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin de compilation -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+EOL
+
+# Exécution des commandes Maven
+mvn clean install
+mvn site
+
+echo "Le projet Maven $ARTIFACT_ID a été créé et configuré avec succès !"
+```
+
+### Ce que fait ce script :
+
+1. **Génération du projet Maven** : Utilise `mvn archetype:generate` pour créer un squelette de projet Maven.
+2. **Renommage des fichiers générés** : Renomme les fichiers `App.java` et `AppTest.java` en `Calculator.java` et `CalculatorTest.java`.
+3. **Remplacement du contenu des fichiers Java** : Remplace les références à `App` dans les fichiers renommés.
+4. **Ajout de contenu Java personnalisé** : Remplace le contenu des fichiers `Calculator.java` et `CalculatorTest.java` avec le code de la calculatrice et des tests unitaires.
+5. **Création du fichier `pom.xml`** : Crée un fichier `pom.xml` avec la configuration correcte pour JUnit et le compilateur Maven.
+6. **Exécution des commandes Maven** : Nettoie, compile, teste, et génère un site pour le projet Maven.
+
+En utilisant ce script, vous devriez pouvoir configurer et exécuter votre projet Maven sans erreur, avec la bonne configuration de JUnit et Java.
+
+
+
+----
 
 # Annexe 02
 
