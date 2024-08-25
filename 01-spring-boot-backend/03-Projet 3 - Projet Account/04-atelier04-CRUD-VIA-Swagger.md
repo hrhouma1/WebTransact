@@ -1,7 +1,11 @@
 
 
+----
 
-### 🏁 Partie 4 : Manipulations CRUD des Comptes via Swagger
+# 🏁 Partie 4 : Manipulations CRUD des Comptes via Swagger
+
+----
+
 
 Dans cette partie, nous allons effectuer les opérations CRUD (Create, Read, Update, Delete) sur les comptes bancaires en utilisant l'interface Swagger que vous avez intégrée précédemment. Swagger simplifie les interactions avec votre API en vous permettant de tester chaque endpoint via une interface web.
 
@@ -9,7 +13,7 @@ Dans cette partie, nous allons effectuer les opérations CRUD (Create, Read, Upd
 
 ## 🚀 Étapes à Suivre
 
-### 1️⃣ Accéder à Swagger UI
+# 1️⃣ Accéder à Swagger UI
 
 Une fois votre application démarrée, ouvrez votre navigateur et accédez à Swagger UI pour interagir avec votre API :
 
@@ -18,7 +22,7 @@ Une fois votre application démarrée, ouvrez votre navigateur et accédez à Sw
 
 ---
 
-### 2️⃣ Effectuer les Opérations CRUD
+# 2️⃣ Effectuer les Opérations CRUD
 
 #### 2.1 **Créer un Compte (Create - POST)**
 
@@ -71,7 +75,7 @@ Une fois votre application démarrée, ouvrez votre navigateur et accédez à Sw
 
 ---
 
-### 3️⃣ Exemples de JSON pour les Opérations
+# 3️⃣ Exemples de JSON pour les Opérations
 
 - **Créer un Compte** :
   ```json
@@ -115,7 +119,12 @@ Après avoir exécuté les opérations via Swagger UI, vous pouvez utiliser les 
 
 Avec Swagger, vous avez désormais un outil puissant pour interagir avec votre API de manière intuitive, tester vos endpoints et documenter automatiquement votre code. Cela rend votre développement plus rapide, plus sûr et plus transparent pour d'autres développeurs ou équipes.
 
-
+--------
+----------
+--------
+----
+# Évaluation Formative - Aller plus loin
+----
 
 ----
 
