@@ -281,7 +281,7 @@ public class AccountsService {
 
     public List<Accounts> getAllAccounts() {
         List<Accounts> allAccounts = new ArrayList<>();
-        accountsRepository.findAll().forEach(accounts -> allAccounts.add(accounts));
+        accountsRepository.findAll().forEach(allAccounts::add);
         return allAccounts;
     }
 
@@ -339,9 +339,7 @@ public class AccountsService {
             accountsRepository.deleteAll();
             return "Tous les comptes ont été supprimés avec succès";
         } catch (Exception e) {
-            return
-
- "Erreur lors de la suppression des comptes : " + e.getMessage();
+            return "Erreur lors de la suppression des comptes : " + e.getMessage();
         }
     }
 
@@ -366,9 +364,10 @@ public class AccountsService {
     }
 
     public List<Accounts> findAllByIds(List<Long> accountIds) {
-        return accountsRepository.findAllById(accountIds);
+        return (List<Accounts>) accountsRepository.findAllById(accountIds);
     }
 }
+
 ```
 
 ### 8. `CustomerService.java`
