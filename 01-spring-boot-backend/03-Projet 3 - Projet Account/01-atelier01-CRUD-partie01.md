@@ -107,11 +107,94 @@ mvn spring-boot:run
 # Testez : 
 
 - http://127.0.0.1:8080/accounts
-  
+ 
+ # Explications: 
+ 
+ 1. **Vous allez avoir une page vide étant donné que nous n'avons pas de données dans la table accounts**
+ 2. **Vous pouvez maintenant explorer la structure en couches ==> Allez au dossier 00-theorie**
+ 3. **Exercice 01: Explorez le code dans AccountsController.java dans le dossier controller**
+ 4. **Exercice 02: Donnez les différents points de terminaisons et les méthodes invoqués dans le controller, ainsi que les méthodes correpondantes dans le service et repository**
+
+
+
+---
+
+# Réponses : 
+----
+
+
+---
+# **Exercice 01: Exploration du code dans AccountsController.java**
+---
+
+**Résumé de l'exploration :**
+
+Le code `AccountsController.java` dans le dossier controller est un contrôleur RESTful qui gère les requêtes HTTP pour les comptes bancaires. Il contient des annotations pour chaque méthode afin de décrire les opérations réalisables, telles que la récupération, la création, la mise à jour et la suppression de comptes.
+
+
+# ===> Table qui résume les points de terminaison (endpoints) et les méthodes correspondantes dans le contrôleur `AccountsController.java` :
+
+
+| **Endpoint (URI)**           | **Méthode HTTP** | **Méthode dans AccountsController**                  |
+|------------------------------|------------------|-----------------------------------------------------|
+| `/myAccount/{id}`             | `GET`            | `getAccountDetails(Long id)`                         |
+| `/accounts`                   | `GET`            | `getAllAccounts()`                                   |
+| `/newAccount`                 | `POST`           | `newAccount(Accounts accounts)`                      |
+| `/update/{id}`                | `PUT`            | `updateAccount(Long id, Accounts updateAccounts)`    |
+| `/deleteAccount/{id}`         | `DELETE`         | `deleteAccount(Long id)`                             |
+
+Cette table montre  l'association entre chaque point de terminaison, la méthode HTTP utilisée, et la méthode correspondante dans le contrôleur `AccountsController.java`.
+
+
+---
+
+# **Exercice 02: Tableau comparatif des points de terminaison et des méthodes correspondantes**
+
+---
+
+| **Point de terminaison (URI)** | **Méthode HTTP** | **Méthode dans AccountsController** | **Méthode dans AccountsService** | **Méthode dans AccountsRepository** |
+|---------------------------------|------------------|-------------------------------------|-----------------------------------|--------------------------------------|
+| `/myAccount/{id}`               | `GET`            | `getAccountDetails(Long id)`        | `getAccountsById(long id)`        | `findById(Long id)`                  |
+| `/accounts`                     | `GET`            | `getAllAccounts()`                  | `getAllAccounts()`                | `findAll()`                          |
+| `/newAccount`                   | `POST`           | `newAccount(Accounts accounts)`     | `save(Accounts accounts)`         | `save(Accounts accounts)`            |
+| `/update/{id}`                  | `PUT`            | `updateAccount(Long id, Accounts updateAccounts)` | `updateAccount(long id, Accounts updateAccounts)` | `findById(Long id)` puis `save(Accounts accounts)` |
+| `/deleteAccount/{id}`           | `DELETE`         | `deleteAccount(Long id)`            | `deleteAccount(Long id)`          | `deleteById(Long id)`                |
+
+### **Détails des Méthodes**
+
+#### **AccountsController.java**
+- `getAccountDetails(Long id)`: Récupère les détails d'un compte spécifique à partir de l'identifiant fourni.
+- `getAllAccounts()`: Récupère tous les comptes disponibles.
+- `newAccount(Accounts accounts)`: Crée un nouveau compte avec les détails fournis.
+- `updateAccount(Long id, Accounts updateAccounts)`: Met à jour un compte existant avec de nouvelles informations.
+- `deleteAccount(Long id)`: Supprime un compte spécifique en utilisant son identifiant.
+
+#### **AccountsService.java**
+- `getAccountsById(long id)`: Cherche et renvoie un compte à partir de son identifiant.
+- `getAllAccounts()`: Récupère une liste de tous les comptes disponibles.
+- `save(Accounts accounts)`: Enregistre un nouveau compte après avoir vérifié que le client existe.
+- `updateAccount(long id, Accounts updateAccounts)`: Met à jour les détails d'un compte existant si le compte est trouvé.
+- `deleteAccount(Long id)`: Supprime un compte par son identifiant.
+
+#### **AccountsRepository.java**
+- `findById(Long id)`: Cherche un compte à partir de son identifiant (méthode héritée de `CrudRepository`).
+- `findAll()`: Récupère tous les comptes (méthode héritée de `CrudRepository`).
+- `save(Accounts accounts)`: Sauvegarde un compte dans la base de données (méthode héritée de `CrudRepository`).
+- `deleteById(Long id)`: Supprime un compte par son identifiant (méthode héritée de `CrudRepository`).
+- `findByCustomerId(int customerId)`: Cherche un compte à partir de l'identifiant du client.
+
+
+
+
+
+----
+----
+
 ---
 
 ## 🚨 Résolution des Problèmes : Port 8080 Occupé
 
+---
 Si vous rencontrez une erreur indiquant que le port 8080 est déjà utilisé, suivez ces étapes :
 
 ### 1️⃣ Vérifier les processus utilisant le port 8080
