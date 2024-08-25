@@ -1,7 +1,7 @@
 
 ---
 
-# THÉORIE - Explication des Annotations dans la Classe Principale
+# 1 - THÉORIE - Explication des Annotations dans la Classe Principale
 
 ---
 
@@ -25,7 +25,7 @@ public class AccountsApplication {
 
 ---
 
-# Annotations Explications
+# 2 - Annotations Explications
 
 ---
 
@@ -50,7 +50,7 @@ public class AccountsApplication {
 
 ---
 
-# Inversion de Contrôle (IoC) - Vulgarisation
+# 3 - Inversion de Contrôle (IoC) - Vulgarisation
 
 ----
 
@@ -61,7 +61,7 @@ public class AccountsApplication {
 
 ---
 
-# Table Récapitulant les Annotations Importantes
+# 4 - Table Récapitulant les Annotations Importantes
 
 ----
 
@@ -83,7 +83,7 @@ public class AccountsApplication {
 
 ---
 
-# Conclusion
+# 5 - Conclusion
 
 ---
 
