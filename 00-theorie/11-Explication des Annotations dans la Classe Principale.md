@@ -23,7 +23,11 @@ public class AccountsApplication {
 }
 ```
 
-### Annotations Explications
+---
+
+# Annotations Explications
+
+---
 
 1. **@SpringBootApplication**
    - **Description** : Cette annotation est une combinaison de trois annotations cruciales pour toute application Spring Boot : `@Configuration`, `@EnableAutoConfiguration`, et `@ComponentScan`.
@@ -44,13 +48,22 @@ public class AccountsApplication {
    - **Description** : Cette annotation est utilisée pour scanner les entités JPA dans les packages spécifiés.
    - **Utilisation** : L'annotation `@EntityScan("com.eazybytes.accounts.model")` indique à Spring de scanner le package `"com.eazybytes.accounts.model"` pour trouver les classes annotées avec `@Entity`, représentant les objets persistants de la base de données.
 
-### Inversion de Contrôle (IoC) - Vulgarisation
+---
+
+# Inversion de Contrôle (IoC) - Vulgarisation
+
+----
 
 **L'Inversion de Contrôle (IoC)** est un principe fondamental en programmation où le contrôle de l'exécution d'un programme est transféré à un cadre ou un conteneur. Dans le contexte de Spring, cela signifie que le développeur ne crée pas directement des instances d'objets et ne gère pas les dépendances entre ces objets. Au lieu de cela, c'est le conteneur Spring qui s'occupe de créer les objets, d'injecter leurs dépendances, et de les gérer tout au long de leur cycle de vie.
 
 **Analogie Simplifiée** : Imaginez un restaurant où, au lieu de préparer vous-même chaque plat, vous donnez votre commande au chef. Le chef s'occupe de sélectionner les ingrédients, de les préparer, et de vous servir le plat fini. Dans ce scénario, vous n'avez pas à vous soucier des détails de la préparation ; vous déléguez le contrôle de cette tâche au chef. De même, avec IoC, vous déléguez le contrôle de la création des objets et de la gestion des dépendances au conteneur Spring.
 
-### Table Récapitulant les Annotations Importantes
+
+---
+
+# Table Récapitulant les Annotations Importantes
+
+----
 
 | **Annotation**               | **Classe**                       | **Description**                                                                                                                                                      |
 |------------------------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
