@@ -207,6 +207,8 @@ public class AccountsController {
 - **Tâche** : Une fois tous les exercices terminés, soumettez votre code sur une branche distincte de votre dépôt GitHub et envoyez un lien vers votre repository pour évaluation.
 
 ---
+# SOLUTION : 
+----
 
 ### **Code Complet avec Javadoc**
 
@@ -248,9 +250,7 @@ public interface AccountsRepository extends CrudRepository<Accounts, Long> {
      * @param endId   l'identifiant de fin de la plage
      * @return une liste de comptes dont l'identifiant est dans la plage spécifiée
      */
-    @Query("SELECT a FROM Accounts a WHERE a.accountNumber
-
- BETWEEN :startId AND :endId")
+    @Query("SELECT a FROM Accounts a WHERE a.accountNumber BETWEEN :startId AND :endId")
     List<Accounts> findAccountsInRange(long startId, long endId);
 
     /**
