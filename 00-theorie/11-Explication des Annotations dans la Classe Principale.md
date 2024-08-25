@@ -68,4 +68,4 @@ Les annotations expliquées ici sont cruciales pour la configuration et le bon f
 
 ---
 
-Ce README inclut des explications détaillées et une vulgarisation du concept d'IoC pour aider les débutants à comprendre les mécanismes internes de Spring Boot. La table récapitulative permet également de visualiser rapidement les annotations essentielles et leurs rôles dans l'application.
+Ce fichier inclut des explications détaillées et une vulgarisation du concept d'IoC pour aider les apprenants à comprendre les mécanismes internes de Spring Boot. La table récapitulative permet également de visualiser rapidement les annotations essentielles et leurs rôles dans l'application.
