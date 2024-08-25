@@ -1,7 +1,7 @@
 # 📚 **Évaluation Formative : Comprendre et Appliquer les Méthodes Personnalisées dans Spring Data JPA**
 
 ### **Objectif**
-Cette évaluation formative vise à renforcer la compréhension des méthodes personnalisées dans Spring Data JPA, en les intégrant dans un contexte pratique. Les étudiants devront écrire, tester et expliquer des méthodes personnalisées dans un repository, ainsi que justifier l'utilisation de telles méthodes.
+Cette évaluation formative vise à renforcer la compréhension des méthodes personnalisées dans Spring Data JPA, en les intégrant dans un contexte pratique. Vous allez écrire, tester et expliquer des méthodes personnalisées dans un repository, ainsi que justifier l'utilisation de telles méthodes.
 
 ---
 
@@ -384,4 +384,4 @@ public class AccountsController {
 
 ### **Conclusion**
 
-Cette évaluation formative permet aux étudiants d'appliquer les concepts théoriques dans un contexte pratique tout en développant des compétences en codage, en intégration, en documentation, et en justification des choix techniques. Ils seront en mesure de comprendre les avantages de l'utilisation de méthodes personnalisées dans Spring Data JPA, ainsi que l'importance de la documentation pour rendre leur code plus compréhensible et maintenable.
+Cette évaluation formative vous permet d'appliquer les concepts théoriques dans un contexte pratique tout en développant des compétences en codage, en intégration, en documentation, et en justification des choix techniques. Les apprenants seront en mesure de comprendre les avantages de l'utilisation de méthodes personnalisées dans Spring Data JPA, ainsi que l'importance de la documentation pour rendre leur code plus compréhensible et maintenable.
