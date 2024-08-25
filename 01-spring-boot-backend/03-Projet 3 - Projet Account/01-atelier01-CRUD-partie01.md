@@ -104,6 +104,10 @@ mvn install -DskipTests
 mvn spring-boot:run
 ```
 
+# Testez : 
+
+- http://127.0.0.1:8080/accounts
+  
 ---
 
 ## 🚨 Résolution des Problèmes : Port 8080 Occupé
