@@ -1,4 +1,9 @@
+
+---
+
 # THÉORIE - Explication des Annotations dans la Classe Principale
+
+---
 
 Ce document explique en détail les annotations présentes dans la classe principale `AccountsApplication` d'une application Spring Boot. Il inclut également une vulgarisation du concept d'Inversion de Contrôle (IoC) et une table récapitulative des annotations essentielles.
 
@@ -62,7 +67,13 @@ public class AccountsApplication {
 | `@Service`                    | `Service Classes`                | Marque une classe comme un service Spring, généralement contenant la logique métier de l'application.                                                                |
 | `@Autowired`                  | `Various Classes`                | Indique à Spring d'injecter automatiquement les dépendances requises dans les champs, méthodes ou constructeurs annotés.                                             |
 
-### Conclusion
+
+---
+
+# Conclusion
+
+---
+
 
 Les annotations expliquées ici sont cruciales pour la configuration et le bon fonctionnement d'une application Spring Boot. Elles permettent à Spring de gérer les composants, les entités, et les repositories de manière automatisée, simplifiant ainsi le développement et la maintenance du code.
 
