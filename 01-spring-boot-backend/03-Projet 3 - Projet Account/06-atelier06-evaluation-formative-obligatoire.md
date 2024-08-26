@@ -1,4 +1,125 @@
+### Énoncé
 
+Dans cette partie de l'exercice, je vous ai demandé d'implémenter diverses méthodes pour les contrôleurs `customers-controller` et `accounts-controller`. Voici un rappel des endpoints que vous deviez implémenter :
+
+### `customers-controller`
+- **PUT** `/updateCustomer/{id}` : Mettre à jour un client par ID.
+- **POST** `/newCustomer` : Créer un nouveau client.
+- **GET** `/customers` : Obtenir tous les clients.
+- **GET** `/customerExist/{id}` : Vérifier si un client existe par ID.
+- **GET** `/customer/{id}` : Obtenir un client par ID.
+- **DELETE** `/deleteCustomer/{id}` : Supprimer un client par ID.
+
+### `accounts-controller`
+- **PUT** `/updateAccounts` : Mettre à jour plusieurs comptes.
+- **PUT** `/update/{id}` : Mettre à jour un compte par ID.
+- **POST** `/newAccounts` : Créer plusieurs comptes.
+- **POST** `/newAccount` : Créer un nouveau compte.
+- **POST** `/findAccounts` : Trouver des comptes par IDs.
+- **GET** `/myAccount/{id}` : Obtenir un compte par ID.
+- **GET** `/accounts` : Obtenir tous les comptes.
+- **DELETE** `/deleteAllAccounts` : Supprimer tous les comptes.
+- **DELETE** `/deleteAccounts` : Supprimer plusieurs comptes par IDs.
+- **DELETE** `/deleteAccount/{id}` : Supprimer un compte par ID.
+
+Je vous encourage à essayer d'implémenter ces méthodes par vous-même avant de consulter la correction.
+
+
+
+### `customers-controller`
+| HTTP Method | Endpoint                | Description                       |
+|-------------|-------------------------|-----------------------------------|
+| PUT         | `/updateCustomer/{id}`   | Update customer by ID             |
+| POST        | `/newCustomer`           | Create a new customer             |
+| GET         | `/customers`             | Get all customers                 |
+| GET         | `/customerExist/{id}`    | Check if a customer exists by ID  |
+| GET         | `/customer/{id}`         | Get a customer by ID              |
+| DELETE      | `/deleteCustomer/{id}`   | Delete customer by ID             |
+
+### `accounts-controller`
+| HTTP Method | Endpoint                | Description                                |
+|-------------|-------------------------|--------------------------------------------|
+| PUT         | `/updateAccounts`        | Update multiple accounts                   |
+| PUT         | `/update/{id}`           | Update an account by ID                    |
+| POST        | `/newAccounts`           | Create multiple accounts                   |
+| POST        | `/newAccount`            | Create a new account                       |
+| POST        | `/findAccounts`          | Find accounts by IDs                       |
+| GET         | `/myAccount/{id}`        | Get an account by ID                       |
+| GET         | `/accounts`              | Get all accounts                           |
+| DELETE      | `/deleteAllAccounts`     | Delete all accounts                        |
+| DELETE      | `/deleteAccounts`        | Delete multiple accounts by IDs            |
+| DELETE      | `/deleteAccount/{id}`    | Delete an account by ID                    |
+
+
+----
+# Me fournir les nouveaux fichiers :
+----
+
+- Rappelez-vous qu'il est essentiel de procéder dans cet ordre : **Controller** ==> **Service** ==> **Repository**. 
+- Cette séquence garantit que chaque couche de votre application est correctement mise en place et que les méthodes sont bien connectées entre elles.
+- Testez à chaque étape !
+
+**1. `Accounts.java`**
+
+```java
+// Code du modèle Accounts
+```
+
+**2. `Customer.java`**
+
+```java
+// Code du modèle Customer
+```
+
+**3. `AccountsController.java`**
+
+```java
+// Code du contrôleur AccountsController avec toutes les méthodes
+```
+
+**4. `CustomerController.java`**
+
+```java
+// Code du contrôleur CustomerController avec toutes les méthodes
+```
+
+**5. `AccountsRepository.java`**
+
+```java
+// Code du repository AccountsRepository avec toutes les méthodes
+```
+
+**6. `CustomerRepository.java`**
+
+```java
+// Code du repository CustomerRepository avec toutes les méthodes
+```
+
+**7. `AccountsService.java`**
+
+```java
+// Code du service AccountsService avec toutes les méthodes
+```
+
+**8. `CustomerService.java`**
+
+```java
+// Code du service CustomerService avec toutes les méthodes
+```
+
+**9. `pom.xml`**
+
+```xml
+// Configuration du projet dans le fichier pom.xml
+```
+
+- Reprenez vos implémentations en tenant compte de ces corrections et n'oubliez pas de toujours suivre l'ordre **Controller** ==> **Service** ==> **Repository** pour garantir une bonne structuration de votre code.
+
+# Bon travail !
+
+----
+# Correction
+---
 
 ### 1. `Accounts.java`
 ```java
