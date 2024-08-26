@@ -1,4 +1,4 @@
-J'ai ajouté les annotations nécessaires pour définir la relation `OneToMany` et `ManyToOne` entre les classes `Customer` et `Accounts`. 
+# Définir la relation `OneToMany` et `ManyToOne` entre les classes `Customer` et `Accounts`. 
 
 # Code mis-à-jour
 
@@ -104,3 +104,36 @@ Avec ces modifications, la relation `OneToMany` entre `Customer` et `Accounts` e
 - L'attribut `accounts` dans **Customer** représente la liste de comptes associés à ce client.
 
 Ce diagramme montre clairement les relations et les dépendances entre les deux classes.
+
+
+
+
+
+
+
+
+### `customers-controller`
+| HTTP Method | Endpoint                | Description                       |
+|-------------|-------------------------|-----------------------------------|
+| PUT         | `/updateCustomer/{id}`   | Update customer by ID             |
+| POST        | `/newCustomer`           | Create a new customer             |
+| GET         | `/customers`             | Get all customers                 |
+| GET         | `/customerExist/{id}`    | Check if a customer exists by ID  |
+| GET         | `/customer/{id}`         | Get a customer by ID              |
+| DELETE      | `/deleteCustomer/{id}`   | Delete customer by ID             |
+
+### `accounts-controller`
+| HTTP Method | Endpoint                | Description                                |
+|-------------|-------------------------|--------------------------------------------|
+| PUT         | `/updateAccounts`        | Update multiple accounts                   |
+| PUT         | `/update/{id}`           | Update an account by ID                    |
+| POST        | `/newAccounts`           | Create multiple accounts                   |
+| POST        | `/newAccount`            | Create a new account                       |
+| POST        | `/findAccounts`          | Find accounts by IDs                       |
+| GET         | `/myAccount/{id}`        | Get an account by ID                       |
+| GET         | `/accounts`              | Get all accounts                           |
+| DELETE      | `/deleteAllAccounts`     | Delete all accounts                        |
+| DELETE      | `/deleteAccounts`        | Delete multiple accounts by IDs            |
+| DELETE      | `/deleteAccount/{id}`    | Delete an account by ID                    |
+
+
