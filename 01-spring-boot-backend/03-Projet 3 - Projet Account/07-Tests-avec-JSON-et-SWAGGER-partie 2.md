@@ -1,4 +1,4 @@
-# 🏁 Partie : Tests avec JSON et SWAGGER- partie 2
+# 🏁 Tests avec JSON et SWAGGER- partie 2
 
 Dans cette section, vous allez tester l'application Spring Boot en utilisant des requêtes HTTP pour gérer les comptes associés aux clients. Vous utiliserez Swagger pour envoyer des requêtes POST, GET, PUT, et DELETE.
 
