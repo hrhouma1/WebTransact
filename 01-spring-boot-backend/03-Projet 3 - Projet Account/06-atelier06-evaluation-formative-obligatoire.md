@@ -1,3 +1,5 @@
+
+
 ### 1. `Accounts.java`
 ```java
 package com.eazybytes.accounts.model;
