@@ -22,8 +22,8 @@ Dans cette partie de l'exercice, je vous ai demandé d'implémenter diverses mé
 - **DELETE** `/deleteAccounts` : Supprimer plusieurs comptes par IDs.
 - **DELETE** `/deleteAccount/{id}` : Supprimer un compte par ID.
 
-Je vous encourage à essayer d'implémenter ces méthodes par vous-même avant de consulter la correction.
 
+**🔥💪 Je vous encourage à essayer d'implémenter ces méthodes par vous-même avant de consulter la correction !**
 
 
 ### `customers-controller`
@@ -117,11 +117,16 @@ Je vous encourage à essayer d'implémenter ces méthodes par vous-même avant d
 
 # Bon travail !
 
----
-# Instruction formelle 
-----
 
-- Maintenant, un petit conseil : ne regardez pas la correction tout de suite, je vous surveille... 👀 Essayez de le faire par vous-même d'abord ! C’est comme essayer de ne pas manger une part de gâteau qui est juste là devant vous. Mais je crois en vous, vous êtes plus fort que ça, non ? 😜
+
+---
+
+# 🧐 Instruction Formelle
+
+---
+
+- Maintenant, un petit conseil : ne regardez pas la correction tout de suite, je vous surveille... 👀 Essayez de le faire par vous-même d'abord ! 🎯 C’est comme essayer de ne pas manger une part de gâteau 🍰 qui est juste là devant vous. Mais je crois en vous, vous êtes plus fort que ça, non ? 💪😜🎉
+
 
 
 ----
