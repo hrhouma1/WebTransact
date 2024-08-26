@@ -1,6 +1,8 @@
 # LOGGING (JOURNALISATION)
 
-## PARTIE 1 - Théorie
+----
+# PARTIE 1 - Théorie
+----
 
 Le logging dans une application Spring Boot fait référence à la pratique de l'enregistrement des messages, des événements, et des informations de débogage qui se produisent pendant l'exécution de l'application. C'est un aspect essentiel du développement et du débogage, car il permet aux développeurs de suivre ce qui se passe dans le code, d'identifier les erreurs, de diagnostiquer les problèmes et de surveiller la santé de l'application en temps réel.
 
@@ -39,7 +41,9 @@ Spring Boot utilise généralement le système de journalisation SLF4J (Simple L
 
 En résumé, la journalisation dans une application Spring Boot est un élément crucial pour le développement, la maintenance, et le débogage. Elle permet de capturer des informations sur le comportement de l'application, de les stocker dans des fichiers journaux, et de les rendre disponibles pour l'analyse et la résolution de problèmes.
 
-## PARTIE 2 - Pratique 1 et Implémentation 1 (Basique)
+----
+# PARTIE 2 - Pratique 1 et Implémentation 1 (Basique)
+----
 
 ### Étapes pour Implémenter le Logging dans Spring Boot :
 
@@ -98,7 +102,9 @@ Pour tester l'implémentation du logging dans `AccountsService`, suivez ces éta
      [2023-01-02 12:34:56] - AccountsService - DEBUG - Saving account: Accounts{accountNumber=1, customerId=1, ...}
      ```
 
-## PARTIE 3 - Pratique 2 et Implémentation 2 (Intermédiaire)
+----
+# PARTIE 3 - Pratique 2 et Implémentation 2 (Intermédiaire)
+----
 
 ### Ajout de Logging dans `AccountsService` :
 
@@ -159,7 +165,9 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
    - Utilisez l'endpoint GET `/accounts` pour récupérer la liste des comptes.
    - Vérifiez les logs INFO et DEBUG pour les messages correspondants à cette opération.
 
-## PARTIE 4 - Pratique 3 et Implémentation 3 (Avancée)
+----
+# PARTIE 4 - Pratique 3 et Implémentation 3 (Avancée)
+----
 
 ### Configuration Avancée de Logback pour Séparation des Logs par Niveau de Sévérité :
 
@@ -213,7 +221,9 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
      </configuration>
      ```
 
-### Test de l'Implémentation Avancée
+----
+# Test de l'Implémentation Avancée
+----
 
 Pour tester la séparation des logs par niveau de sévérité, suivez ces étapes :
 
@@ -228,7 +238,9 @@ Pour tester la séparation des logs par niveau de sévérité, suivez ces étape
 3. **Génération de Logs INFO et DEBUG** :
    - Utilisez les endpoints GET pour récupérer des données et vérifiez que les logs INFO et DEBUG apparaissent dans le fichier `app.general.log`.
 
-## PARTIE 5 - Exercice - Personnaliser les Logs
+----
+# PARTIE 5 - Exercice - Personnaliser les Logs
+----
 
 ### Énoncé de l'Exercice : Configuration Avancée de Logging
 
@@ -256,7 +268,9 @@ Pour tester la séparation des logs par niveau de sévérité, suivez ces étape
 - Soumettez le fichier `logback-spring.xml`.
 - Incluez un bref rapport expliquant votre configuration et la manière dont vous avez testé les différents niveaux de logs.
 
-## CORRECTION
+----
+# CORRECTION
+----
 
 **Étape 1** : Définir l'Appender pour les Logs Généraux
 
@@ -307,6 +321,8 @@ Pour tester la séparation des logs par niveau de sévérité, suivez ces étape
 
 Après avoir mis à jour le fichier `logback-spring.xml`, redémarrez votre application pour appliquer la nouvelle configuration.
 
-### Test de la Configuration
+----
+# Test de la Configuration
+----
 
 Pour tester cette configuration, générez des logs à différents niveaux (DEBUG, INFO, WARN, ERROR) et vérifiez qu'ils sont correctement répartis dans les fichiers configurés (`app.general.log`, `app.warn.log`, `app.error.log`).
