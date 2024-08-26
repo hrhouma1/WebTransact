@@ -117,6 +117,13 @@ Je vous encourage à essayer d'implémenter ces méthodes par vous-même avant d
 
 # Bon travail !
 
+---
+# Instruction formelle 
+----
+
+- Maintenant, un petit conseil : ne regardez pas la correction tout de suite, je vous surveille... 👀 Essayez de le faire par vous-même d'abord ! C’est comme essayer de ne pas manger une part de gâteau qui est juste là devant vous. Mais je crois en vous, vous êtes plus fort que ça, non ? 😜
+
+
 ----
 # Correction
 ---
