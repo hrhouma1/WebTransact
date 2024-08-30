@@ -3,15 +3,15 @@
 
 #**Fichier de configuration** : 
 
-
-     ```properties
+```properties
      # Niveau de journalisation global
      logging.level.root=INFO
      # Configuration spécifique à une classe ou un package
      logging.level.com.example=DEBUG
      # Emplacement du fichier de journal
      logging.file=myapp.log
-     ```
+```
+
 # La signification de logging.level.com.example=DEBUG
 
 
