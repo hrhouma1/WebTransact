@@ -99,13 +99,14 @@ Une fois votre application démarrée, ouvrez votre navigateur et accédez à Sw
   }
   ```
 
-- **Supprimer un Compte** : Il suffit de spécifier l'ID du compte dans l'URL, par exemple `/deleteAccount/2`.
+- **Supprimer un Compte** : Il suffit d'aller à l'interface *SWAGGER* et de spécifier l'ID du compte dans l'interface *SWAGGER*. Il faut aller dans `/deleteAccount/{id}`, choisir *try it out* et mettre 2 dans le champ *id*. 
+- Alternative : utilisation de postman et spécifier par exemple `/deleteAccount/2`.
 
 ---
 
 ### 🛠️ Test et Vérification
 
-Après avoir exécuté les opérations via Swagger UI, vous pouvez utiliser les endpoints GET pour vérifier les résultats. Par exemple, utilisez `/accounts` pour voir la liste des comptes après avoir effectué des insertions, mises à jour ou suppressions.
+Après avoir exécuté les opérations via Swagger UI, vous pouvez utiliser les endpoints GET pour vérifier les résultats. Par exemple, utilisez `/accounts` (*http://localhost:8080/accounts*) pour voir la liste des comptes après avoir effectué des insertions, mises à jour ou suppressions.
 
 ---
 
