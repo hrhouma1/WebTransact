@@ -1,6 +1,19 @@
 # Journalisation Spécifique (com.example)
 - Comme pour la journalisation globale, chaque niveau de journalisation pour `com.example` est de plus en plus restrictif, en capturant moins d'événements à mesure que l'on passe de DEBUG à ERROR.
 
+#**Fichier de configuration** : 
+
+
+     ```properties
+     # Niveau de journalisation global
+     logging.level.root=INFO
+     # Configuration spécifique à une classe ou un package
+     logging.level.com.example=DEBUG
+     # Emplacement du fichier de journal
+     logging.file=myapp.log
+     ```
+# La signification de logging.level.com.example=DEBUG
+
 
 #### 1. Niveau `DEBUG`
 ```
