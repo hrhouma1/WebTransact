@@ -326,3 +326,52 @@ Après avoir mis à jour le fichier `logback-spring.xml`, redémarrez votre appl
 ----
 
 Pour tester cette configuration, générez des logs à différents niveaux (DEBUG, INFO, WARN, ERROR) et vérifiez qu'ils sont correctement répartis dans les fichiers configurés (`app.general.log`, `app.warn.log`, `app.error.log`).
+
+---
+# Annexe : signification de logging.pattern.console
+----
+
+Le format spécifié par `logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n` est une configuration utilisée dans les fichiers de propriétés ou de configuration pour déterminer comment les messages de log sont formatés lorsqu'ils sont affichés dans la console. Décomposons chaque partie de ce format pour comprendre en détail ce qu'elle signifie.
+
+### 1. `%d{yyyy-MM-dd HH:mm:ss}`
+- **%d** : Ceci est un spécificateur pour la date et l'heure du log. Il formate le timestamp du message de log.
+- **{yyyy-MM-dd HH:mm:ss}** : Le format dans lequel la date et l'heure seront affichées.
+  - `yyyy` : L'année sur quatre chiffres (ex : 2024).
+  - `MM` : Le mois sur deux chiffres (01 pour janvier, 12 pour décembre).
+  - `dd` : Le jour du mois sur deux chiffres.
+  - `HH` : L'heure sur deux chiffres, au format 24 heures (00 à 23).
+  - `mm` : Les minutes sur deux chiffres.
+  - `ss` : Les secondes sur deux chiffres.
+  
+  **Exemple** : Si un message de log est généré le 30 août 2024 à 14:35:26, la sortie serait `2024-08-30 14:35:26`.
+
+### 2. `- %logger{35}`
+- **%logger** : Ceci est un spécificateur qui représente le nom du logger. En général, cela correspond au nom de la classe Java d'où le log a été généré.
+- **{35}** : Ce nombre limite la longueur du nom du logger à 35 caractères. Si le nom du logger dépasse cette longueur, il sera tronqué au début pour ne garder que les 35 derniers caractères. Cela permet de rendre le log plus lisible en évitant que les noms de logger trop longs n'encombrent la sortie.
+  
+  **Exemple** : Si le nom du logger est `com.example.project.module.ClassName`, il sera affiché en entier si sa longueur est de 35 caractères ou moins. Sinon, seuls les 35 derniers caractères seront affichés.
+
+### 3. `- %level`
+- **%level** : Ceci affiche le niveau de log du message, comme `DEBUG`, `INFO`, `WARN`, `ERROR`, etc. Ce niveau indique la gravité ou la priorité du message.
+  
+  **Exemple** : Si le message de log est de niveau `INFO`, il sera affiché comme `INFO`.
+
+### 4. `- %msg`
+- **%msg** : Ceci affiche le message de log réel qui a été enregistré. C'est le contenu principal du log qui décrit l'événement ou l'action qui a eu lieu.
+  
+  **Exemple** : Si le message de log est `"Saving account: Accounts{accountNumber=1}"`, il sera affiché comme `Saving account: Accounts{accountNumber=1}`.
+
+### 5. `%n`
+- **%n** : Ceci représente un saut de ligne (newline). Cela garantit que chaque message de log est affiché sur une nouvelle ligne dans la console.
+  
+  **Exemple** : Après chaque log, le curseur passe à la ligne suivante, ce qui permet de séparer clairement les différents messages de log.
+
+### Exemple global
+Lorsque ce format est appliqué, voici à quoi pourrait ressembler un message de log dans la console :
+
+```
+2024-08-30 14:35:26 - com.example.project.module.ClassName - INFO - Saving account: Accounts{accountNumber=1}
+```
+
+### Conclusion
+Ce format fournit une structure claire et lisible pour afficher les logs, en incluant des informations essentielles comme la date, le nom du logger, le niveau de log, et le message. Le fait de formater les logs de manière cohérente aide les développeurs à comprendre rapidement ce qui se passe dans l'application et à identifier les problèmes en un coup d'œil.
