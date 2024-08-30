@@ -4,7 +4,7 @@
 - Cette comparaison vous aidera à comprendre ce que chaque niveau capture ou ignore.
 
 
-#**Fichier de configuration** : 
+# **Fichier de configuration** : 
 
 
 ```properties
