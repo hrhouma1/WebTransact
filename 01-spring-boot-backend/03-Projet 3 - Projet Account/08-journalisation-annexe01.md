@@ -3,6 +3,20 @@
 - Comparons les différents niveaux de journalisation pour la **Journalisation Globale (root)** en utilisant une arborescence. 
 - Cette comparaison vous aidera à comprendre ce que chaque niveau capture ou ignore.
 
+
+#**Fichier de configuration** : 
+
+
+     ```properties
+     # Niveau de journalisation global
+     logging.level.root=INFO
+     # Configuration spécifique à une classe ou un package
+     logging.level.com.example=DEBUG
+     # Emplacement du fichier de journal
+     logging.file=myapp.log
+     ```
+# La signification de logging.level.root=INFO 
+
 ### Journalisation Globale (root)
 #### 1. Niveau `INFO`
 ```
