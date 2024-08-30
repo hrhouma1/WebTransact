@@ -1,7 +1,7 @@
 # ANNEXE 2 - Journalisation Spécifique (com.example)
 - Comme pour la journalisation globale, chaque niveau de journalisation pour `com.example` est de plus en plus restrictif, en capturant moins d'événements à mesure que l'on passe de DEBUG à ERROR.
 
-#**Fichier de configuration** : 
+# **Fichier de configuration** : 
 
 ```properties
      # Niveau de journalisation global
