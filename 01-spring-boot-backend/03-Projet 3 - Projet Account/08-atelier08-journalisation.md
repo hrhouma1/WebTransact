@@ -135,7 +135,7 @@ Pour tester l'implémentation du logging dans `AccountsService`, suivez ces éta
      }
 
      public String save(Accounts accounts){
-         logger.info("Saving account: {}", accounts);
+         logger.debug("Tentative de sauvegarde du compte : {}", accounts);
          int id = accounts.getCustomerId();
          if (customerRepository.existsById(id)) {
              accounts.setCreateDt(LocalDate.now());
