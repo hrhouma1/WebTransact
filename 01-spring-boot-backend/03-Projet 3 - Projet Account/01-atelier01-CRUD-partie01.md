@@ -29,7 +29,7 @@ Avant de lancer l'application, il est nécessaire de configurer la base de donn�
 
 #### 1.1 **Ouvrir pgAdmin ou l'invite de commande PostgreSQL**
 
-- **Via pgAdmin** : Utilisez l'interface graphique pour créer un nouvel utilisateur et une base de données ( *VOIR : 01-spring-boot-backend/01-Projet 1 - Hello World/04-atelier04-hello-service-web.md* ou point 2.5 (E) 05-atelier05-hello-persistance-ORM.md) 
+- **Via pgAdmin** : Utilisez l'interface graphique pour créer un nouvel utilisateur et une base de données ( *VOIR : 01-spring-boot-backend/01-Projet 1 - Hello World/05-atelier05-hello-persistance-ORM.md* ➡️ **point 2.5 (E) 05-atelier05-hello-persistance-ORM.md**) 
 - **Via l'invite de commande** : Ouvrez l'invite de commande PostgreSQL.
 
 #### 1.2 **Créer l'utilisateur `hrgres` avec un mot de passe**
