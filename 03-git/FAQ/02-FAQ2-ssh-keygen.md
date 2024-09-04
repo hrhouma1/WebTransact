@@ -1,8 +1,10 @@
-### Tutoriel détaillé sur l’utilisation de `ssh-keygen`
+# Tutoriel détaillé sur l’utilisation de `ssh-keygen`
 
 Ce tutoriel vous guide pas à pas dans l'utilisation de `ssh-keygen` pour configurer une authentification sécurisée avec des clés SSH pour interagir avec GitHub, sans avoir besoin d’entrer votre mot de passe à chaque fois.
 
-#### Étape 1 : Générer une paire de clés SSH
+--------
+# Étape 1 : Générer une paire de clés SSH
+--------
 
 **Commande :**
 ```bash
@@ -18,7 +20,9 @@ Après la génération, les fichiers seront enregistrés ici :
 - **Clé privée** : `/root/.ssh/id_rsa`
 - **Clé publique** : `/root/.ssh/id_rsa.pub`
 
-#### Étape 2 : Afficher la clé publique
+--------
+# Étape 2 : Afficher la clé publique
+--------
 
 Une fois les clés générées, vous devrez copier la clé publique pour l’ajouter à GitHub.
 
@@ -28,7 +32,10 @@ cat /root/.ssh/id_rsa.pub
 ```
 Cela affichera le contenu de votre fichier de clé publique. Vous devez copier la sortie pour l'utiliser dans l'étape suivante.
 
-#### Étape 3 : Ajouter la clé publique à GitHub
+
+--------
+# Étape 3 : Ajouter la clé publique à GitHub
+--------
 
 1. Allez dans les **paramètres** de votre dépôt GitHub.
 2. Sélectionnez **Deploy keys** dans la barre de navigation gauche.
@@ -38,7 +45,9 @@ Cela affichera le contenu de votre fichier de clé publique. Vous devez copier l
 6. Activez l'option **Allow write access** si vous avez besoin de pousser des changements vers ce dépôt.
 7. Cliquez sur **Add key** pour enregistrer.
 
-#### Étape 4 : Cloner le dépôt en utilisant SSH
+--------
+# Étape 4 : Cloner le dépôt en utilisant SSH
+--------
 
 Maintenant que la clé SSH est ajoutée à GitHub, vous pouvez cloner votre dépôt sans avoir besoin de saisir de nom d'utilisateur ni de mot de passe.
 
@@ -52,7 +61,9 @@ git clone git@github.com:hrhouma/ProjetJava.git
 ```
 Remplacez `<nom_utilisateur>` et `<nom_repertoire>` par vos propres informations.
 
-#### Étape 5 : Effectuer des opérations Git
+--------
+# Étape 5 : Effectuer des opérations Git
+--------
 
 Une fois le dépôt cloné, naviguez dans le dossier du projet :
 ```bash
@@ -77,18 +88,17 @@ git push origin main
 Grâce à l'authentification par clé SSH, Git ne vous demandera plus de mot de passe.
 
 ---
-
-### Annexe : Explication du fonctionnement des clés SSH
-
+# Annexe : Explication du fonctionnement des clés SSH
+--------
 L'authentification par clé SSH repose sur une **clé publique** et une **clé privée**. Ce mécanisme de chiffrement asymétrique garantit une communication sécurisée entre deux systèmes.
 
-#### 1. **Clé publique** et **Clé privée**
+# 1. **Clé publique** et **Clé privée**
 
 - **Clé publique** : Elle est utilisée pour **chiffrer** les informations envoyées à un serveur. Vous pouvez la partager sans risque, car seule la clé privée correspondante peut déchiffrer les messages chiffrés avec la clé publique.
   
 - **Clé privée** : Elle reste sur votre machine et **ne doit jamais être partagée**. Cette clé privée sert à **décrypter** les messages chiffrés avec la clé publique, assurant ainsi que vous êtes le seul à pouvoir accéder aux données chiffrées.
 
-#### 2. **Comment cela fonctionne-t-il ?**
+# 2. **Comment cela fonctionne-t-il ?**
 
 Imaginons un scénario où vous vous connectez à un serveur GitHub via SSH :
 
@@ -99,7 +109,7 @@ Imaginons un scénario où vous vous connectez à un serveur GitHub via SSH :
 
 Ce système est extrêmement sécurisé, car même si quelqu'un intercepte la clé publique, il ne pourra pas déchiffrer les messages ou usurper votre identité sans la clé privée.
 
-#### 3. **Avantages de l'authentification SSH avec des clés**
+# 3. **Avantages de l'authentification SSH avec des clés**
 
 - **Sécurité accrue** : Il est beaucoup plus difficile de compromettre une clé privée que de deviner un mot de passe.
 - **Pas besoin de mot de passe** : Une fois configurée, l'authentification SSH par clé permet de se connecter sans mot de passe, ce qui est plus rapide et plus pratique.
