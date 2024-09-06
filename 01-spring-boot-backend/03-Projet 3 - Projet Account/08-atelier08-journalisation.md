@@ -22,11 +22,12 @@ Spring Boot utilise généralement le système de journalisation SLF4J (Simple L
      logging.file=myapp.log
      ```
 
-☠️ ATTENTION ! Il se peut que tu aies un conflit entre `logging.file.name` et `logging.file.path`. Dans ce cas, nous pouvons garder uniquement "logging.file.name=.."
-☠️ ATTENTION ! Vérifie les permissions du dossier `logs`, l'application pourrait ne pas avoir les droits d'écriture. Il faut le créer dans ce cas (Ce n'est pas vraiment obligatoire dans windows).
-☠️ ATTENTION ! Dans *Windows*, le chemin utilisé doit être absolu, évite les chemins relatifs comme `/logs` sous Windows.
-☠️ ATTENTION ! Assure-toi que les barres obliques sont correctement utilisées dans les chemins, sinon cela peut provoquer des erreurs.
-☠️ ATTENTION ! Redémarre toujours ton application après avoir modifié le fichier `application.properties` pour que les changements soient pris en compte.
+
+
+---
+# Résultat:
+----
+![image](https://github.com/user-attachments/assets/a49e167b-670b-4926-9e2e-e1409e775d34)
 
 
 2. **Programmation** :
@@ -67,6 +68,36 @@ En résumé, la journalisation dans une application Spring Boot est un élément
      logging.file.path=/logs
      logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
      ```
+     ---
+     # Résultat :
+     ----
+     ![image](https://github.com/user-attachments/assets/aa95351a-cb04-4163-a4ca-03e0f68bca07)
+
+
+
+☠️ ATTENTION ! Il se peut que tu aies un conflit entre `logging.file.name` et `logging.file.path`. Dans ce cas, nous pouvons garder uniquement "logging.file.name=.."
+
+☠️ ATTENTION ! Vérifie les permissions du dossier `logs`, l'application pourrait ne pas avoir les droits d'écriture. Il faut le créer dans ce cas (Ce n'est pas vraiment obligatoire dans windows).
+
+☠️ ATTENTION ! Dans *Windows*, le chemin utilisé doit être absolu, évite les chemins relatifs comme `/logs` sous Windows.
+
+☠️ ATTENTION ! Assure-toi que les barres obliques sont correctement utilisées dans les chemins, sinon cela peut provoquer des erreurs.
+
+☠️ ATTENTION ! Redémarre toujours ton application après avoir modifié le fichier `application.properties` pour que les changements soient pris en compte.
+
+
+     ```properties
+     logging.level.root=WARN
+     logging.level.com.eazybytes=DEBUG
+     logging.file.name=app.log
+     logging.file.name=C:/Users/Haythem/Desktop/RO/accounts-v1/logs/app.log
+     logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
+     ```
+
+#logging.file.path=C:/Users/Haythem/Desktop/RO/accounts-v1/logs
+#C:\Users\Haythem\Desktop\RO\accounts-v1
+#C:\\Users\\Haythem\\Desktop\\RO\\accounts-v1\\logs
+
 
 3. **Utilisation de Logger dans le Code** :
    - Utilisez le Logger de SLF4J dans vos classes, par exemple dans `AccountsService` :
