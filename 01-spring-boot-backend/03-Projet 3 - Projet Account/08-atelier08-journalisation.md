@@ -53,6 +53,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
    - Assurez-vous d'avoir les dépendances appropriées dans votre fichier `pom.xml`. Spring Boot inclut déjà `spring-boot-starter-logging` qui apporte des bibliothèques comme Logback, SLF4J, et Log4J2.
 
 2. **Configuration du Logging** :
+   
    - Vous pouvez configurer le logging en modifiant le fichier `application.properties` ou `application.yml`.
    - Exemple :
      ```properties
@@ -71,15 +72,20 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 
 
-☠️ ATTENTION ! Il se peut que tu aies un conflit entre `logging.file.name` et `logging.file.path`. Dans ce cas, nous pouvons garder uniquement "logging.file.name=.."
+# ☠️ ATTENTION ! 
+- Il se peut que tu aies un conflit entre `logging.file.name` et `logging.file.path`. Dans ce cas, nous pouvons garder uniquement "logging.file.name=.."
 
-☠️ ATTENTION ! Vérifie les permissions du dossier `logs`, l'application pourrait ne pas avoir les droits d'écriture. Il faut le créer dans ce cas (Ce n'est pas vraiment obligatoire dans windows).
+# ☠️ ATTENTION ! 
+- Vérifie les permissions du dossier `logs`, l'application pourrait ne pas avoir les droits d'écriture. Il faut le créer dans ce cas (Ce n'est pas vraiment obligatoire dans windows).
 
-☠️ ATTENTION ! Dans *Windows*, le chemin utilisé doit être absolu, évite les chemins relatifs comme `/logs` sous Windows.
+# ☠️ ATTENTION ! 
+- Dans *Windows*, le chemin utilisé doit être absolu, évite les chemins relatifs comme `/logs` sous Windows.
 
-☠️ ATTENTION ! Assure-toi que les barres obliques sont correctement utilisées dans les chemins, sinon cela peut provoquer des erreurs.
+# ☠️ ATTENTION ! 
+- Assure-toi que les barres obliques sont correctement utilisées dans les chemins, sinon cela peut provoquer des erreurs.
 
-☠️ ATTENTION ! Redémarre toujours ton application après avoir modifié le fichier `application.properties` pour que les changements soient pris en compte.
+# ☠️ ATTENTION ! 
+- Redémarre toujours ton application après avoir modifié le fichier `application.properties` pour que les changements soient pris en compte.
 
 
      ```properties
