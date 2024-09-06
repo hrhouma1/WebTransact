@@ -56,6 +56,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
    
    - Vous pouvez configurer le logging en modifiant le fichier `application.properties` ou `application.yml`.
    - Exemple :
+     
      ```properties
      logging.level.root=WARN
      logging.level.com.eazybytes=DEBUG
@@ -68,7 +69,6 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 # Résultat 1:
 ----
 ![image](https://github.com/user-attachments/assets/87cb0432-cd8b-4c0c-b57f-af1e89a0d8ae)
-
 
 
 
