@@ -50,7 +50,8 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ### Étapes pour Implémenter le Logging dans Spring Boot :
 
 1. **Dépendances Maven** :
-   - Assurez-vous d'avoir les dépendances appropriées dans votre fichier `pom.xml`. Spring Boot inclut déjà `spring-boot-starter-logging` qui apporte des bibliothèques comme Logback, SLF4J, et Log4J2.
+   - Assurez-vous d'avoir les dépendances appropriées dans votre fichier `pom.xml`.
+   - Spring Boot inclut déjà `spring-boot-starter-logging` qui apporte des bibliothèques comme Logback, SLF4J, et Log4J2.
 
 2. **Configuration du Logging** :
    
@@ -72,44 +73,91 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 
 
-# ☠️ ATTENTION ! 
+
+```
+🚫 À éviter : Utiliser à la fois `logging.file.name` et `logging.file.path` (cela crée des conflits).
+✅ À garder : Utiliser uniquement `logging.file.name` avec un chemin absolu vers le fichier log.
+
+🚫 À éviter : Spécifier un chemin relatif comme `/logs` sous Windows.
+✅ À garder : Utiliser un chemin absolu comme `C:/Users/Haythem/Desktop/RO/accounts-v1/logs`.
+
+🚫 À éviter : Oublier de vérifier les permissions d'écriture sur le dossier `logs`.
+✅ À garder : Assure-toi que ton application a les droits d'écriture sur le répertoire `logs`.
+
+🚫 À éviter : Ne pas redémarrer l'application après modification du fichier `application.properties`.
+✅ À garder : Redémarrer l'application pour appliquer les changements de configuration.
+```
+
+
+# ☠️ ATTENTION #1 ! 
 - Il se peut que tu aies un conflit entre `logging.file.name` et `logging.file.path`. Dans ce cas, nous pouvons garder uniquement "logging.file.name=.."
 
-# ☠️ ATTENTION ! 
+```
+🚫 À éviter : Utiliser à la fois `logging.file.name` et `logging.file.path` (cela crée des conflits).
+✅ À garder : Utiliser uniquement `logging.file.name` avec un chemin absolu vers le fichier log.
+```
+
+
+
+# ☠️ ATTENTION #2 ! 
 - Vérifie les permissions du dossier `logs`, l'application pourrait ne pas avoir les droits d'écriture. Il faut le créer dans ce cas (Ce n'est pas vraiment obligatoire dans windows).
 
-# ☠️ ATTENTION ! 
+
+```
+🚫 À éviter : Oublier de vérifier les permissions d'écriture sur le dossier `logs`.
+✅ À garder : Assure-toi que ton application a les droits d'écriture sur le répertoire `logs`.
+```
+
+# ☠️ ATTENTION #3 ! 
 - Dans *Windows*, le chemin utilisé doit être absolu, évite les chemins relatifs comme `/logs` sous Windows.
 
-# ☠️ ATTENTION ! 
+```
+🚫 À éviter : Spécifier un chemin relatif comme `/logs` sous Windows.
+✅ À garder : Utiliser un chemin absolu comme `C:/Users/Haythem/Desktop/accounts-v1/logs`.
+```
+
+
+# ☠️ ATTENTION #4 ! 
 - Assure-toi que les barres obliques sont correctement utilisées dans les chemins, sinon cela peut provoquer des erreurs.
 
-# ☠️ ATTENTION ! 
+```
+🚫 À éviter : Utiliser un chemin comme `C:\Users\Haythem\Desktop\accounts-v1\log` sous Windows.
+✅ À garder : Utiliser un chemin absolu comme `C:/Users/Haythem/Desktop/RO/accounts-v1/logs`.
+✅ À garder : Utiliser un chemin absolu comme `C:\\Users\\Haythem\\Desktop\\accounts-v1\\log`.
+```
+
+
+# ☠️ ATTENTION #5 ! 
 - Redémarre toujours ton application après avoir modifié le fichier `application.properties` pour que les changements soient pris en compte.
+
+
+```
+🚫 À éviter : Ne pas redémarrer l'application après modification du fichier `application.properties`.
+✅ À garder : Redémarrer l'application pour appliquer les changements de configuration.
+```
 
 
      ```properties
      logging.level.root=WARN
      logging.level.com.eazybytes=DEBUG
      logging.file.name=app.log
-     logging.file.name=C:/Users/Haythem/Desktop/RO/accounts-v1/logs/app.log
+     logging.file.name=C:/Users/Haythem/Desktop/accounts-v1/logs/app.log
      logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
      ```
 
-
-  
 ---
-# Résultat:
+# Résultat 2:
 ----
 ![image](https://github.com/user-attachments/assets/a49e167b-670b-4926-9e2e-e1409e775d34)
 
 
-
-#logging.file.path=C:/Users/Haythem/Desktop/RO/accounts-v1/logs
-#C:\Users\Haythem\Desktop\RO\accounts-v1
-#C:\\Users\\Haythem\\Desktop\\RO\\accounts-v1\\logs
-
-
+```
+🎉 Yay ! Ça fonctionne ! 🎉
+✅ Les logs sont bien créés dans le bon répertoire.
+✅ La configuration de `logging.file.name` est correcte.
+✅ Plus de conflit entre `logging.file.name` et `logging.file.path`.
+🚀 Tout roule parfaitement !
+```
 
 
 
