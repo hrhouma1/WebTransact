@@ -1,6 +1,8 @@
 # LOGGING (JOURNALISATION)
 
 ----
+----
+----
 # PARTIE 1 - Théorie
 ----
 
@@ -44,6 +46,9 @@ Spring Boot utilise généralement le système de journalisation SLF4J (Simple L
 En résumé, la journalisation dans une application Spring Boot est un élément crucial pour le développement, la maintenance, et le débogage. Elle permet de capturer des informations sur le comportement de l'application, de les stocker dans des fichiers journaux, et de les rendre disponibles pour l'analyse et la résolution de problèmes.
 
 ----
+----
+----
+----
 # PARTIE 2 - Pratique 1 et Implémentation 1 (Basique)
 ----
 
@@ -73,23 +78,18 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 
 
-
 ```
-🚫 À éviter : Utiliser à la fois `logging.file.name` et `logging.file.path` (cela crée des conflits).
-✅ À garder : Utiliser uniquement `logging.file.name` avec un chemin absolu vers le fichier log.
-
-🚫 À éviter : Spécifier un chemin relatif comme `/logs` sous Windows.
-✅ À garder : Utiliser un chemin absolu comme `C:/Users/Haythem/Desktop/RO/accounts-v1/logs`.
-
-🚫 À éviter : Oublier de vérifier les permissions d'écriture sur le dossier `logs`.
-✅ À garder : Assure-toi que ton application a les droits d'écriture sur le répertoire `logs`.
-
-🚫 À éviter : Ne pas redémarrer l'application après modification du fichier `application.properties`.
-✅ À garder : Redémarrer l'application pour appliquer les changements de configuration.
+🎉 Yay ! Ça fonctionne ! 🎉 On voit app.log 🎉🎉🎉
+❗ Mais attention, le dossier `logs` n'a pas été créé automatiquement. 😕😕😕😕😕
+🤔 Hmmm... Pourquoi le dossier `logs` n'a-t-il pas été créé automatiquement ? 🤔
+🧐 Peut-être un problème de permissions ou de configuration ?
+❓ Avons-nous vérifié les chemins et les droits d'écriture ?
 ```
 
 
-# ☠️ ATTENTION #1 ! 
+
+
+# ☠️ ATTENTION #1 ! 🧐
 - Il se peut que tu aies un conflit entre `logging.file.name` et `logging.file.path`. Dans ce cas, nous pouvons garder uniquement "logging.file.name=.."
 
 ```
@@ -99,7 +99,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 
 
-# ☠️ ATTENTION #2 ! 
+# ☠️ ATTENTION #2 ! 🧐
 - Vérifie les permissions du dossier `logs`, l'application pourrait ne pas avoir les droits d'écriture. Il faut le créer dans ce cas (Ce n'est pas vraiment obligatoire dans windows).
 
 
@@ -108,7 +108,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ✅ À garder : Assure-toi que ton application a les droits d'écriture sur le répertoire `logs`.
 ```
 
-# ☠️ ATTENTION #3 ! 
+# ☠️ ATTENTION #3 ! 🧐
 - Dans *Windows*, le chemin utilisé doit être absolu, évite les chemins relatifs comme `/logs` sous Windows.
 
 ```
@@ -117,17 +117,17 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ```
 
 
-# ☠️ ATTENTION #4 ! 
+# ☠️ ATTENTION #4 ! 🧐
 - Assure-toi que les barres obliques sont correctement utilisées dans les chemins, sinon cela peut provoquer des erreurs.
 
 ```
 🚫 À éviter : Utiliser un chemin comme `C:\Users\Haythem\Desktop\accounts-v1\log` sous Windows.
-✅ À garder : Utiliser un chemin absolu comme `C:/Users/Haythem/Desktop/RO/accounts-v1/logs`.
+✅ À garder : Utiliser un chemin absolu comme `C:/Users/Haythem/Desktop/accounts-v1/logs`.
 ✅ À garder : Utiliser un chemin absolu comme `C:\\Users\\Haythem\\Desktop\\accounts-v1\\log`.
 ```
 
 
-# ☠️ ATTENTION #5 ! 
+# ☠️ ATTENTION #5 ! 🧐
 - Redémarre toujours ton application après avoir modifié le fichier `application.properties` pour que les changements soient pris en compte.
 
 
@@ -158,6 +158,23 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ✅ Plus de conflit entre `logging.file.name` et `logging.file.path`.
 🚀 Tout roule parfaitement !
 ```
+
+
+
+```
+🚫 À éviter : Utiliser à la fois `logging.file.name` et `logging.file.path` (cela crée des conflits).
+✅ À garder : Utiliser uniquement `logging.file.name` avec un chemin absolu vers le fichier log.
+
+🚫 À éviter : Spécifier un chemin relatif comme `/logs` sous Windows.
+✅ À garder : Utiliser un chemin absolu comme `C:/Users/Haythem/Desktop/RO/accounts-v1/logs`.
+
+🚫 À éviter : Oublier de vérifier les permissions d'écriture sur le dossier `logs`.
+✅ À garder : Assure-toi que ton application a les droits d'écriture sur le répertoire `logs`.
+
+🚫 À éviter : Ne pas redémarrer l'application après modification du fichier `application.properties`.
+✅ À garder : Redémarrer l'application pour appliquer les changements de configuration.
+```
+
 
 
 
@@ -203,6 +220,9 @@ Pour tester l'implémentation du logging dans `AccountsService`, suivez ces éta
      ```
 
 ----
+----
+----
+
 # PARTIE 3 - Pratique 2 et Implémentation 2 (Intermédiaire)
 ----
 
@@ -266,6 +286,9 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
    - Vérifiez les logs INFO et DEBUG pour les messages correspondants à cette opération.
 
 ----
+----
+----
+
 # PARTIE 4 - Pratique 3 et Implémentation 3 (Avancée)
 ----
 
