@@ -22,6 +22,17 @@ Spring Boot utilise généralement le système de journalisation SLF4J (Simple L
      logging.file=myapp.log
      ```
 
+☠️ ATTENTION ! Il se peut que tu aies un conflit entre `logging.file.name` et `logging.file.path`.
+
+☠️ ATTENTION ! Vérifie les permissions du dossier `logs`, l'application pourrait ne pas avoir les droits d'écriture.
+
+☠️ ATTENTION ! Le chemin utilisé doit être absolu, évite les chemins relatifs comme `/logs` sous Windows.
+
+☠️ ATTENTION ! Assure-toi que les barres obliques sont correctement utilisées dans les chemins, sinon cela peut provoquer des erreurs.
+
+☠️ ATTENTION ! Redémarre toujours ton application après avoir modifié le fichier `application.properties` pour que les changements soient pris en compte.
+
+
 2. **Programmation** :
    - Vous pouvez également journaliser de manière programmatique dans votre code Java en utilisant des bibliothèques de journalisation comme SLF4J. 
    - Exemple :
