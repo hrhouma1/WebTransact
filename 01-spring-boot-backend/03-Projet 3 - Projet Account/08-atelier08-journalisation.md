@@ -52,13 +52,13 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 # PARTIE 2 - Pratique 1 et Implémentation 1 (Basique)
 ----
 
-### Étapes pour Implémenter le Logging dans Spring Boot :
+# Étapes pour Implémenter le Logging dans Spring Boot :
 
-1. **Dépendances Maven** :
+# 2.1. **Dépendances Maven** :
    - Assurez-vous d'avoir les dépendances appropriées dans votre fichier `pom.xml`.
    - Spring Boot inclut déjà `spring-boot-starter-logging` qui apporte des bibliothèques comme Logback, SLF4J, et Log4J2.
 
-2. **Configuration du Logging** :
+# 2.2. **Configuration du Logging** :
    
    - Vous pouvez configurer le logging en modifiant le fichier `application.properties` ou `application.yml`.
    - Exemple :
@@ -71,8 +71,11 @@ En résumé, la journalisation dans une application Spring Boot est un élément
      logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
      ```
 
+
+
+
 ---
-# Résultat 1:
+### ➡️➡️➡️ Résultat 1:
 ----
 ![image](https://github.com/user-attachments/assets/87cb0432-cd8b-4c0c-b57f-af1e89a0d8ae)
 
@@ -80,7 +83,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 ```
 🎉 Yay ! Ça fonctionne ! 🎉 On voit app.log 🎉🎉🎉
-❗ Mais attention, le dossier `logs` n'a pas été créé automatiquement. 😕😕😕😕😕
+❗❗❗❗❗❗❗ Mais attention, le dossier `logs` n'a pas été créé automatiquement. 😕😕😕😕😕
 🤔 Hmmm... Pourquoi le dossier `logs` n'a-t-il pas été créé automatiquement ? 🤔
 🧐 Peut-être un problème de permissions ou de configuration ?
 ❓ Avons-nous vérifié les chemins et les droits d'écriture ?
@@ -89,7 +92,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 
 
-# ☠️ WARNING #1 ! 🧐
+#### ➡️➡️➡️ ☠️ WARNING #1 ! 🧐
 - Il se peut que tu aies un conflit entre `logging.file.name` et `logging.file.path`. Dans ce cas, nous pouvons garder uniquement "logging.file.name=.."
 
 ```
@@ -99,7 +102,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 
 
-# ☠️ WARNING #2 ! 🧐
+#### ➡️➡️➡️ ☠️ WARNING #2 ! 🧐
 - Vérifie les permissions du dossier `logs`, l'application pourrait ne pas avoir les droits d'écriture. Il faut le créer dans ce cas (Ce n'est pas vraiment obligatoire dans windows).
 
 
@@ -108,7 +111,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ✅ À garder : Assure-toi que ton application a les droits d'écriture sur le répertoire `logs`.
 ```
 
-# ☠️ WARNING #3 ! 🧐
+#### ➡️➡️➡️ ☠️ WARNING #3 ! 🧐
 - Dans *Windows*, le chemin utilisé doit être absolu, évite les chemins relatifs comme `/logs` sous Windows.
 
 ```
@@ -117,7 +120,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ```
 
 
-# ☠️ WARNING #4 ! 🧐
+#### ➡️➡️➡️ ☠️ WARNING #4 ! 🧐
 - Assure-toi que les barres obliques sont correctement utilisées dans les chemins, sinon cela peut provoquer des erreurs.
 
 ```
@@ -127,7 +130,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ```
 
 
-# ☠️ WARNING #5 ! 🧐
+#### ➡️➡️➡️ ☠️ WARNING #5 ! 🧐
 - Redémarre toujours ton application après avoir modifié le fichier `application.properties` pour que les changements soient pris en compte.
 
 
@@ -145,7 +148,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ```
 
 ---
-# Résultat 2:
+### ➡️➡️➡️ Résultat 2:
 ----
 ![image](https://github.com/user-attachments/assets/a49e167b-670b-4926-9e2e-e1409e775d34)
 
@@ -172,7 +175,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 
 
-3. **Utilisation de Logger dans le Code** :
+# 2.3. **Utilisation de Logger dans le Code** :
    - Utilisez le Logger de SLF4J dans vos classes, par exemple dans `AccountsService` :
      ```java
      import org.slf4j.Logger;
