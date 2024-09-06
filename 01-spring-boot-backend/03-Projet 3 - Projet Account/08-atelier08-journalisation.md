@@ -62,11 +62,16 @@ En résumé, la journalisation dans une application Spring Boot est un élément
      logging.file.path=/logs
      logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
      ```
+
+---
+# Résultat :
+----
+![image](https://github.com/user-attachments/assets/aa95351a-cb04-4163-a4ca-03e0f68bca07)
+
   
 ---
 # Résultat:
 ----
-
 ![image](https://github.com/user-attachments/assets/a49e167b-670b-4926-9e2e-e1409e775d34)
 
 
@@ -96,10 +101,6 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 #C:\\Users\\Haythem\\Desktop\\RO\\accounts-v1\\logs
 
 
-     ---
-     # Résultat :
-     ----
-     ![image](https://github.com/user-attachments/assets/aa95351a-cb04-4163-a4ca-03e0f68bca07)
 
 
 3. **Utilisation de Logger dans le Code** :
