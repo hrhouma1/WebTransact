@@ -231,7 +231,7 @@ Pour tester l'implémentation du logging dans `AccountsService`, suivez ces éta
 
 ### Ajout de Logging dans `AccountsService` :
 
-1. **Ajouter le Logger** :
+# 3.1. **Ajouter le Logger** :
    - Assurez-vous d'avoir un logger dans votre classe `AccountsService` :
      ```java
      import org.slf4j.Logger;
@@ -246,33 +246,59 @@ Pour tester l'implémentation du logging dans `AccountsService`, suivez ces éta
      }
      ```
 
-2. **Utilisation du Logger dans les Méthodes** :
+# 3.2. **Utilisation du Logger dans les Méthodes** :
    - Ajoutez des logs à différents niveaux dans vos méthodes :
-     ```java
-     public List<Accounts> getAllAccounts(){
-         logger.info("Fetching all accounts");
-         List<Accounts> allAccounts = new ArrayList<>();
-         accountsRepository.findAll().forEach(allAccounts::add);
-         logger.debug("Number of accounts fetched: {}", allAccounts.size());
-         return allAccounts;
-     }
 
-     public String save(Accounts accounts){
-         logger.debug("Tentative de sauvegarde du compte : {}", accounts);
-         int id = accounts.getCustomerId();
-         if (customerRepository.existsById(id)) {
-             accounts.setCreateDt(LocalDate.now());
-             accountsRepository.save(accounts);
-             logger.info("Account saved successfully");
-             return "saved";
-         } else {
-             logger.warn("Failed to save account, customer not found: {}", id);
-             return "failed, customer not found!";
-         }
-     }
-     ```
+```java
+public List<Accounts> getAllAccounts() {
+    // 🟢 Ajoutez cette ligne ici pour informer les utilisateurs du début de la récupération de tous les comptes
+    logger.info("Fetching all accounts");
+    
+    List<Accounts> allAccounts = new ArrayList<>();
+    accountsRepository.findAll().forEach(allAccounts::add);
+    
+    // 🔵 Ajoutez cette ligne ici pour informer les utilisateurs du nombre de comptes récupérés
+    logger.debug("Number of accounts fetched: {}", allAccounts.size());
+    
+    return allAccounts;
+}
 
-### Test de l'Implémentation Intermédiaire
+public String save(Accounts accounts) {
+    // 🔵 Ajoutez cette ligne ici pour déboguer la tentative de sauvegarde d'un compte
+    logger.debug("Tentative de sauvegarde du compte : {}", accounts);
+    
+    int id = accounts.getCustomerId();
+    if (customerRepository.existsById(id)) {
+        accounts.setCreateDt(LocalDate.now());
+        accountsRepository.save(accounts);
+        
+        // 🟢 Ajoutez cette ligne ici pour informer les utilisateurs que le compte a été sauvegardé avec succès
+        logger.info("Account saved successfully");
+        
+        return "saved";
+    } else {
+        // 🟠 Ajoutez cette ligne ici pour avertir les utilisateurs que la sauvegarde a échoué car le client n'a pas été trouvé
+        logger.warn("Failed to save account, customer not found: {}", id);
+        
+        // 🔴 Ajoutez cette ligne ici pour signaler une erreur critique : impossible de sauvegarder car le client n'existe pas
+        logger.error("Critical error: unable to save account, customer ID not found: {}", id);
+        
+        return "failed, customer not found!";
+    }
+}
+```
+
+### Code couleur :
+- 🟢 **Info** (niveau moins important) : Informer les utilisateurs d'une action réussie ou d'un processus normal, comme le début de la récupération des comptes.
+- 🔵 **Debug** (niveau technique) : Fournir des informations pour les développeurs sur des détails techniques comme le nombre de comptes récupérés ou une tentative de sauvegarde.
+- 🟠 **Warning** (niveau modéré) : Avertir d'un problème potentiel, comme l'absence d'un client.
+- 🔴 **Error** (niveau critique) : Signaler une erreur grave qui doit être corrigée, comme l'impossibilité de sauvegarder un compte à cause d'une erreur critique.
+
+
+
+
+
+# 3.3. Test de l'Implémentation Intermédiaire
 
 Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 
