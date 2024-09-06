@@ -71,8 +71,9 @@ En résumé, la journalisation dans une application Spring Boot est un élément
      logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
      ```
      
+----
 ###### ❗❗❗❗ Signification de logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n  ➡️➡️➡️ REGARDEZ Annexe 01 ❗❗❗❗
-
+----
 
 
 ---
