@@ -219,6 +219,10 @@ Pour tester l'implémentation du logging dans `AccountsService`, suivez ces éta
      ```
 
 ----
+###### ❗❗❗❗ Signification de logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n  ➡️➡️➡️ REGARDEZ Annexe 01 ❗❗❗❗
+----
+
+----
 ----
 ----
 
