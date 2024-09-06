@@ -89,7 +89,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 
 
-# ☠️ ATTENTION #1 ! 🧐
+# ☠️ WARNING #1 ! 🧐
 - Il se peut que tu aies un conflit entre `logging.file.name` et `logging.file.path`. Dans ce cas, nous pouvons garder uniquement "logging.file.name=.."
 
 ```
@@ -99,7 +99,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 
 
 
-# ☠️ ATTENTION #2 ! 🧐
+# ☠️ WARNING #2 ! 🧐
 - Vérifie les permissions du dossier `logs`, l'application pourrait ne pas avoir les droits d'écriture. Il faut le créer dans ce cas (Ce n'est pas vraiment obligatoire dans windows).
 
 
@@ -108,7 +108,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ✅ À garder : Assure-toi que ton application a les droits d'écriture sur le répertoire `logs`.
 ```
 
-# ☠️ ATTENTION #3 ! 🧐
+# ☠️ WARNING #3 ! 🧐
 - Dans *Windows*, le chemin utilisé doit être absolu, évite les chemins relatifs comme `/logs` sous Windows.
 
 ```
@@ -117,7 +117,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ```
 
 
-# ☠️ ATTENTION #4 ! 🧐
+# ☠️ WARNING #4 ! 🧐
 - Assure-toi que les barres obliques sont correctement utilisées dans les chemins, sinon cela peut provoquer des erreurs.
 
 ```
@@ -127,7 +127,7 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ```
 
 
-# ☠️ ATTENTION #5 ! 🧐
+# ☠️ WARNING #5 ! 🧐
 - Redémarre toujours ton application après avoir modifié le fichier `application.properties` pour que les changements soient pris en compte.
 
 
@@ -136,14 +136,13 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ✅ À garder : Redémarrer l'application pour appliquer les changements de configuration.
 ```
 
-
-     ```properties
+```properties
      logging.level.root=WARN
      logging.level.com.eazybytes=DEBUG
      logging.file.name=app.log
      logging.file.name=C:/Users/Haythem/Desktop/accounts-v1/logs/app.log
      logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
-     ```
+```
 
 ---
 # Résultat 2:
@@ -160,20 +159,15 @@ En résumé, la journalisation dans une application Spring Boot est un élément
 ```
 
 
+--------------------
+# Résumons 📝
+--------------------
 
-```
-🚫 À éviter : Utiliser à la fois `logging.file.name` et `logging.file.path` (cela crée des conflits).
-✅ À garder : Utiliser uniquement `logging.file.name` avec un chemin absolu vers le fichier log.
-
-🚫 À éviter : Spécifier un chemin relatif comme `/logs` sous Windows.
-✅ À garder : Utiliser un chemin absolu comme `C:/Users/Haythem/Desktop/RO/accounts-v1/logs`.
-
-🚫 À éviter : Oublier de vérifier les permissions d'écriture sur le dossier `logs`.
-✅ À garder : Assure-toi que ton application a les droits d'écriture sur le répertoire `logs`.
-
-🚫 À éviter : Ne pas redémarrer l'application après modification du fichier `application.properties`.
-✅ À garder : Redémarrer l'application pour appliquer les changements de configuration.
-```
+## 1 -  Utiliser uniquement `logging.file.name` avec un chemin absolu vers le fichier log. ✅✅✅
+## 2 -  Assure-toi que ton application a les droits d'écriture sur le répertoire `logs`. ✅✅✅
+## 3 -  Utiliser un chemin absolu comme `C:/Users/Haythem/Desktop/accounts-v1/logs`. ✅✅✅
+## 4 -  Utiliser un chemin absolu comme `C:\\Users\\Haythem\\Desktop\\accounts-v1\\log`. ✅✅✅
+## 5 - Redémarrer l'application pour appliquer les changements de configuration. ✅✅✅
 
 
 
