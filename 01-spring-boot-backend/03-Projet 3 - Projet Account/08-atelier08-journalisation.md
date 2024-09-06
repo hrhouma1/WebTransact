@@ -296,6 +296,19 @@ public String save(Accounts accounts) {
 
 
 
+# résumé 
+- dans une table qui indique quand les logs sont invoqués, les points de terminaison, les méthodes correspondantes et les logs appelés avec leurs codes couleur associés :
+
+| **Point de terminaison**        | **Méthode**            | **Logs appelés**                                                                 | **Code couleur**                  |
+|----------------------------------|------------------------|----------------------------------------------------------------------------------|-----------------------------------|
+| `/accounts` (GET)                | `getAllAccounts()`     | `logger.info("Fetching all accounts");`                                           | 🟢 **Info** (début de la récupération des comptes) |
+|                                  |                        | `logger.debug("Number of accounts fetched: {}", allAccounts.size());`             | 🔵 **Debug** (nombre de comptes récupérés) |
+| `/accounts/save` (POST)          | `save(Accounts)`       | `logger.debug("Tentative de sauvegarde du compte : {}", accounts);`               | 🔵 **Debug** (tentative de sauvegarde d'un compte) |
+|                                  |                        | `logger.info("Account saved successfully");`                                      | 🟢 **Info** (compte sauvegardé avec succès) |
+|                                  |                        | `logger.warn("Failed to save account, customer not found: {}", id);`              | 🟠 **Warning** (client non trouvé) |
+|                                  |                        | `logger.error("Critical error: unable to save account, customer ID not found: {}", id);` | 🔴 **Error** (erreur critique, sauvegarde échouée) |
+
+
 
 
 # 3.3. Test de l'Implémentation Intermédiaire
