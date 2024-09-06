@@ -296,8 +296,8 @@ public String save(Accounts accounts) {
 
 
 
-# résumé 
-- dans une table qui indique quand les logs sont invoqués, les points de terminaison, les méthodes correspondantes et les logs appelés avec leurs codes couleur associés :
+# Résumé 
+- Je vous propose une table qui indique quand les logs sont invoqués, les points de terminaison, les méthodes correspondantes et les logs appelés avec leurs codes couleur associés :
 
 | **Point de terminaison**        | **Méthode**            | **Logs appelés**                                                                 | **Code couleur**                  |
 |----------------------------------|------------------------|----------------------------------------------------------------------------------|-----------------------------------|
