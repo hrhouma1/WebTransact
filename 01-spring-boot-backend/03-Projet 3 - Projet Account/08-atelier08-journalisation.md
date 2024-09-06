@@ -70,7 +70,8 @@ En résumé, la journalisation dans une application Spring Boot est un élément
      logging.file.path=/logs
      logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
      ```
-
+     
+###### ❗❗❗❗ Signification de logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n  ➡️➡️➡️ REGARDEZ Annexe 01 ❗❗❗❗
 
 
 
@@ -448,7 +449,10 @@ Après avoir mis à jour le fichier `logback-spring.xml`, redémarrez votre appl
 Pour tester cette configuration, générez des logs à différents niveaux (DEBUG, INFO, WARN, ERROR) et vérifiez qu'ils sont correctement répartis dans les fichiers configurés (`app.general.log`, `app.warn.log`, `app.error.log`).
 
 ---
-# Annexe : signification de logging.pattern.console
+---
+---
+---
+# 01 - Annexe 01: signification de logging.pattern.console
 ----
 
 Le format spécifié par `logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n` est une configuration utilisée dans les fichiers de propriétés ou de configuration pour déterminer comment les messages de log sont formatés lorsqu'ils sont affichés dans la console. Décomposons chaque partie de ce format pour comprendre en détail ce qu'elle signifie.
