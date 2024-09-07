@@ -1,3 +1,4 @@
+# QUIZ3 (30 QUESTIONS)
 
 ### 1. **Quel est le rôle de la commande `git init` ?**
    - A. Initialiser un nouveau dépôt Git.
