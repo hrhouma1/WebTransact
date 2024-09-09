@@ -2,6 +2,30 @@
 
 ----
 ----
+
+- Si vous n'avez pas réussi à compléter **l'étape 8**, vous pouvez cloner le dépôt du projet avec la commande suivante :
+
+```bash
+git clone https://github.com/hrhouma1/accounts-v2.git
+```
+
+- Cela vous fournira le code nécessaire pour continuer.
+
+---
+
+### PARTIE 1 - Théorie
+
+Dans cette section, nous allons explorer le concept de la **journalisation**, un élément crucial pour la
+
+
+
+
+
+
+
+- Vous pouvez utiliser ce code si vous n'êtes pas arrivés à l'étape 8 :
+
+git clone [g](https://github.com/hrhouma1/accounts-v2.git)
 ----
 # PARTIE 1 - Théorie
 ----
