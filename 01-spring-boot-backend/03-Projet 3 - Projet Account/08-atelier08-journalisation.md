@@ -503,19 +503,16 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 - Après avoir mis à jour le fichier `logback-spring.xml`, redémarrez votre application pour appliquer la nouvelle configuration.
 - Pour tester la séparation des logs par niveau de sévérité, suivez ces étapes :
 
-4.1. **Génération de Logs WARN** :
+4.1. **Génération de Logs WARN et ERROR** :
    - Utilisez l'endpoint POST `/newAccount` avec un `customerId` qui n'existe pas pour générer un log WARN.
    - Vérifiez que le log apparaît uniquement dans le fichier `app.warn.log`.
-
-4.2. **Génération de Logs ERROR** :
-   - Modifiez temporairement le code pour forcer une exception lors de la création d'un compte, par exemple en essayant de sauvegarder un compte avec un `accountNumber` déjà existant.
    - Vérifiez que le log ERROR apparaît uniquement dans le fichier `app.error.log`.
 
-4.3. **Génération de Logs INFO et DEBUG** :
+4.2. **Génération de Logs INFO et DEBUG** :
    - Utilisez les endpoints GET pour récupérer des données et vérifiez que les logs INFO et DEBUG apparaissent dans le fichier `app.general.log`.
 
 
-## Conclusion: 
+# Conclusion: 
 - Nous avons généré des logs à différents niveaux (DEBUG, INFO, WARN, ERROR) et nous avons vérifié qu'ils sont correctement répartis dans les fichiers configurés (`app.general.log`, `app.warn.log`, `app.error.log`).
 
 
