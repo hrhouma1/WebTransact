@@ -347,52 +347,114 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 
 1. **Créer un Fichier de Configuration Logback** :
    - Créez un fichier `logback-spring.xml` dans `src/main/resources`.
+2. **Changez votre applications.properties en commentant les lignes de logging** :
 
-2. **Configurer les Appenders** :
+ - Exemple :
+     ```xml
+            spring.datasource.driverClassName=org.postgresql.Driver
+            spring.datasource.url=jdbc:postgresql://localhost:5432/microDemo1
+            spring.datasource.username=hrgres
+            spring.datasource.password=hrgres
+            spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+            spring.jpa.hibernate.ddl-auto=update
+            spring.jpa.show-sql=true
+            server.port=8081
+             
+            # Niveau global de journalisation
+            logging.level.root=INFO
+            # Niveau de journalisation pour un package spécifique
+            logging.level.com.eazybytes=DEBUG
+            
+            
+            # *********************************
+            # Partie 1
+            # *********************************
+            # logging.level.root=WARN
+            # logging.level.com.eazybytes=DEBUG
+            # chemin relatif à partir du pom.xml
+            # logging.file.name=./logs/app.log 
+            #logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
+            
+            
+            # *********************************
+            # ERREURS
+            # *********************************
+            # logging.file.path=/logs - a causé une erreure
+     ```
+3. **Configurer les Appenders** :
    - Définissez des appenders distincts pour les niveaux WARN et ERROR.
    - Exemple :
      ```xml
-     <?xml version="1.0" encoding="UTF-8"?>
-     <configuration>
-         <appender name="GENERAL_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-             <file>logs/app.general.log</file>
-             <encoder>
-                 <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-             </encoder>
-         </appender>
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
 
-         <appender name="WARN_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-             <file>logs/app.warn.log</file>
-             <encoder>
-                 <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-             </encoder>
-             <filter class="ch.qos.logback.classic.filter.LevelFilter">
-                 <level>WARN</level>
-                 <onMatch>ACCEPT</onMatch>
-                 <onMismatch>DENY</onMismatch>
-             </filter>
-         </appender>
+    <!-- Encoder pour formater les logs -->
+    <encoder>
+        <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
 
-         <appender name="ERROR_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-             <file>logs/app.error.log</file>
-             <encoder>
-                 <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-             </encoder>
-             <filter class="ch.qos.logback.classic.filter.LevelFilter">
-                 <level>ERROR</level>
-                 <onMatch>ACCEPT</onMatch>
-                 <onMismatch>DENY</onMismatch>
-             </filter>
-         </appender>
+    <!-- Appender pour les logs généraux (INFO et DEBUG) -->
+    <appender name="GENERAL_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- Chemin relatif avec ./ pour spécifier le répertoire courant -->
+        <file>./logs/app.general.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./logs/app.general.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
 
-         <root level="DEBUG">
-             <appender-ref ref="GENERAL_LOG_FILE" />
-             <appender-ref ref="WARN_LOG_FILE" />
-             <appender-ref ref="ERROR_LOG_FILE" />
-         </root>
+    <!-- Appender pour les logs WARN -->
+    <appender name="WARN_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- Chemin relatif avec ./ pour spécifier le répertoire courant -->
+        <file>./logs/app.warn.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./logs/app.warn.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
 
+    <!-- Appender pour les logs ERROR -->
+    <appender name="ERROR_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- Chemin relatif avec ./ pour spécifier le répertoire courant -->
+        <file>./logs/app.error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./logs/app.error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
 
-     </configuration>
+    <!-- Configuration du Root Logger -->
+    <root level="INFO">
+        <appender-ref ref="GENERAL_LOG_FILE" />
+        <appender-ref ref="WARN_LOG_FILE" />
+        <appender-ref ref="ERROR_LOG_FILE" />
+    </root>
+
+</configuration>
      ```
 
 ----
