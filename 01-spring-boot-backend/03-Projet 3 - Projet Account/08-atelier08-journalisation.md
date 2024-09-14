@@ -340,10 +340,39 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 ----
 ----
 
-# PARTIE 4 - Pratique 3 et Implémentation 3 (Avancée)
+# PARTIE 4 - Pratique 3 et Implémentation 3 - Personnaliser les Logs (Avancée)
 ----
 
-### Configuration Avancée de Logback pour Séparation des Logs par Niveau de Sévérité :
+
+----
+# Énoncé de l'Exercice : Configuration Avancée de Logging
+----
+
+**Objectif** : Configurer la gestion de logs personnalisée dans une application Spring Boot en séparant les logs selon leur niveau de sévérité.
+
+**Instructions** :
+1. **Configurer les Appenders** :
+   - Créez un fichier `logback-spring.xml` et configurez trois appenders : un pour WARN, un pour ERROR, et un pour les autres niveaux de logs (INFO, DEBUG, TRACE).
+
+2. **Configurer les Filtres de Niveau** :
+   - Utilisez des `LevelFilter` pour vous assurer que seuls les logs correspondants aux niveaux sont écrits dans les fichiers respectifs.
+
+3. **Configurer le Logger ROOT** :
+   - Assurez-vous que le logger ROOT utilise les trois appenders configurés.
+
+4. **Tester la Configuration** :
+   - Écrivez des exemples de logs à différents niveaux et vérifiez si les logs sont correctement écrits dans les fichiers respectifs.
+
+### Critères de Réussite :
+- Les logs de niveau WARN apparaissent uniquement dans `app.warn.log`.
+- Les logs de niveau ERROR apparaissent uniquement dans `app.error.log`.
+- Les logs des autres niveaux apparaissent dans `app.general.log`.
+
+
+
+----
+# Correction : Configuration Avancée de Logback pour Séparation des Logs par Niveau de Sévérité :
+----
 
 1. **Créer un Fichier de Configuration Logback** :
    - Créez un fichier `logback-spring.xml` dans `src/main/resources`.
@@ -469,111 +498,28 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 
 
 
-----
-# Test de l'Implémentation Avancée
-----
+4. **Test de l'Implémentation**
 
-Pour tester la séparation des logs par niveau de sévérité, suivez ces étapes :
+- Après avoir mis à jour le fichier `logback-spring.xml`, redémarrez votre application pour appliquer la nouvelle configuration.
+- Pour tester la séparation des logs par niveau de sévérité, suivez ces étapes :
 
-1. **Génération de Logs WARN** :
+4.1. **Génération de Logs WARN** :
    - Utilisez l'endpoint POST `/newAccount` avec un `customerId` qui n'existe pas pour générer un log WARN.
    - Vérifiez que le log apparaît uniquement dans le fichier `app.warn.log`.
 
-2. **Génération de Logs ERROR** :
+4.2. **Génération de Logs ERROR** :
    - Modifiez temporairement le code pour forcer une exception lors de la création d'un compte, par exemple en essayant de sauvegarder un compte avec un `accountNumber` déjà existant.
    - Vérifiez que le log ERROR apparaît uniquement dans le fichier `app.error.log`.
 
-3. **Génération de Logs INFO et DEBUG** :
+4.3. **Génération de Logs INFO et DEBUG** :
    - Utilisez les endpoints GET pour récupérer des données et vérifiez que les logs INFO et DEBUG apparaissent dans le fichier `app.general.log`.
 
-----
-# PARTIE 5 - Exercice - Personnaliser les Logs
-----
 
-### Énoncé de l'Exercice : Configuration Avancée de Logging
+## Conclusion: 
+- Nous avons généré des logs à différents niveaux (DEBUG, INFO, WARN, ERROR) et nous avons vérifié qu'ils sont correctement répartis dans les fichiers configurés (`app.general.log`, `app.warn.log`, `app.error.log`).
 
-**Objectif** : Configurer la gestion de logs personnalisée dans une application Spring Boot en séparant les logs selon leur niveau de sévérité.
 
-**Instructions** :
-1. **Configurer les Appenders** :
-   - Créez un fichier `logback-spring.xml` et configurez trois appenders : un pour WARN, un pour ERROR, et un pour les autres niveaux de logs (INFO, DEBUG, TRACE).
 
-2. **Configurer les Filtres de Niveau** :
-   - Utilisez des `LevelFilter` pour vous assurer que seuls les logs correspondants aux niveaux sont écrits dans les fichiers respectifs.
-
-3. **Configurer le Logger ROOT** :
-   - Assurez-vous que le logger ROOT utilise les trois appenders configurés.
-
-4. **Tester la Configuration** :
-   - Écrivez des exemples de logs à différents niveaux et vérifiez si les logs sont correctement écrits dans les fichiers respectifs.
-
-### Critères de Réussite :
-- Les logs de niveau WARN apparaissent uniquement dans `app.warn.log`.
-- Les logs de niveau ERROR apparaissent uniquement dans `app.error.log`.
-- Les logs des autres niveaux apparaissent dans `app.general.log`.
-
-### Remise :
-- Soumettez le fichier `logback-spring.xml`.
-- Incluez un bref rapport expliquant votre configuration et la manière dont vous avez testé les différents niveaux de logs.
-
-----
-# CORRECTION
-----
-
-**Étape 1** : Définir l'Appender pour les Logs Généraux
-
-**Étape 2** : Mettre à jour la Configuration
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <appender name="GENERAL_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/app.general.log</file>
-        <encoder>
-            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-        </encoder>
-    </appender>
-
-    <appender name="WARN_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/app.warn.log</file>
-        <encoder>
-            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-        </encoder>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>WARN</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-    </appender>
-
-    <appender name="ERROR_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/app.error.log</file>
-        <encoder>
-            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-        </encoder>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>ERROR</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-    </appender>
-
-    <root level="DEBUG">
-        <appender-ref ref="GENERAL_LOG_FILE" />
-        <appender-ref ref="WARN_LOG_FILE" />
-        <appender-ref ref="ERROR_LOG_FILE" />
-    </root>
-</configuration>
-```
-
-**Étape 3** : Redémarrez Votre Application
-
-Après avoir mis à jour le fichier `logback-spring.xml`, redémarrez votre application pour appliquer la nouvelle configuration.
-
-----
-# Test de la Configuration
-----
-
-Pour tester cette configuration, générez des logs à différents niveaux (DEBUG, INFO, WARN, ERROR) et vérifiez qu'ils sont correctement répartis dans les fichiers configurés (`app.general.log`, `app.warn.log`, `app.error.log`).
 
 ---
 ---
