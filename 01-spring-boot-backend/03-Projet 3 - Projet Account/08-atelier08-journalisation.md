@@ -360,7 +360,7 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 
  - Exemple :
    
-   ```sh
+   ```properties
             spring.datasource.driverClassName=org.postgresql.Driver
             spring.datasource.url=jdbc:postgresql://localhost:5432/microDemo1
             spring.datasource.username=hrgres
