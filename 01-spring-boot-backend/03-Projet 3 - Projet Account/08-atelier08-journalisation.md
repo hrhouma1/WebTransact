@@ -349,8 +349,17 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
    - Créez un fichier `logback-spring.xml` dans `src/main/resources`.
 2. **Changez votre applications.properties en commentant les lignes de logging** :
    - J'ai commenté tous ce qui est en dessous de #Partie1 (qui fait référence à l'ancienne configuration de Logging).
+#### ➡️➡️➡️ ☠️  🧐 Il faut garder uniquement le Niveau global de journalisation et le Niveau de journalisation pour un package spécifique
+
+   ```properties             
+            # Niveau global de journalisation
+            logging.level.root=INFO
+            # Niveau de journalisation pour un package spécifique
+            logging.level.com.eazybytes=DEBUG   
+     ```
+
  - Exemple :
-     ```xml
+     ```sh
             spring.datasource.driverClassName=org.postgresql.Driver
             spring.datasource.url=jdbc:postgresql://localhost:5432/microDemo1
             spring.datasource.username=hrgres
