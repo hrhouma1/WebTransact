@@ -356,10 +356,11 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
             logging.level.root=INFO
             # Niveau de journalisation pour un package spécifique
             logging.level.com.eazybytes=DEBUG   
-     ```
+   ```
 
  - Exemple :
-     ```sh
+   
+   ```sh
             spring.datasource.driverClassName=org.postgresql.Driver
             spring.datasource.url=jdbc:postgresql://localhost:5432/microDemo1
             spring.datasource.username=hrgres
@@ -389,7 +390,7 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
             # ERREURS
             # *********************************
             # logging.file.path=/logs - a causé une erreure
-     ```
+   ```
 3. **Configurer les Appenders** :
    - Définissez des appenders distincts pour les niveaux WARN et ERROR.
    - Exemple :
