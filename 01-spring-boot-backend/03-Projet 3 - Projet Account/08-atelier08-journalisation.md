@@ -348,7 +348,7 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 1. **Créer un Fichier de Configuration Logback** :
    - Créez un fichier `logback-spring.xml` dans `src/main/resources`.
 2. **Changez votre applications.properties en commentant les lignes de logging** :
-
+   - J'ai commenté tous ce qui est en dessous de #Partie1 (qui fait référence à l'ancienne configuration de Logging).
  - Exemple :
      ```xml
             spring.datasource.driverClassName=org.postgresql.Driver
@@ -384,7 +384,8 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 3. **Configurer les Appenders** :
    - Définissez des appenders distincts pour les niveaux WARN et ERROR.
    - Exemple :
-     ```xml
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
@@ -413,7 +414,6 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 
     <!-- Appender pour les logs WARN -->
     <appender name="WARN_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <!-- Chemin relatif avec ./ pour spécifier le répertoire courant -->
         <file>./logs/app.warn.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>./logs/app.warn.%d{yyyy-MM-dd}.log</fileNamePattern>
@@ -431,7 +431,6 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
 
     <!-- Appender pour les logs ERROR -->
     <appender name="ERROR_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <!-- Chemin relatif avec ./ pour spécifier le répertoire courant -->
         <file>./logs/app.error.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>./logs/app.error.%d{yyyy-MM-dd}.log</fileNamePattern>
@@ -455,7 +454,10 @@ Pour tester l'ajout de logging à différents niveaux, suivez ces étapes :
     </root>
 
 </configuration>
-     ```
+```
+
+
+
 
 ----
 # Test de l'Implémentation Avancée
