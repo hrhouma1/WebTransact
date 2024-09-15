@@ -234,3 +234,14 @@ Cet annexe 2 explique comment utiliser GitLens dans Visual Studio Code pour comp
 - 👁️‍🗨️ **Comparaison visuelle** avec des outils graphiques.
 - 🤖 **Automatisation** avec des scripts pour gagner du temps sur les comparaisons récurrentes.
 
+
+---
+# Références GitLens: 
+---
+
+- https://stackoverflow.com/questions/42112526/how-to-compare-different-branches-in-visual-studio-code
+- https://medium.com/@sachinsoni600517/complete-tutorial-of-git-and-github-for-basic-to-advanced-1dd34d12b90b
+- https://medium.com/@igurpreetsingh/git-tutorial-for-beginners-a-comprehensive-guide-to-mastering-version-control-a0da3eb0b6e8
+- https://www.youtube.com/watch?v=UQPb73Zz9qk&ab_channel=GitKraken
+- https://www.youtube.com/watch?v=uQB7eGncFEA&ab_channel=CodewithMMAK
+
