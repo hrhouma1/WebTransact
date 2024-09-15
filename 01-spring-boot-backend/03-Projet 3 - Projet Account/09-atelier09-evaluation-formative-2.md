@@ -1,8 +1,9 @@
----
-# 01 - Exercice : Comparaison des versions v2 et v3 du projet Accounts
----
 
-Dans cet exercice, vous allez comparer deux versions différentes du projet Accounts pour identifier les changements effectués entre la version v2 et la version v3.
+------
+# 📝 **Exercice 01 : Comparaison des versions v2 et v3 du projet *Accounts***
+------
+Dans cet exercice, vous allez comparer deux versions différentes du projet *Accounts* afin d’identifier les modifications effectuées entre la version **v2** et la version **v3**.
+
 
 - Clonez les deux versions du projet dans des dossiers séparés :
 
@@ -132,28 +133,10 @@ Bien que la commande `git diff --no-index` fonctionne bien pour comparer des fic
 
 ![image](https://github.com/user-attachments/assets/d1d6aa2a-81de-421d-a774-d5043a6a7a15)
 ![image](https://github.com/user-attachments/assets/eab02667-51c6-42c4-8c07-b4b23f700a47)
-![image](https://github.com/user-attachments/assets/34b29e07-1ecd-4986-8795-4b8419c8adbd)
 ![image](https://github.com/user-attachments/assets/78088416-165a-4a0a-83d2-086475cfdf3e)
 ![image](https://github.com/user-attachments/assets/388b5aed-5a7f-4838-999a-15be109e8314)
 ![image](https://github.com/user-attachments/assets/91564ecf-c33c-43ed-a861-6088b2c53366)
 ![image](https://github.com/user-attachments/assets/1f29f022-3f25-4e81-9758-9b59b8c5570a)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -238,9 +221,17 @@ Cet annexe 2 explique comment utiliser GitLens dans Visual Studio Code pour comp
    - Si vous avez besoin de faire des ajustements, **vous pouvez éditer les fichiers directement** dans la vue de comparaison.
    - Ceci est particulièrement utile pour faire des corrections rapides sans quitter l'interface de comparaison.
 
-### Conseils 
+# Conseils 
 
 - **Prenez le temps de vous familiariser** avec l'interface de GitLens. Explorez les différentes options dans la barre latérale pour voir ce que chaque fonction peut faire.
 - **Consultez la documentation de GitLens** pour des guides détaillés sur les caractéristiques spécifiques.
 - **Pratiquez la comparaison** entre des branches peu complexes pour commencer, afin de comprendre le flux de travail sans se sentir submergé par des différences trop nombreuses ou complexes.
+
+---
+# Autres conseils 
+
+💡 **Ces méthodes permettent une approche complète et adaptée selon vos besoins** :
+- 🛠️ **Analyse rapide** avec Git pour des comparaisons de fichiers.
+- 👁️‍🗨️ **Comparaison visuelle** avec des outils graphiques.
+- 🤖 **Automatisation** avec des scripts pour gagner du temps sur les comparaisons récurrentes.
 
