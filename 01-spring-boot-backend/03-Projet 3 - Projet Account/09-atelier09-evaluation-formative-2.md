@@ -132,7 +132,6 @@ Bien que la commande `git diff --no-index` fonctionne bien pour comparer des fic
 
 
 ![image](https://github.com/user-attachments/assets/d1d6aa2a-81de-421d-a774-d5043a6a7a15)
-![image](https://github.com/user-attachments/assets/eab02667-51c6-42c4-8c07-b4b23f700a47)
 ![image](https://github.com/user-attachments/assets/78088416-165a-4a0a-83d2-086475cfdf3e)
 ![image](https://github.com/user-attachments/assets/388b5aed-5a7f-4838-999a-15be109e8314)
 ![image](https://github.com/user-attachments/assets/91564ecf-c33c-43ed-a861-6088b2c53366)
