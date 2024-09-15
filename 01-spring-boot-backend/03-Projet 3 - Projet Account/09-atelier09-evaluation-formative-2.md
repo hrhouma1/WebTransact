@@ -1,3 +1,18 @@
+# Table des matières
+
+1. [📝 Exercice 01 : Comparaison des versions v2 et v3 du projet *Accounts*](#-exercice-01--comparaison-des-versions-v2-et-v3-du-projet-accounts)
+2. [02 - Questions à répondre](#02---questions-à-répondre)
+3. [03 - Conseils](#03---conseils)
+4. [04 - Références pour vous aider](#04---références-pour-vous-aider)
+5. [05 - Solutions](#05---solutions)
+6. [Méthode 1: comparaison directe sans index (en dehors d’un dépôt Git)](#méthode-1-comparaison-directe-sans-index-en-dehors-dun-dépôt-git)
+7. [Méthode 2: comparaison plus rapide (dépôt Git local temporaire) mais non visuelle](#méthode-2-comparaison-plus-rapide-dépôt-git-local-temporaire-mais-non-visuelle)
+8. [Méthode 3: IDE avec fonction de comparaison intégrée (VISUELLE)](#méthode-3-ide-avec-fonction-de-comparaison-intégrée-visuelle)
+9. [Annexe 1 : Guide détaillé pour la visualisation des modifications dans Visual Studio Code](#annexe-1--guide-détaillé-pour-la-visualisation-des-modifications-dans-visual-studio-code)
+10. [Annexe 2 : Comparaison de branches dans Visual Studio Code avec GitLens](#annexe-2--comparaison-de-branches-dans-visual-studio-code-avec-gitlens)
+11. [Autres conseils](#autres-conseils)
+12. [Références GitLens](#références-gitlens)
+
 
 ------
 # 📝 **Exercice 01 : Comparaison des versions v2 et v3 du projet *Accounts***
