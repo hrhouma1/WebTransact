@@ -59,7 +59,7 @@ git clone https://github.com/hrhouma1/accounts-v3
 
 
 -----
-# 04 - Références pour vous aider !
+# 04 - Références pour vous aider
 -----
 - [1] https://github.com/hrhouma1/accounts-v2
 - [2] https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits
@@ -72,7 +72,7 @@ git clone https://github.com/hrhouma1/accounts-v3
 
 
 ---
-# 05 -  Solutions :
+# 05 -  Solutions
 ---
 
 ---
