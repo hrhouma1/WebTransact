@@ -45,6 +45,8 @@ git clone https://github.com/hrhouma1/accounts-v3
 # 02 - Questions à répondre 
 ---
 
+[Retour à la Table des matières](#table-des-matières)
+
 1. Quels sont les nouveaux fichiers ou dossiers ajoutés dans la version v3 ?
 2. Y a-t-il des fichiers ou dossiers qui ont été supprimés ou renommés ?
 3. Quelles sont les principales modifications de code que vous avez observées ?
@@ -55,6 +57,8 @@ git clone https://github.com/hrhouma1/accounts-v3
 # 03 - Conseils 
 ---
 
+[Retour à la Table des matières](#table-des-matières)
+
 **Utiliser des outils spécialisés pour comparer des fichiers :**
    - **Meld** (Linux/Windows) ou **Beyond Compare** (Windows/Linux/macOS) sont des outils graphiques de comparaison de fichiers très puissants. Ils permettent de visualiser facilement les différences ligne par ligne et sont plus ergonomiques pour des comparaisons fréquentes.
    - **DiffMerge** ou **KDiff3** sont aussi des options populaires pour comparer des fichiers ou des dossiers entiers.
@@ -64,6 +68,9 @@ git clone https://github.com/hrhouma1/accounts-v3
 -----
 # 04 - References pour vous aider
 -----
+
+[Retour à la Table des matières](#table-des-matières)
+
 - [1] https://github.com/hrhouma1/accounts-v2
 - [2] https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits
 - [3] https://stackoverflow.com/questions/1968512/getting-the-difference-between-two-repositories
@@ -78,9 +85,13 @@ git clone https://github.com/hrhouma1/accounts-v3
 # 05 - solutions
 ---
 
+[Retour à la Table des matières](#table-des-matières)
+
 ---
 # Méthode 1: comparaison directe sans index (en dehors d’un dépôt Git)
 ---
+
+[Retour à la Table des matières](#table-des-matières)
 
 1. Clonez les deux versions du projet dans des dossiers séparés :
 
@@ -108,6 +119,7 @@ Bien que la commande `git diff --no-index` fonctionne bien pour comparer des fic
 # Méthode 2: comparaison plus rapide ( dépôt Git local temporaire) mais *non visuelle*
 ---
 
+[Retour à la Table des matières](#table-des-matières)
 
 - Si vous désirez effectuer la comparaison rapide de deux version, il faut **utiliser un dépôt Git local temporaire :**. Pour ce faire, créez un dossier indépendant danslequel vous copierez les deux fichiers à comparer par exemple les deux controlleurs *AccountsController.java* des versions **v2** et **v3** respectivement.
 - Renommez les à  *AccountsControllerv1.java* et  *AccountsControllerv2.java*
@@ -144,6 +156,8 @@ Bien que la commande `git diff --no-index` fonctionne bien pour comparer des fic
 # Méthode 3: **IDE avec fonction de comparaison intégrée (VISUELLE) :**
 ---
 
+[Retour à la Table des matières](#table-des-matières)
+
    Si vous travaillez dans un IDE comme **IntelliJ IDEA**, **VSCode**, ou **Eclipse**, ils ont souvent des fonctions intégrées pour comparer deux fichiers ou répertoires, directement dans l'interface graphique.
 
    - Sur **VSCode**, par exemple, vous pouvez ouvrir deux fichiers, faire un clic droit sur l'onglet du premier fichier et choisir **"Select for Compare"**, puis faire un clic droit sur le second fichier et sélectionner **"Compare with Selected"**.
@@ -161,6 +175,8 @@ Bien que la commande `git diff --no-index` fonctionne bien pour comparer des fic
 ---
 # Annexe 1 : Guide détaillé pour la visualisation des modifications côte à côte de versions commitées dans Visual Studio Code
 ---
+
+[Retour à la Table des matières](#table-des-matières)
 
 Cet annexe 1 fournit une explication détaillée sur comment utiliser Visual Studio Code pour comparer visuellement des modifications entre différentes versions d'un fichier dans un projet versionné avec Git. Cela peut être particulièrement utile pour des débutants qui apprennent à gérer des versions de code source.
 
@@ -192,6 +208,8 @@ Cet annexe 1 fournit une explication détaillée sur comment utiliser Visual Stu
 ---
 # Annexe 2 : Comparaison de branches dans Visual Studio Code avec GitLens
 ---
+
+[Retour à la Table des matières](#table-des-matières)
 
 - Références : https://stackoverflow.com/questions/42112526/how-to-compare-different-branches-in-visual-studio-code
 
@@ -247,6 +265,8 @@ Cet annexe 2 explique comment utiliser GitLens dans Visual Studio Code pour comp
 ---
 # Autres conseils 
 
+[Retour à la Table des matières](#table-des-matières)
+
 💡 **Ces méthodes permettent une approche complète et adaptée selon vos besoins** :
 - 🛠️ **Analyse rapide** avec Git pour des comparaisons de fichiers.
 - 👁️‍🗨️ **Comparaison visuelle** avec des outils graphiques.
@@ -256,6 +276,8 @@ Cet annexe 2 explique comment utiliser GitLens dans Visual Studio Code pour comp
 ---
 # Références GitLens: 
 ---
+
+[Retour à la Table des matières](#table-des-matières)
 
 - https://stackoverflow.com/questions/42112526/how-to-compare-different-branches-in-visual-studio-code
 - https://medium.com/@sachinsoni600517/complete-tutorial-of-git-and-github-for-basic-to-advanced-1dd34d12b90b
