@@ -1,6 +1,4 @@
-D'accord, je comprends que vous avez besoin d'une version **exhaustive et détaillée**. Voici une approche complète, avec toutes les **méthodes** bien séparées et toutes les commandes **Git**, des détails **visuels**, des **scripts**, et des sections pour **automatiser** le processus.
-
-### 🗂️ Table des matières
+# 🗂️ Table des matières
 1. **Introduction** - [01_introduction.md](#)
 2. **Clone des versions** - [02_clone_versions.md](#)
 3. **Comparaison rapide avec `git diff`** - [03_comparaison_rapide.md](#)
