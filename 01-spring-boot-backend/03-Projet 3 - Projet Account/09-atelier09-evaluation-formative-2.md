@@ -72,7 +72,7 @@ git clone https://github.com/hrhouma1/accounts-v3
 
 
 ---
-# 05 -  Solutions
+# 05 - solutions
 ---
 
 ---
