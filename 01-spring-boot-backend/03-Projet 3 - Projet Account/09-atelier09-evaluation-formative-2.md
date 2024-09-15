@@ -17,6 +17,9 @@
 ------
 # 📝 **Exercice 01 : Comparaison des versions v2 et v3 du projet *Accounts***
 ------
+
+[Retour à la Table des matières](#table-des-matières)
+
 Dans cet exercice, vous allez comparer deux versions différentes du projet *Accounts* afin d’identifier les modifications effectuées entre la version **v2** et la version **v3**.
 
 
