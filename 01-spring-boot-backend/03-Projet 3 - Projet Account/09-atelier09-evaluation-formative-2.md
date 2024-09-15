@@ -3,7 +3,7 @@
 1. [📝 Exercice 01 : Comparaison des versions v2 et v3 du projet *Accounts*](#-exercice-01--comparaison-des-versions-v2-et-v3-du-projet-accounts)
 2. [02 - Questions à répondre](#02---questions-à-répondre)
 3. [03 - Conseils](#03---conseils)
-4. [04 - Références pour vous aider](#04---références-pour-vous-aider)
+4. [04 - Références pour vous aider](#04---references-pour-vous-aider)
 5. [05 - Solutions](#05---solutions)
 6. [Méthode 1: comparaison directe sans index (en dehors d’un dépôt Git)](#méthode-1-comparaison-directe-sans-index-en-dehors-dun-dépôt-git)
 7. [Méthode 2: comparaison plus rapide (dépôt Git local temporaire) mais non visuelle](#méthode-2-comparaison-plus-rapide-dépôt-git-local-temporaire-mais-non-visuelle)
@@ -59,7 +59,7 @@ git clone https://github.com/hrhouma1/accounts-v3
 
 
 -----
-# 04 - Références pour vous aider
+# 04 - References pour vous aider
 -----
 - [1] https://github.com/hrhouma1/accounts-v2
 - [2] https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits
