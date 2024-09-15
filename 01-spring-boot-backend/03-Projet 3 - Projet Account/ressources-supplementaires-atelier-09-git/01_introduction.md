@@ -1,10 +1,10 @@
 # 📝 **Introduction**
 
-## Objectif de l’exercice :
+# Objectif de l’exercice :
 
 Cet exercice a pour objectif de vous initier à différentes techniques de comparaison de versions d’un projet logiciel, tant avec des outils en ligne de commande qu'avec des environnements de développement intégrés (IDE). Vous allez comparer deux versions du projet **Accounts** (v2 et v3), en utilisant des commandes Git, des outils graphiques, ainsi que des scripts d'automatisation pour effectuer des comparaisons approfondies.
 
-### Ce que vous apprendrez :
+# Ce que vous apprendrez :
 
 1. **Comparer des versions avec et sans IDE** : Vous découvrirez comment utiliser à la fois des outils en ligne de commande pour effectuer des comparaisons de code et des environnements de développement intégrés (comme Visual Studio Code ou IntelliJ IDEA) pour faciliter la visualisation et la navigation dans les différences entre les versions.
 
@@ -16,7 +16,7 @@ Cet exercice a pour objectif de vous initier à différentes techniques de compa
 
 5. **Automatiser les comparaisons** : En plus de comparer manuellement des fichiers, vous verrez comment automatiser ce processus via des scripts en Bash ou Python, pour des projets comportant de nombreux fichiers.
 
-### Pourquoi c’est important :
+# Pourquoi c’est important :
 
 - **Travailler efficacement sans IDE** : Bien que les IDE facilitent les comparaisons de code, savoir utiliser des outils en ligne de commande comme `git diff` est essentiel lorsque vous travaillez dans des environnements dépourvus d’interface graphique ou dans des environnements de production.
   
@@ -24,11 +24,11 @@ Cet exercice a pour objectif de vous initier à différentes techniques de compa
 
 - **Analyser des modifications dans un projet collaboratif** : En travaillant sur des branches différentes, il est important de savoir identifier les changements apportés à des fichiers critiques entre deux branches. Cela vous aide à comprendre comment les modifications dans une branche affecteront les autres branches du projet, avant de les fusionner.
 
-### Contexte du projet *Accounts* :
+# Contexte du projet *Accounts* :
 
 Le projet **Accounts** est un système de gestion de comptes utilisé dans des environnements professionnels pour gérer les informations relatives aux utilisateurs et à leurs comptes. Dans cet exercice, vous allez comparer deux versions de ce projet, **v2** et **v3**, qui comportent des modifications importantes. Cela inclut des ajustements dans les fonctionnalités, des corrections de bugs, ou des révisions de la structure du code.
 
-### Méthodes que vous allez explorer :
+# Méthodes que vous allez explorer :
 
 - **Comparaison sans IDE** : Vous allez apprendre à utiliser les commandes **Git** comme `git diff`, `git log` et `git checkout` pour comparer les versions de fichiers, examiner l’historique des modifications, et naviguer entre les branches directement en ligne de commande.
   
@@ -38,7 +38,7 @@ Le projet **Accounts** est un système de gestion de comptes utilisé dans des e
 
 - **Comparaison entre branches Git** : Vous allez comparer des fichiers entre deux branches différentes du projet pour suivre les modifications introduites dans une branche de développement avant de les fusionner avec la branche principale (par exemple, comparer les fichiers entre une branche `feature` et `main`).
 
-### Résultat attendu :
+# Résultat attendu :
 
 À la fin de cet exercice, vous devrez être en mesure de :
 - **Comparer des versions de projet avec et sans IDE(*outils en ligne de commande*)**, en utilisant des outils adaptés à chaque environnement.
