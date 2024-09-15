@@ -1,14 +1,14 @@
 # 🗂️ Table des matières
 1. **Introduction** - [01_introduction.md](01_introduction.md)
-2. **Clone des versions** - [02_clone_versions.md](#)
-3. **Comparaison rapide avec `git diff`** - [03_comparaison_rapide.md](#)
-4. **Méthode 1 : Comparaison directe sans index** - [04_methode_1_sans_index.md](#)
-5. **Méthode 2 : Comparaison avec dépôt Git local temporaire** - [05_methode_2_depot_local.md](#)
-6. **Méthode 3 : Comparaison visuelle avec un IDE** - [06_methode_3_comparaison_visuelle.md](#)
-7. **Méthode 4 : Automatisation via scripts Bash et Python** - [07_methode_4_automatisation.md](#)
-8. **Questions et réflexion** - [08_questions_reflexion.md](#)
-9. **Conseils et recommandations** - [09_conseils.md](#)
-10. **Références utiles** - [10_references.md](#)
+2. **Clone des versions** - [02_clone_versions.md](02_clone_versions.md)
+3. **Comparaison rapide avec `git diff`** - [03_comparaison_rapide.md](03_comparaison_rapide.md)
+4. **Méthode 1 : Comparaison directe sans index** - [04_methode_1_sans_index.md](04_methode_1_sans_index.md)
+5. **Méthode 2 : Comparaison avec dépôt Git local temporaire** - [05_methode_2_depot_local.md](05_methode_2_depot_local.md)
+6. **Méthode 3 : Comparaison visuelle avec un IDE** - [06_methode_3_comparaison_visuelle.md](06_methode_3_comparaison_visuelle.md)
+7. **Méthode 4 : Automatisation via scripts Bash et Python** - [07_methode_4_automatisation.md](07_methode_4_automatisation.md)
+8. **Questions et réflexion** - [08_questions_reflexion.md](08_questions_reflexion.md)
+9. **Conseils et recommandations** - [09_conseils.md](09_conseils.md)
+10. **Références utiles** - [10_references.md](10_references.md)
 
 ---
 
