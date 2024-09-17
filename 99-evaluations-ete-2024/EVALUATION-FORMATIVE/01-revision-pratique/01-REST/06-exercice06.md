@@ -1,4 +1,4 @@
-# **Exercice 05 : Compléter les annotations et les appels API dans un contrôleur REST**
+# **Exercice 06 : Compléter les annotations et les appels API dans un contrôleur REST**
 
 **Objectif :**  
 L'objectif de cet exercice est de compléter les annotations et de configurer les appels API d'un contrôleur REST dans un système sécurisé pour la gestion des utilisateurs. Le système doit suivre les bonnes pratiques de versionnement d'API via l'usage du préfixe `/api/v1`. Vous devrez mettre en place des méthodes de gestion des utilisateurs à travers différents types de requêtes HTTP (GET, POST), avec des paramètres obligatoires et optionnels.
