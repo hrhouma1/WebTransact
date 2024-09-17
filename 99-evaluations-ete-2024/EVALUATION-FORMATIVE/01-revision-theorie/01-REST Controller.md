@@ -1,3 +1,11 @@
+# Les services web avec spring-boot
+
+- `spring-boot-starter-web` est une dépendance de Spring Boot qui fournit les composants nécessaires pour développer des applications web, y compris les API REST. Il inclut des outils pour gérer les requêtes HTTP, JSON, des contrôleurs REST, et un serveur intégré (comme Tomcat).
+- `@RestController` est une annotation Spring qui combine `@Controller` et `@ResponseBody`. 
+- Elle indique qu'une classe va gérer des requêtes HTTP REST, en renvoyant directement les réponses (généralement en JSON ou XML) sans passer par une vue (interface utilisateur). 
+- Elle est utilisée pour construire des API REST où chaque méthode répond à une requête HTTP (GET, POST, PUT, DELETE).
+
+
 # 1. **@RestController**
 - **Description** : Cette annotation indique que la classe est un contrôleur Spring qui gère les requêtes HTTP REST. Elle combine `@Controller` et `@ResponseBody`, ce qui signifie que les méthodes renvoient directement les données (au format JSON ou XML) au lieu de renvoyer une vue.
 
