@@ -109,7 +109,7 @@ Cet exemple montre comment utiliser ces annotations pour gérer des requêtes HT
 
 
 ------------
-# Annexe - **Exemple d’utilisation de `@RequestMapping` au niveau de la classe**
+# Annexe 1 - **Exemple d’utilisation de `@RequestMapping` au niveau de la classe**
 ------------
 
 Voici un exemple d'utilisation de l'annotation `@RequestMapping` pour une **classe** et pour une **méthode** :
@@ -178,3 +178,178 @@ public class CardController {
 - **Niveau méthode** : Utiliser `@RequestMapping` sur une méthode permet d'associer une URL et un type de requête spécifique à une seule méthode.
 
 En combinant les deux approches, tu peux organiser les routes de ton API de manière claire et intuitive.
+
+
+---
+# Annexe 2 -
+---
+
+
+Pour compléter ton exemple avec des requêtes `GET`, `POST`, `PUT`, et `DELETE`, voici un modèle complet qui illustre les différentes opérations CRUD (Create, Read, Update, Delete) dans un contrôleur Spring Boot. 
+
+### 1. **GET** - Récupérer une carte par ID
+```java
+@GetMapping("/{id}")
+public ResponseEntity<Card> getCardById(@PathVariable int id) {
+    // Code pour récupérer une carte par son ID
+    Card card = cardService.findCardById(id);
+    return ResponseEntity.ok(card);
+}
+```
+
+#### Exécution:
+```bash
+GET /cartes/1
+```
+
+#### Réponse JSON:
+```json
+{
+  "id": 1,
+  "number": "1234-5678-9012-3456",
+  "type": "Visa"
+}
+```
+
+---
+
+### 2. **POST** - Créer une nouvelle carte
+```java
+@PostMapping
+public ResponseEntity<Card> createCard(@RequestBody Card card) {
+    // Code pour créer une nouvelle carte
+    Card newCard = cardService.saveCard(card);
+    return ResponseEntity.status(HttpStatus.CREATED).body(newCard);
+}
+```
+
+#### Exécution:
+```bash
+POST /cartes
+Content-Type: application/json
+
+{
+  "number": "1111-2222-3333-4444",
+  "type": "MasterCard"
+}
+```
+
+#### Réponse JSON:
+```json
+{
+  "id": 2,
+  "number": "1111-2222-3333-4444",
+  "type": "MasterCard"
+}
+```
+
+---
+
+### 3. **PUT** - Mettre à jour une carte existante
+```java
+@PutMapping("/{id}")
+public ResponseEntity<Card> updateCard(@PathVariable int id, @RequestBody Card cardDetails) {
+    // Code pour mettre à jour une carte par ID
+    Card updatedCard = cardService.updateCard(id, cardDetails);
+    return ResponseEntity.ok(updatedCard);
+}
+```
+
+#### Exécution:
+```bash
+PUT /cartes/1
+Content-Type: application/json
+
+{
+  "number": "9876-5432-1098-7654",
+  "type": "Visa"
+}
+```
+
+#### Réponse JSON:
+```json
+{
+  "id": 1,
+  "number": "9876-5432-1098-7654",
+  "type": "Visa"
+}
+```
+
+---
+
+### 4. **DELETE** - Supprimer une carte par ID
+```java
+@DeleteMapping("/{id}")
+public ResponseEntity<Void> deleteCard(@PathVariable int id) {
+    // Code pour supprimer une carte par ID
+    cardService.deleteCardById(id);
+    return ResponseEntity.noContent().build();
+}
+```
+
+#### Exécution:
+```bash
+DELETE /cartes/1
+```
+
+#### Réponse:
+```json
+{
+  "message": "Carte supprimée avec succès"
+}
+```
+
+---
+# Exemple  avec les 4 méthodes dans un contrôleur `RestController` :
+---
+
+
+```java
+@RestController
+@RequestMapping("/cartes")
+public class CardController {
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Card> getCardById(@PathVariable int id) {
+        Card card = cardService.findCardById(id);
+        return ResponseEntity.ok(card);
+    }
+
+    @PostMapping
+    public ResponseEntity<Card> createCard(@RequestBody Card card) {
+        Card newCard = cardService.saveCard(card);
+        return ResponseEntity.status(HttpStatus.CREATED).body(newCard);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Card> updateCard(@PathVariable int id, @RequestBody Card cardDetails) {
+        Card updatedCard = cardService.updateCard(id, cardDetails);
+        return ResponseEntity.ok(updatedCard);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteCard(@PathVariable int id) {
+        cardService.deleteCardById(id);
+        return ResponseEntity.noContent().build();
+    }
+}
+```
+
+### Modèles JSON de requête pour POST et PUT :
+- **POST** (Créer une nouvelle carte):
+  ```json
+  {
+    "number": "1111-2222-3333-4444",
+    "type": "MasterCard"
+  }
+  ```
+
+- **PUT** (Mettre à jour une carte existante):
+  ```json
+  {
+    "number": "9876-5432-1098-7654",
+    "type": "Visa"
+  }
+  ```
+
+Ces exemples montrent comment manipuler les opérations CRUD avec un contrôleur Spring, incluant la gestion du corps JSON via `@RequestBody` et la gestion des URL variables avec `@PathVariable`.
