@@ -1,4 +1,4 @@
-# **Exercice 3 : Implémenter un contrôleur REST pour la gestion des livres**
+# **Exercice 03 : Implémenter un contrôleur REST pour la gestion des livres**
 
 L'objectif de cet exercice est de créer un contrôleur REST pour la gestion des livres dans une bibliothèque. Vous devrez implémenter les méthodes du contrôleur et rédiger les appels API dans un fichier `.http`. Cet exercice demande une compréhension des annotations Spring, des concepts REST, et des outils de test d'API.
 
