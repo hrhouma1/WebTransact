@@ -104,7 +104,7 @@ public class CardController {
 }
 ```
 
-Cet exemple montre comment utiliser ces annotations pour gérer des requêtes HTTP GET et POST, extraire des paramètres depuis l'URL ou le corps de la requête, et renvoyer les réponses sous forme d'objets Java.
+- Cet exemple présenté ci-haut montre comment utiliser ces annotations pour gérer des requêtes HTTP GET et POST, extraire des paramètres depuis l'URL ou le corps de la requête, et renvoyer les réponses sous forme d'objets Java.
 
 
 
@@ -112,7 +112,7 @@ Cet exemple montre comment utiliser ces annotations pour gérer des requêtes HT
 # Annexe 1 - **Exemple d’utilisation de `@RequestMapping` au niveau de la classe**
 ------------
 
-Voici un exemple d'utilisation de l'annotation `@RequestMapping` pour une **classe** et pour une **méthode** :
+# Exemple d'utilisation de l'annotation `@RequestMapping` pour une **classe** et pour une **méthode** :
 
 
 
