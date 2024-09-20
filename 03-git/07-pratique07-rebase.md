@@ -9,7 +9,7 @@ Imaginons que vous travaillez sur le projet de recherche d'utilisateurs GitHub a
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/votre-repo/github-user-search.git
+git clone https://github.com/hrhouma1/github-user-search
 cd github-user-search
 
 # Créer et basculer sur votre branche de fonctionnalité
