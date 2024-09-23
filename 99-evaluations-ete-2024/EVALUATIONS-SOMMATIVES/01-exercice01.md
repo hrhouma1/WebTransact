@@ -1,4 +1,5 @@
-# **Examen de Développement d'API : Gestion d'une Animalerie avec API REST**
+
+# **Examen Partie 1 : Gestion d'une Animalerie avec API REST**
 
 # **Contexte :**
 Dans cet exercice, vous allez travailler sur la gestion d'une animalerie à l'aide d'une API REST. Vous devez compléter les annotations et les méthodes d'un contrôleur qui permet de gérer les animaux disponibles dans l'animalerie, ainsi que d'autres fonctionnalités liées à la gestion des animaux, comme l'ajout de nouveaux animaux, la mise à jour de leurs informations et la récupération de détails spécifiques.
