@@ -1,4 +1,5 @@
-# **Exercice 02: Compléter les annotations et les appels API**
+**Examen Partie 2 : Compléter les annotations et les appels API**
+
 
 - L'objectif de cet exercice est de compléter les annotations et les appels API dans un contrôleur REST pour la gestion des médicaments dans une pharmacie. 
 - Plusieurs possibilités sont offertes pour chaque annotation ainsi que pour les appels API. 
