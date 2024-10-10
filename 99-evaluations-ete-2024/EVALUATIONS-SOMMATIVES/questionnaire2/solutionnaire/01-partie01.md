@@ -1,6 +1,6 @@
 Chers étudiant.e.s,
 
-Bravo à tous pour vos efforts et votre participation au quiz. Je comprends que certaines questions ont pu sembler difficiles, notamment celles concernant les jointures et les agrégations. Comme promis, voici le **solutionnaire** complet pour vous aider à comprendre les méthodes JPA à dériver des requêtes SQL.
+Bravo à tous pour vos efforts et votre participation au questionnaire. Comme promis, voici le **solutionnaire** complet pour vous aider à comprendre les méthodes JPA à dériver des requêtes SQL.
 
 ---
 
