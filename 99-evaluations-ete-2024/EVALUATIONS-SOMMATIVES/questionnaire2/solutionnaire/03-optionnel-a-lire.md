@@ -82,8 +82,6 @@ Ce tutoriel vous montre comment récupérer des données complexes depuis une ba
 
 Bravo pour vos efforts et bonne chance pour la suite de l’évaluation !
 
-Cordialement,  
-**Haythem Rehouma**
 
 -----------------------
 # Annexe  : Est ce que JPQL est suffisant pour  gérer des opérations de manipulation complexes de chaînes de caractères. C'est quoi son utilité ?
