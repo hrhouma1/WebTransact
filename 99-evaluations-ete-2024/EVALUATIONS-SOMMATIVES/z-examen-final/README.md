@@ -5,7 +5,7 @@ Vous allez travailler sur un projet **Gestion des Livres et Auteurs** en utilisa
 
 **Instructions :**
 
-1. Vous devez consulter les liens fournis pour obtenir les détails des entités et les exercices.
+1. Vous devez consulter les liens suivant pour obtenir les détails des entités :
    [**Lien vers les entités**](https://github.com/hrhouma1/WebTransact/blob/main/99-evaluations-ete-2024/EVALUATIONS-SOMMATIVES/z-examen-final/entites.md)
 
 2. Les trois parties de l'examen sont disponibles aux liens suivants :
