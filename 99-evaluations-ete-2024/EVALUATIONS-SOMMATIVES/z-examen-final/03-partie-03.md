@@ -8,7 +8,7 @@
 
 
 # Objectif : 
-Cette évaluation teste votre capacité à utiliser **ResponseEntity** pour retourner des réponses HTTP appropriées dans des scénarios liés à la gestion des livres, auteurs, critiques et lecteurs dans Spring Boot.
+Cette partie teste votre capacité à utiliser **ResponseEntity** pour retourner des réponses HTTP appropriées dans des scénarios liés à la gestion des livres, auteurs, critiques et lecteurs dans Spring Boot.
 
 ---
 
