@@ -1,6 +1,6 @@
 # Examen Final : Projet **Gestion des Livres et Auteurs avec Jakarta EE**
 
-## Objectif :
+# Objectif :
 Vous allez travailler sur un projet **Gestion des Livres et Auteurs** en utilisant Jakarta EE. Cet examen est divisé en trois parties, chacune évaluant vos compétences sur différents aspects de la mise en œuvre.
 
 **Instructions :**
