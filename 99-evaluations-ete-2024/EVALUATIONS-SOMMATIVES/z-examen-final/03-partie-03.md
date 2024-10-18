@@ -1,6 +1,13 @@
-# Partie 3 - Travailler avec ResponseEntity dans Spring Boot
+# **Examen Final**  
+## **Projet : Gestion des Livres et Auteurs avec Jakarta EE**
+
+---
+
+### **Partie 3 : Travailler avec `ResponseEntity` dans Spring Boot**  
+**(30 points)**
 
 
+# Objectif : 
 Cette évaluation teste votre capacité à utiliser **ResponseEntity** pour retourner des réponses HTTP appropriées dans des scénarios liés à la gestion des livres, auteurs, critiques et lecteurs dans Spring Boot.
 
 ---
