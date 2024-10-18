@@ -1,7 +1,7 @@
 # **Examen Final**  
 ## **Projet : Gestion des Livres et Auteurs avec Jakarta EE**
 
-
+---
 # **Partie 2 : Méthodes dérivées avec Spring Data JPA**  
 **(40 points)**
 
