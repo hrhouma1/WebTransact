@@ -4,7 +4,10 @@
 Vous allez travailler sur un projet **Gestion des Livres et Auteurs** en utilisant Jakarta EE. Cet examen est divisé en trois parties, chacune évaluant vos compétences sur différents aspects de la mise en œuvre.
 
 **Instructions :**
+
 1. Vous devez consulter les liens fournis pour obtenir les détails des entités et les exercices.
+   [**Lien vers les entités**](https://github.com/hrhouma1/WebTransact/blob/main/99-evaluations-ete-2024/EVALUATIONS-SOMMATIVES/z-examen-final/entites.md)
+
 2. Les trois parties de l'examen sont disponibles aux liens suivants :
    - [**Partie 1 (30%)**](https://github.com/hrhouma1/WebTransact/blob/main/99-evaluations-ete-2024/EVALUATIONS-SOMMATIVES/z-examen-final/01-partie-01.md)
    - [**Partie 2 (40%)**](https://github.com/hrhouma1/WebTransact/blob/main/99-evaluations-ete-2024/EVALUATIONS-SOMMATIVES/z-examen-final/02-partie-02.md)
