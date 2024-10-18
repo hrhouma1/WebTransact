@@ -3,7 +3,7 @@
 
 ---
 # **Partie 2 : Méthodes dérivées avec Spring Data JPA**  
-**(40 points)**
+### *(40 points)*
 
 
 ### Objectif: 
