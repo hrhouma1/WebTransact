@@ -3,8 +3,8 @@
 
 ---
 
-### **Partie 3 : Travailler avec `ResponseEntity` dans Spring Boot**  
-**(30 points)**
+# **Partie 3 : Travailler avec `ResponseEntity` dans Spring Boot**  
+### *(30 points)*
 
 
 # Objectif : 
