@@ -58,3 +58,23 @@ Lien vers les scénarios : [**Partie 3**](https://github.com/hrhouma1/WebTransac
 ---
 
 **Bonne chance à toutes et à tous !**
+
+
+---
+# Annexe: Structure de l'examen final - *Gestion des Livres et Auteurs avec Jakarta EE*
+---
+
+
+### **Partie 1 : Relations entre les entités et Dépendances Maven**  
+**(30 points)**
+
+---
+
+### **Partie 2 : Méthodes dérivées avec Spring Data JPA**  
+**(40 points)**
+
+---
+
+### **Partie 3 : Travailler avec `ResponseEntity` dans Spring Boot**  
+**(30 points)**
+
