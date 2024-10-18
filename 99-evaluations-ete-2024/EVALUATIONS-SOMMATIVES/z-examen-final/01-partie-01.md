@@ -1,6 +1,12 @@
-# Examen : Projet Gestion des Livres et Auteurs avec Jakarta EE
+# **Examen Final**  
+## **Projet : Gestion des Livres et Auteurs avec Jakarta EE**
 
-# Partie 1 
+---
+
+### **Partie 1 : Relations entre les entités et Dépendances Maven**  
+**(30 points)**
+
+
 
 # 1. Relations entre les entités
 
