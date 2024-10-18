@@ -3,8 +3,8 @@
 
 ---
 
-# **Partie 1 : Relations entre les entités et Dépendances Maven** *(30 points)*
-
+# **Partie 1 : Relations entre les entités et Dépendances Maven** 
+*(30 points)*
 
 
 # 1. Relations entre les entités
