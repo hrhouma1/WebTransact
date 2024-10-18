@@ -15,9 +15,11 @@ Vous allez travailler sur un projet **Gestion des Livres et Auteurs** en utilisa
 # Partie 1 (30%) - Relations entre les entités et Dépendances Maven
 
 ### Instructions : 
+
 1. **Relations entre les entités :**  
    - Dessinez le diagramme de relations entre les entités `Address`, `Author`, `Book`, `Reader`, et `Review`. Identifiez et décrivez chaque relation.
-  
+   [**Lien vers les entités**](https://github.com/hrhouma1/WebTransact/blob/main/99-evaluations-ete-2024/EVALUATIONS-SOMMATIVES/z-examen-final/entites.md)
+
 2. **Dépendances Maven :**  
    - Proposez les dépendances Maven nécessaires pour ajouter H2, PostgreSQL, JPA, et Jakarta EE dans le projet.
 
