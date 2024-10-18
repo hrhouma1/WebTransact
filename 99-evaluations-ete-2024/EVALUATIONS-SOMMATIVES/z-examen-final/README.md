@@ -12,7 +12,7 @@ Vous allez travailler sur un projet **Gestion des Livres et Auteurs** en utilisa
 
 ---
 
-## Partie 1 (30%) - Relations entre les entités et Dépendances Maven
+# Partie 1 (30%) - Relations entre les entités et Dépendances Maven
 
 ### Instructions : 
 1. **Relations entre les entités :**  
@@ -32,7 +32,7 @@ Vous allez travailler sur un projet **Gestion des Livres et Auteurs** en utilisa
 
 ---
 
-## Partie 2 (40%) - Méthodes dérivées de Spring Data JPA
+# Partie 2 (40%) - Méthodes dérivées de Spring Data JPA
 
 ### Instructions :
 1. Complétez les méthodes JPA dérivées pour les requêtes SQL dans le tableau fourni.
@@ -42,7 +42,7 @@ Lien vers les instructions : [**Partie 2**](https://github.com/hrhouma1/WebTrans
 
 ---
 
-## Partie 3 (30%) - Travailler avec `ResponseEntity` dans Spring Boot
+# Partie 3 (30%) - Travailler avec `ResponseEntity` dans Spring Boot
 
 ### Instructions :
 1. Complétez chaque scénario en fournissant une réponse HTTP appropriée avec `ResponseEntity`.
